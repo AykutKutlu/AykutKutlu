@@ -32,5 +32,5 @@ Email: aykutkutlu811@gmail.com
 
 LinkedIn: [linkedin.com/in/aykutkutlu](https://www.linkedin.com/in/aykut-kutlu-562867236/)
 
-GitHub: [github.com/aykutkutlu](https://github.com/simple1one)
+GitHub: [github.com/aykutkutlu](https://github.com/AykutKutlu)
 
