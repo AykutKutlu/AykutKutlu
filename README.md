@@ -34,5 +34,5 @@ LinkedIn: [linkedin.com/in/aykutkutlu](https://www.linkedin.com/in/aykut-kutlu-5
 
 GitHub: [github.com/aykutkutlu](https://github.com/AykutKutlu)
 
-My Personal Site: [Personal](https://aykutkutlu.github.io/AykutKutlu/index.html)
+My Personal Site: [Personal](https://aykutkutlu.github.io/AykutKutlu/)
 
