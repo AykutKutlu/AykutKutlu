@@ -1,0 +1,123 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Experience - Aykut KUTLU</title>
+    <link rel="stylesheet" href="styles.css">
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css" rel="stylesheet">
+</head>
+<body>
+    <!-- Navigation -->
+    <nav id="navbar">
+        <div class="nav-container">
+            <div class="nav-links">
+                <a href="index.html" class="nav-link">Home</a>
+                <a href="about.html" class="nav-link">About</a>
+                <a href="experience.html" class="nav-link active">Experience</a>
+                <a href="projects.html" class="nav-link">Projects</a>
+                <a href="skills.html" class="nav-link">Skills</a>
+                <a href="contact.html" class="nav-link">Contact</a>
+            </div>
+            <div class="mobile-menu-toggle">
+                <span></span>
+                <span></span>
+                <span></span>
+            </div>
+        </div>
+    </nav>
+
+    <!-- Experience Section -->
+    <section class="experience">
+        <div class="container">
+            <div class="timeline" id="timeline">
+                <!-- Timeline items will be loaded here -->
+            </div>
+        </div>
+    </section>
+
+    <script src="data/data.js"></script>
+    <script src="scripts/page-script.js"></script>
+    <script>
+        // Load experience timeline
+        document.addEventListener('DOMContentLoaded', function() {
+            loadTimeline();
+        });
+
+        function loadTimeline() {
+            const timeline = document.getElementById('timeline');
+            if (!timeline || !resumeData) return;
+
+            let timelineHTML = '';
+
+            // Professional Experience Section
+            if (resumeData.professionalExperience && resumeData.professionalExperience.length > 0) {
+                timelineHTML += `
+                    <div class="timeline-section-header">
+                        <div class="section-divider-title">
+                            <i class="fas fa-briefcase"></i>
+                            Professional Experience
+                        </div>
+                    </div>
+                `;
+
+                resumeData.professionalExperience.forEach((experience, index) => {
+                    timelineHTML += createTimelineItem(experience, index, 'professional');
+                });
+            }
+
+            // Internships Section
+            if (resumeData.internships && resumeData.internships.length > 0) {
+                timelineHTML += `
+                    <div class="timeline-section-header">
+                        <div class="section-divider-title">
+                            <i class="fas fa-graduation-cap"></i>
+                            Internships
+                        </div>
+                    </div>
+                `;
+
+                resumeData.internships.forEach((internship, index) => {
+                    timelineHTML += createTimelineItem(internship, index, 'internship');
+                });
+            }
+
+            timeline.innerHTML = timelineHTML;
+
+            // Animate timeline items
+            setTimeout(() => {
+                const timelineItems = document.querySelectorAll('.timeline-item');
+                timelineItems.forEach((item, index) => {
+                    setTimeout(() => {
+                        item.style.animation = 'fadeInLeft 0.8s ease-out forwards';
+                        item.style.opacity = '1';
+                    }, index * 200);
+                });
+            }, 300);
+        }
+
+        function createTimelineItem(item, index, type) {
+            const descriptionHTML = item.description.map(desc => `<li>${desc}</li>`).join('');
+            
+            return `
+                <div class="timeline-item ${type}-item" style="animation-delay: ${index * 0.2}s">
+                    <div class="timeline-header">
+                        <div class="timeline-info">
+                            <h3 class="timeline-title">${item.role}</h3>
+                            <div class="timeline-company">${item.company}</div>
+                        </div>
+                        <div class="timeline-meta">
+                            <div class="timeline-duration">${item.duration}</div>
+                            <div class="timeline-location">${item.location}</div>
+                        </div>
+                    </div>
+                    <ul class="timeline-description">
+                        ${descriptionHTML}
+                    </ul>
+                </div>
+            `;
+        }
+    </script>
+</body>
+</html>

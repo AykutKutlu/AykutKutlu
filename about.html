@@ -1,0 +1,179 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>About - Aykut KUTLU</title>
+    <link rel="stylesheet" href="styles.css">
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css" rel="stylesheet">
+</head>
+<body>
+    <!-- Navigation -->
+    <nav id="navbar">
+        <div class="nav-container">
+            <div class="nav-links">
+                <a href="index.html" class="nav-link">Home</a>
+                <a href="about.html" class="nav-link active">About</a>
+                <a href="experience.html" class="nav-link">Experience</a>
+                <a href="projects.html" class="nav-link">Projects</a>
+                <a href="skills.html" class="nav-link">Skills</a>
+                <a href="contact.html" class="nav-link">Contact</a>
+            </div>
+            <div class="mobile-menu-toggle">
+                <span></span>
+                <span></span>
+                <span></span>
+            </div>
+        </div>
+    </nav>
+
+    <!-- About Section -->
+    <section class="about page-section">
+        <div class="container">
+            <!-- Personal Introduction -->
+            <div class="about-intro">
+                <div class="intro-text">
+                    <h3>About me</h3>
+                    <div id="about-introduction">
+                        <!-- Will be loaded dynamically from data.js -->
+                    </div>
+                </div>
+                <div class="intro-image">
+                    <div class="profile-placeholder" id="about-profile-image">
+                        <i class="fas fa-user"></i>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Quick Facts -->
+            <div class="quick-facts" id="quick-facts-container">
+                <!-- Will be loaded dynamically from data.js -->
+            </div>
+
+            <!-- What I Do -->
+            <div class="what-i-do">
+                <h3>What I Do</h3>
+                <div class="services-grid" id="services-container">
+                    <!-- Will be loaded dynamically from data.js -->
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <script src="data/data.js"></script>
+    <script src="scripts/page-script.js"></script>
+    <script>
+        // About page functionality
+        document.addEventListener('DOMContentLoaded', function() {
+            loadAboutData();
+            loadProfileImage();
+        });
+
+        function loadAboutData() {
+            if (!resumeData || !resumeData.about) {
+                console.log('Resume data not loaded yet, retrying...');
+                setTimeout(loadAboutData, 100);
+                return;
+            }
+
+            loadIntroduction();
+            loadQuickFacts();
+            loadServices();
+        }
+
+        function loadIntroduction() {
+            const container = document.getElementById('about-introduction');
+            if (!container) return;
+
+            const introHTML = resumeData.about.introduction.map(paragraph => 
+                `<p>${paragraph}</p>`
+            ).join('');
+
+            container.innerHTML = introHTML;
+        }
+
+        function loadQuickFacts() {
+            const container = document.getElementById('quick-facts-container');
+            if (!container) return;
+
+            const factsHTML = resumeData.about.quickFacts.map(fact => `
+                <div class="fact-card">
+                    <div class="fact-icon">
+                        <i class="${fact.icon}"></i>
+                    </div>
+                    <div class="fact-content">
+                        <h4>${fact.title}</h4>
+                        <p>${fact.content}${fact.subtitle ? `<br><small>${fact.subtitle}</small>` : ''}</p>
+                    </div>
+                </div>
+            `).join('');
+
+            container.innerHTML = factsHTML;
+        }
+
+        function loadServices() {
+            const container = document.getElementById('services-container');
+            if (!container) return;
+
+            const servicesHTML = resumeData.about.services.map(service => `
+                <div class="service-card">
+                    <div class="service-icon">
+                        <i class="${service.icon}"></i>
+                    </div>
+                    <h4>${service.title}</h4>
+                    <p>${service.description}</p>
+                </div>
+            `).join('');
+
+            container.innerHTML = servicesHTML;
+        }
+
+        function loadProfileImage() {
+            const profileImageContainer = document.getElementById('about-profile-image');
+            
+            function loadProfileImageSrc(imageSrc) {
+                if (imageSrc) {
+                    const img = new Image();
+                    img.onload = function() {
+                        profileImageContainer.innerHTML = '';
+                        profileImageContainer.style.backgroundImage = `url(${imageSrc})`;
+                        profileImageContainer.style.backgroundSize = 'cover';
+                        profileImageContainer.style.backgroundPosition = 'center';
+                        profileImageContainer.style.backgroundRepeat = 'no-repeat';
+                    };
+                    img.onerror = function() {
+                        console.log('Profile image failed to load, keeping default icon');
+                    };
+                    img.src = imageSrc;
+                }
+            }
+            
+            // Try multiple possible image formats and names
+            const possibleImages = [
+                'images/profile.jpg',
+                'images/pofile.jpg',  // In case of typo
+                'images/profile.jpeg', 
+                'images/profile.png',
+                'images/profile.webp'
+            ];
+            
+            // Try to load the first available image
+            function tryLoadImage(index = 0) {
+                if (index >= possibleImages.length) return;
+                
+                const img = new Image();
+                img.onload = function() {
+                    loadProfileImageSrc(possibleImages[index]);
+                };
+                img.onerror = function() {
+                    tryLoadImage(index + 1);
+                };
+                img.src = possibleImages[index];
+            }
+            
+            tryLoadImage();
+        }
+    </script>
+</body>
+</html>

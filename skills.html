@@ -1,0 +1,131 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Skills - Aykut KUTLU</title>
+    <link rel="stylesheet" href="styles.css">
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css" rel="stylesheet">
+</head>
+<body>
+    <!-- Navigation -->
+    <nav id="navbar">
+        <div class="nav-container">
+            <div class="nav-links">
+                <a href="index.html" class="nav-link">Home</a>
+                <a href="about.html" class="nav-link">About</a>
+                <a href="experience.html" class="nav-link">Experience</a>
+                <a href="projects.html" class="nav-link">Projects</a>
+                <a href="skills.html" class="nav-link active">Skills</a>
+                <a href="contact.html" class="nav-link">Contact</a>
+            </div>
+            <div class="mobile-menu-toggle">
+                <span></span>
+                <span></span>
+                <span></span>
+            </div>
+        </div>
+    </nav>
+
+    <!-- Skills Section -->
+    <section class="skills page-section">
+        <div class="container">
+            <!-- Skills Accordion -->
+            <div class="skills-accordion" id="skills-container">
+                <!-- Skills will be loaded dynamically from data.js -->
+            </div>
+        </div>
+    </section>
+
+    <script src="data/data.js"></script>
+    <script src="scripts/page-script.js"></script>
+    <script>
+        // Skills Page Functionality
+        document.addEventListener('DOMContentLoaded', function() {
+            initializeSkills();
+        });
+
+        function initializeSkills() {
+            loadSkillsData();
+        }
+
+        function initSkillsAccordion() {
+            const accordionItems = document.querySelectorAll('.skill-accordion-item');
+            
+            accordionItems.forEach(item => {
+                const header = item.querySelector('.skill-accordion-header');
+                const icon = item.querySelector('.skill-accordion-icon');
+                
+                header.addEventListener('click', function() {
+                    const isActive = item.classList.contains('active');
+                    
+                    // Close all items
+                    accordionItems.forEach(otherItem => {
+                        otherItem.classList.remove('active');
+                        otherItem.querySelector('.skill-accordion-icon').style.transform = 'rotate(0deg)';
+                    });
+                    
+                    // Toggle current item
+                    if (!isActive) {
+                        item.classList.add('active');
+                        icon.style.transform = 'rotate(180deg)';
+                    }
+                });
+            });
+        }
+
+        function loadSkillsData() {
+            if (!resumeData || !resumeData.skills) {
+                console.log('Resume data not loaded yet, retrying...');
+                setTimeout(loadSkillsData, 100);
+                return;
+            }
+
+            const container = document.getElementById('skills-container');
+            
+            resumeData.skills.forEach(skillGroup => {
+                if (skillGroup.name === "Programming Languages") {
+                    createSkillAccordion(container, skillGroup, 'fas fa-code', 'programming');
+                } else if (skillGroup.name === "Machine Learning Frameworks") {
+                    createSkillAccordion(container, skillGroup, 'fas fa-brain', 'ml');
+                } else if (skillGroup.type === 'list') {
+                    createSkillAccordion(container, skillGroup, 'fas fa-tools', 'tools');
+                }
+            });
+            
+            // Initialize accordion after all items are created
+            initSkillsAccordion();
+        }
+        
+        function createSkillAccordion(container, skillGroup, icon, sectionId) {
+            const accordionItem = document.createElement('div');
+            accordionItem.className = 'skill-accordion-item';
+            accordionItem.dataset.section = sectionId;
+            
+            const skillsHTML = skillGroup.skills.map(skill => {
+                const skillName = skill.name || skill;
+                return `<span class="skill-tag">${skillName}</span>`;
+            }).join('');
+            
+            accordionItem.innerHTML = `
+                <div class="skill-accordion-header">
+                    <h2>
+                        <i class="${icon}"></i>
+                        <span>${skillGroup.name}</span>
+                    </h2>
+                    <i class="fas fa-chevron-down skill-accordion-icon"></i>
+                </div>
+                <div class="skill-accordion-content">
+                    <div class="skill-tags-container">
+                        ${skillsHTML}
+                    </div>
+                </div>
+            `;
+            
+            container.appendChild(accordionItem);
+        }
+
+    </script>
+</body>
+</html>

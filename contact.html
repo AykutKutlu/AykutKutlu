@@ -1,0 +1,187 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Contact - Aykut KUTLU</title>
+    <link rel="stylesheet" href="styles.css">
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css" rel="stylesheet">
+</head>
+<body>
+    <!-- Navigation -->
+    <nav id="navbar">
+        <div class="nav-container">
+            <div class="nav-links">
+                <a href="index.html" class="nav-link">Home</a>
+                <a href="about.html" class="nav-link">About</a>
+                <a href="experience.html" class="nav-link">Experience</a>
+                <a href="projects.html" class="nav-link">Projects</a>
+                <a href="skills.html" class="nav-link">Skills</a>
+                <a href="contact.html" class="nav-link active">Contact</a>
+            </div>
+            <div class="mobile-menu-toggle">
+                <span></span>
+                <span></span>
+                <span></span>
+            </div>
+        </div>
+    </nav>
+
+    <!-- Contact Section -->
+    <section class="contact page-section">
+        <div class="container">
+            <!-- Call to Action -->
+            <div class="contact-cta">
+                <div class="cta-content">
+                    <h3 id="contact-title"><!-- Will be loaded from data.js --></h3>
+                    <p id="contact-subtitle"><!-- Will be loaded from data.js --></p>
+                    
+                    <!-- Current Time Display -->
+                    <div class="time-widget">
+                        <div class="widget-header">
+                            <h4><i class="fas fa-clock"></i> Current Time</h4>
+                        </div>
+                        <div class="time-display-widget">
+                            <div class="current-time-large">
+                                <span id="current-time"></span>
+                            </div>
+                            <div class="current-date-small">
+                                <span id="current-date"></span>
+                            </div>
+                            <div class="timezone-info">
+                                <i class="fas fa-map-marker-alt"></i>
+                                <span>Ankara, Türkiye (GMT+3)</span>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            
+            <!-- Contact Methods -->
+            <div class="contact-methods" id="contact-methods-container">
+                <!-- Will be loaded dynamically from data.js -->
+            </div>
+
+            <!-- Quick Info Cards -->
+            <div class="quick-contact-info" id="quick-info-container">
+                <!-- Will be loaded dynamically from data.js -->
+            </div>
+        </div>
+    </section>
+
+    <script src="data/data.js"></script>
+    <script src="scripts/page-script.js"></script>
+    <script>
+        // Contact page functionality
+        document.addEventListener('DOMContentLoaded', function() {
+            loadContactData();
+            initializeTimeDisplay();
+        });
+
+        function loadContactData() {
+            if (!resumeData || !resumeData.contact) {
+                console.log('Resume data not loaded yet, retrying...');
+                setTimeout(loadContactData, 100);
+                return;
+            }
+
+            loadContactHeader();
+            loadContactMethods();
+            loadQuickInfo();
+        }
+
+        function loadContactHeader() {
+            const titleElement = document.getElementById('contact-title');
+            const subtitleElement = document.getElementById('contact-subtitle');
+            
+            if (titleElement) titleElement.textContent = resumeData.contact.title;
+            if (subtitleElement) subtitleElement.textContent = resumeData.contact.subtitle;
+        }
+
+        function loadContactMethods() {
+            const container = document.getElementById('contact-methods-container');
+            if (!container) return;
+
+            const methodsHTML = resumeData.contact.methods.map(method => `
+                <div class="contact-method">
+                    <div class="method-icon">
+                        <i class="${method.icon}"></i>
+                    </div>
+                    <div class="method-content">
+                        <h3>${method.title}</h3>
+                        <p>${method.description}</p>
+                        <a href="${method.link}" ${method.target ? `target="${method.target}"` : ''} class="method-link">
+                            ${method.linkText}
+                            <i class="fas fa-external-link-alt"></i>
+                        </a>
+                    </div>
+                </div>
+            `).join('');
+
+            container.innerHTML = methodsHTML;
+        }
+
+        function loadQuickInfo() {
+            const container = document.getElementById('quick-info-container');
+            if (!container) return;
+
+            const quickInfoHTML = resumeData.contact.quickInfo.map(info => `
+                <div class="info-card">
+                    <div class="info-icon">
+                        <i class="${info.icon}"></i>
+                    </div>
+                    <div class="info-content">
+                        <h4>${info.title}</h4>
+                        <p>
+                            ${info.link ? 
+                                `<a href="${info.link}" target="_blank" style="color: inherit; text-decoration: none;">${info.content}</a>` : 
+                                info.content
+                            }
+                        </p>
+                        <small>${info.subtitle}</small>
+                    </div>
+                </div>
+            `).join('');
+
+            container.innerHTML = quickInfoHTML;
+        }
+
+        function initializeTimeDisplay() {
+            // Time functions
+            function updateDateTime() {
+                const now = new Date();
+                
+                const timeOptions = {
+                    hour: '2-digit',
+                    minute: '2-digit',
+                    second: '2-digit',
+                    hour12: false,
+                    timeZone: 'Europe/Istanbul'
+                };
+                
+                const dateOptions = {
+                    weekday: 'long',
+                    year: 'numeric',
+                    month: 'long',
+                    day: 'numeric',
+                    timeZone: 'Europe/Istanbul'
+                };
+                
+                const timeString = now.toLocaleTimeString('tr-TR', timeOptions);
+                const dateString = now.toLocaleDateString('en-US', dateOptions);
+                
+                const timeElement = document.getElementById('current-time');
+                const dateElement = document.getElementById('current-date');
+                
+                if (timeElement) timeElement.textContent = timeString;
+                if (dateElement) dateElement.textContent = dateString;
+            }
+            
+            // Initialize and update every second
+            updateDateTime();
+            setInterval(updateDateTime, 1000);
+        }
+    </script>
+</body>
+</html>
