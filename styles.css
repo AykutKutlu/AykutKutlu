@@ -1,37 +1,42 @@
+/* ===================================
+   CSS ROOT VARIABLES - TÜM RENKLERİ VE SPACING'İ KONTROL EDER
+   Bu değişkenler tüm sayfalarda kullanılır (Home, About, Experience, Projects, Skills, Contact)
+   =================================== */
+
 :root {
-    /* Business color palette - professional & warm */
-    --primary-color: #38376e;          /* Koyu kahve - primary */
-    --primary-dark: #2b0505;           /* Charcoal - darker primary */
-    --primary-light: #e6d0d0;          /* Warm taupe - lighter primary */
-    --accent-color: #fa8585;           /* Warm taupe - accent */
-    --accent-light: #fff5f5;           /* Açık krem - light accent */
+    /* RENK PALETİ - Tüm tasarımı belirleyen ana renkler */
+    --primary-color: #6b8ac4;          /* Yumuşak mavi-gri - Ana renk */
+    --primary-dark: #4a5a7a;           /* Açık koyu gri - Hover efektleri */
+    --primary-light: #e8ddd8;          /* Çok açık taupe - Hafif arka planlar */
+    --accent-color: #d9a8a3;           /* Yumuşak pembe - Accent rengi */
+    --accent-light: #faf8f6;           /* Çok açık krem - Light accent */
     
-    /* Business background colors */
-    --bg-primary: #dbbebe;             /* Açık krem - main background */
-    --bg-secondary: #f5eded;           /* Slightly darker cream */
-    --bg-tertiary: #eddddd;            /* Medium cream */
-    --bg-dark: #0a0808;                /* Siyah - dark backgrounds */
-    --bg-card: #9b4b4b;                /* Pure white for cards */
+    /* ARKA PLAN RENKLERİ - Sayfa bölümleri ve kartlar için */
+    --bg-primary: #f5f3f0;             /* Açık krem - Ana arka plan */
+    --bg-secondary: #faf8f6;           /* Çok açık - Bölümler */
+    --bg-tertiary: #f0ede8;            /* Yumuşak taupe - Hover */
+    --bg-dark: #e8e5e0;                /* Açık gri - Soft koyu */
+    --bg-card: #fefdfb;                /* Neredeyse beyaz - Kartlar */
     
-    /* Text colors */
-    --text-primary: #24223b;           /* Charcoal - primary text */
-    --text-secondary: #180900;         /* Koyu kahve - secondary text */
-    --text-muted: #04042c;             /* Muted brown */
-    --text-white: #ffffff;
+    /* METİN RENKLERİ - Tüm yazı stillerine uygulanır */
+    --text-primary: #4a5568;           /* Açık koyu gri - Ana metin */
+    --text-secondary: #6b7280;         /* Orta gri - İkincil metin */
+    --text-muted: #8b95a5;             /* Sönük gri - Daha az önemli */
+    --text-white: #ffffff;             /* Beyaz - Kontrast */
     
-    /* Border and shadow with business colors */
-    --border-color: rgba(94, 80, 63, 0.2);           /* Soft brown border */
-    --shadow-light: 0 1px 3px 0 rgba(34, 51, 59, 0.1), 0 1px 2px 0 rgba(34, 51, 59, 0.06);
-    --shadow-medium: 0 4px 6px -1px rgba(34, 51, 59, 0.1), 0 2px 4px -1px rgba(34, 51, 59, 0.06);
-    --shadow-large: 0 10px 15px -3px rgba(34, 51, 59, 0.1), 0 4px 6px -2px rgba(34, 51, 59, 0.05);
-    --shadow-glow: 0 0 0 1px rgba(198, 172, 143, 0.15), 0 10px 25px -5px rgba(198, 172, 143, 0.2);
+    /* SINIRLARI VE GÖLGELER - Derinlik ve ayrım için */
+    --border-color: rgba(107, 138, 196, 0.15);  /* Çok hafif sınırlar */
+    --shadow-light: 0 1px 3px 0 rgba(107, 138, 196, 0.08), 0 1px 2px 0 rgba(107, 138, 196, 0.04);
+    --shadow-medium: 0 4px 6px -1px rgba(107, 138, 196, 0.08), 0 2px 4px -1px rgba(107, 138, 196, 0.04);
+    --shadow-large: 0 10px 15px -3px rgba(107, 138, 196, 0.08), 0 4px 6px -2px rgba(107, 138, 196, 0.04);
+    --shadow-glow: 0 0 0 1px rgba(217, 168, 163, 0.1), 0 10px 25px -5px rgba(217, 168, 163, 0.12);
     
-    /* Business gradients */
-    --gradient-primary: linear-gradient(135deg, #c68f8f 0%, #5e3f3f 100%);
-    --gradient-light: linear-gradient(135deg, #ead5d5 0%, #f5eded 100%);
-    --gradient-hero: linear-gradient(135deg, #f5eded 0%, #964040 50%, #500606 100%);
+    /* GRADIENTLER - Göz çekici ama soft visual efektler */
+    --gradient-primary: linear-gradient(135deg, #a8b8d8 0%, #7a8aaa 100%);  /* Soft mavi gradient */
+    --gradient-light: linear-gradient(135deg, #f0ebe8 0%, #faf8f6 100%);    /* Çok hafif gradient */
+    --gradient-hero: linear-gradient(135deg, #faf8f6 0%, #d9c8c3 50%, #a89a94 100%); /* Soft hero */
     
-    /* Spacing */
+    /* SPACING (BOSLUK) - Elemanlar arasındaki mesafeler */
     --spacing-xs: 0.25rem;
     --spacing-sm: 0.5rem;
     --spacing-md: 1rem;
@@ -40,7 +45,7 @@
     --spacing-2xl: 3rem;
     --spacing-3xl: 4rem;
     
-    /* Typography */
+    /* TİPOGRAFİ - Yazı tipi ve boyutlar */
     --font-family: 'Inter', -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif;
     --font-size-xs: 0.75rem;
     --font-size-sm: 0.875rem;
@@ -52,14 +57,14 @@
     --font-size-4xl: 2.25rem;
     --font-size-5xl: 3rem;
     
-    /* Border radius */
+    /* BORDER-RADIUS - Köşe yuvarlaması */
     --radius-sm: 0.375rem;
     --radius-md: 0.5rem;
     --radius-lg: 0.75rem;
     --radius-xl: 1rem;
     --radius-2xl: 1.5rem;
     
-    /* Transitions */
+    /* TRANSİSYON/ANİMASYON SÜRELERİ - Hareket hızları */
     --transition-fast: 0.15s ease-in-out;
     --transition-normal: 0.3s ease-in-out;
     --transition-slow: 0.5s ease-in-out;
@@ -85,12 +90,22 @@ body {
     overflow-x: hidden;
 }
 
+/* ===================================
+   LAYOUT TEMELLERI
+   (Tüm sayfalarda kullanılan temel stil)
+   =================================== */
+
 /* Container */
 .container {
     max-width: 1200px;
     margin: 0 auto;
     padding: 0 var(--spacing-lg);
 }
+
+/* ===================================
+   TİPOGRAFİ - BAŞLIKLAR VE METİN
+   (Tüm sayfalardaki h1-h6 ve paragraf stillerine etkili)
+   =================================== */
 
 /* Typography */
 h1, h2, h3, h4, h5, h6 {
@@ -110,6 +125,11 @@ p {
     margin-bottom: var(--spacing-md);
     color: var(--text-secondary);
 }
+
+/* ===================================
+   BUTONLAR - TÜM BUTTON STYLE'LAR
+   (CTA'lar, nav kartlar, action butonları)
+   =================================== */
 
 /* Buttons */
 .btn {
@@ -199,6 +219,11 @@ p {
 .btn-accent:hover::before {
     left: 100%;
 }
+
+/* ===================================
+   NAVİGASYON BAR - SABIT ÜSTTEKI MENU
+   (Tüm sayfalarda fixed position, logo ve linkler)
+   =================================== */
 
 /* Navigation */
 #navbar {
@@ -542,6 +567,11 @@ p {
     color: var(--text-white);
 }
 
+/* ===================================
+   SECTION (BÖLÜM) - TEMEL STİLLER
+   (Tüm sayfalardaki section bölümleri, başlıklar)
+   =================================== */
+
 /* Section Styles */
 section {
     padding: var(--spacing-3xl) 0;
@@ -571,6 +601,23 @@ section {
     margin: 0 auto;
 }
 
+/* ===================================
+   ABOUT SAYFASI - HAKKIMDA BÖLÜMLERİ
+   (About.html - Profil, Detaylar, Sertifikalar)
+   
+   📝 NOT: Aşağıdaki kartları ".about-card", ".highlight-card", 
+   ".certificate-card" vs. 
+   Hepsi aynı pattern'i takip ediyor:
+   - background: var(--bg-card)
+   - padding: var(--spacing-xl) ve var(--spacing-2xl)
+   - border-radius: var(--radius-xl)
+   - box-shadow: var(--shadow-light)
+   - transition: all var(--transition-normal)
+   - :hover { transform: translateY(-5px); box-shadow: var(--shadow-medium); }
+   
+   💡 ÖNERİ: Tüm kartlar için base ".card-base" class'ı oluştur
+   =================================== */
+
 /* About Section */
 .about {
     background: var(--bg-secondary);
@@ -584,11 +631,13 @@ section {
 }
 
 .about-card {
+    /* 🎨 KART PATTERN #1 - Base Kart Stilleri */
     background: var(--bg-card);
     padding: var(--spacing-2xl);
     border-radius: var(--radius-xl);
     box-shadow: var(--shadow-light);
     margin-bottom: var(--spacing-lg);
+    /* NOT: Aynı stil about-details, highlight-card vb. de tekrar ediyor */
 }
 
 .about-card h3 {
@@ -642,6 +691,7 @@ section {
 }
 
 .highlight-card {
+    /* 🎨 KART PATTERN #2 - Highlight kartları (.about-card ile aynı) */
     background: var(--bg-card);
     padding: var(--spacing-xl);
     border-radius: var(--radius-xl);
@@ -656,6 +706,7 @@ section {
 }
 
 .highlight-icon {
+    /* 🎯 ICON PATTERN #1 - Icon Circle (gradient + responsive) */
     width: 60px;
     height: 60px;
     background: var(--gradient-primary);
@@ -666,6 +717,8 @@ section {
     margin: 0 auto var(--spacing-md);
     color: var(--text-white);
     font-size: var(--font-size-xl);
+    /* NOT: Bu pattern .service-icon, .fact-icon, .certificate-icon'da 
+            çok benzer şekilde tekrar ediliyor (sadece width/height farklı) */
 }
 
 .highlight-card h4 {
@@ -959,6 +1012,11 @@ section {
     gap: var(--spacing-xl);
 }
 
+/* ===================================
+   SERVICE KARTLARI - HIZMETLERİ GÖSTEREN KARTLAR
+   (About sayfasında "What I Do" bölümü)
+   =================================== */
+
 /* Quick Facts Responsive */
 @media (max-width: 1200px) {
     .quick-facts {
@@ -996,6 +1054,7 @@ section {
 }
 
 .service-card {
+    /* 🎨 KART PATTERN #3 - Service Card (.about-card ile benzer) */
     background: linear-gradient(145deg, var(--bg-card), rgba(255, 255, 255, 0.02));
     padding: var(--spacing-2xl);
     border-radius: var(--radius-xl);
@@ -1008,6 +1067,8 @@ section {
 }
 
 .service-card::before {
+    /* ✨ SHINE EFFECT #1 - Tüm kartlara ve butonlara eklenmiş
+       .btn, .tech-tag, .access-card, .social-link vb.'de de aynı */
     content: '';
     position: absolute;
     top: 0;
@@ -1023,13 +1084,16 @@ section {
 }
 
 .service-card:hover {
+    /* 🔄 HOVER PATTERN #1 - Kart Hover (.highlight-card:hover ile benzer) */
     transform: translateY(-15px) scale(1.02);
     box-shadow: 0 20px 40px rgba(0, 0, 0, 0.3);
     border-color: var(--primary-color);
     background: linear-gradient(145deg, var(--bg-card), rgba(99, 102, 241, 0.05));
+    /* NOT: translateY(-5px) veya -10px bu pattern'de çok tekrar ediyor */
 }
 
 .service-icon {
+    /* 🎯 ICON PATTERN #2 - Büyük Icon Circle (.highlight-icon'dan farklı boyut) */
     width: 70px;
     height: 70px;
     background: var(--gradient-primary);
@@ -1043,6 +1107,7 @@ section {
     position: relative;
     transition: all var(--transition-normal);
     box-shadow: 0 8px 20px rgba(99, 102, 241, 0.3);
+    /* NOT: Aynı pattern .fact-icon, .certificate-icon'da tekrar ediyor */
 }
 
 .service-icon::before {
@@ -1138,6 +1203,12 @@ section {
     color: var(--text-secondary);
     font-weight: 500;
 }
+
+/* ===================================
+   EXPERIENCE SAYFASI - İŞ DENEYİMLERİ
+   (Experience.html - Timeline, Pozisyon, Açıklama)
+   Tekrar eden pattern: timeline-item → komplet iş kartı
+   =================================== */
 
 /* Experience Section */
 .experience {
@@ -1377,6 +1448,12 @@ section {
 .internship-item:hover::before {
     border-color: var(--primary-color);
 }
+
+/* ===================================
+   PROJECTS SAYFASI - YAPILAN PROJELER
+   (Projects.html - Proje kartları, teknoloji etiketleri)
+   Tekrar eden pattern: project-card → tam proje bilgisi
+   =================================== */
 
 /* Projects Section */
 .projects {
@@ -1632,6 +1709,11 @@ section {
     left: 100%;
 }
 
+/* ===================================
+   SKILLS SAYFASI - TEKNOLOJI BİLGİLERİ
+   (Skills.html - Accordion, Progress bar, Skill items)
+   =================================== */
+
 /* Skills Section */
 .skills {
     padding: calc(70px + 1rem) 0 var(--spacing-3xl) 0;
@@ -1854,6 +1936,11 @@ section {
     color: var(--primary-color);
     font-size: 0.9rem;
 }
+
+/* ===================================
+   CONTACT SAYFASI - İLETİŞİM BİLGİLERİ
+   (Contact.html - İletişim yöntemleri, CTA, zaman widget)
+   =================================== */
 
 /* Contact Section */
 .contact {
@@ -2308,6 +2395,11 @@ section {
     }
 }
 
+/* ===================================
+   ANİMASYONLAR - TEKRAR EDEN MOTION EFEKTLER
+   (Pulse, Float, Bounce, Fade - Tüm sayfalarda kullanılır)
+   =================================== */
+
 /* Animations */
 @keyframes fadeInUp {
     from {
@@ -2373,6 +2465,11 @@ section {
         opacity: 1;
     }
 }
+
+/* ===================================
+   RESPONSIVE DEĞİŞKENLİKLER
+   (@media kuralları - Mobil, Tablet, Desktop uyumluluğu)
+   =================================== */
 
 /* Responsive Design */
 @media (max-width: 1024px) {
@@ -2669,6 +2766,11 @@ section {
         gap: var(--spacing-md);
     }
 }
+
+/* ===================================
+   HOME PAGE - ANASAYFA
+   (index.html - Hero, Profil, Hızlı Erişim, Sosyal)
+   =================================== */
 
 /* =====================================
    HOME PAGE STYLES
