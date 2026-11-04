@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="tr">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>FinansPro - Gizlilik Politikası</title>
+<style>
+  body { margin: 0; font-family: Arial, Helvetica, sans-serif; background: #f7f8fa; color: #1f2937; }
+  main { max-width: 720px; margin: 0 auto; padding: 32px 20px 64px; }
+  h1 { font-size: 26px; margin: 0 0 6px; }
+  h2 { font-size: 18px; margin: 28px 0 8px; color: #b45309; }
+  p, li { font-size: 15px; line-height: 1.65; }
+  ul { padding-left: 18px; }
+  .meta { color: #6b7280; font-size: 14px; }
+  a { color: #b45309; }
+</style>
+</head>
+<body>
+<main>
+  <h1>FinansPro Gizlilik Politikası</h1>
+  <p class="meta">Son güncelleme: 4 Kasım 2026</p>
+
+  <h2>1. Özet</h2>
+  <p>FinansPro, verilerinin büyük bölümünü cihazında saklayan bir finans uygulamasıdır. Portföyün, işlemlerin, favorilerin, fiyat alarmların ve sohbet geçmişi cihazındaki yerel veritabanında tutulur. Sunucu hesabı yoktur; portföy verin cihazından dışarı çıkmaz.</p>
+
+  <h2>2. Hangi verileri işleriz?</h2>
+  <ul>
+    <li><strong>Hesap verisi (opsiyonel):</strong> Google ile giriş kullanırsan e-posta, ad ve profil fotoğrafın Firebase Authentication üzerinden işlenir. Bu bilgiler yalnızca uygulama içi hesabının tanınması için kullanılır.</li>
+    <li><strong>Cihaz içi veriler:</strong> Portföyün (varlıklar, adetler, maliyetler), favoriler, fiyat alarmları ve sohbet geçmişi. Bunlar yalnızca cihazındaki yerel SQLite veritabanında saklanır; sunucumuz yoktur.</li>
+    <li><strong>API anahtarları:</strong> Kendi yapay zeka sağlayıcın (OpenAI, Gemini, Kimi, DeepSeek, Ollama Cloud) için girdiğin anahtarlar cihazda Android Keystore ile şifrelenmiş olarak saklanır. Anahtarın cihazdan çıkmaz.</li>
+    <li><strong>Reklam:</strong> AdMob banner reklamcılığı reklam kimliği (advertising ID) cihaz kimliğine erişebilir; ayrıntılar Google'ın gizlilik politikasındadır.</li>
+  </ul>
+
+  <h2>3. Verileri hangi durumda paylaşırız?</h2>
+  <p>Portföy verin uygulamadan dışarı çıkmaz. Aşağıdaki istekler yalnızca piyasa verisi görüntülemek için üçüncü taraf servislerine gider:</p>
+  <ul>
+    <li>Yahoo Finance: hisse, endeks, döviz ve emtia fiyat geçmişleri</li>
+    <li>Binance: kripto canlı fiyat akışı</li>
+    <li>Finansal medya RSS kaynakları: Türkçe haber başlıkları</li>
+    <li>AdMob / Google: reklam gösterimi</li>
+    <li>Yapay zeka sağlayıcın: kendi anahtarınla, yalnızca soru sorduğun anda, seçtiğin sağlayıcının (OpenAI, Google, Moonshot, DeepSeek, Ollama) sunucusuna. Anahtar tanımlı değilse hiçbir yapay zeka isteği gönderilmez.</li>
+  </ul>
+
+  <h2>4. Verilerini nasıl silersin?</h2>
+  <p>Uygulamayı kaldırabilir ya da uygulama içi Ayarlar'dan verileri sıfırlayabilirsin. Google hesabıyla oluşturulan kaydı Firebase hesap silme üzerinden kaldırabilirsin. Destek istersen:</p>
+  <p><a href="mailto:support@finanspro.app">support@finanspro.app</a></p>
+
+  <h2>5. Çocuklar</h2>
+  <p>FinansPro 18 yaş ve üzeri kullanıcılara yöneliktir. 13 yaş altı kullanım desteklenmez.</p>
+
+  <h2>6. Değişiklikler</h2>
+  <p>Bu politika zaman zaman güncellenir; güncel sürüme her zaman bu sayfadan ulaşabilirsin.</p>
+
+  <h2>7. İletişim</h2>
+  <p><a href="mailto:support@finanspro.app">support@finanspro.app</a></p>
+</main>
+</body>
+</html>
