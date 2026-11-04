@@ -1,5 +1,5 @@
-# app-ads.txt — IAB Tech Lab standardına göre AdMob/AdSense tarafından üretilen satır
+﻿# app-ads.txt — IAB Tech Lab standardına göre AdMob/AdSense tarafından üretilen satır
 # Yayın yeri: geliştirici web sitesinin KÖK dizini (örnek: https://ornekalanadi.com/app-ads.txt)
 # ÖNEMLİ: Alan adı Google Play Console'da kayıtlı geliştirici web sitesiyle birebir aynı olmalı.
-# Bu satır aynı yayıncı hesabını kullanan TÜM Kutvoks uygulamalarını (FinansPro, Bütçe Takip) kapsar.
+# Bu satır aynı yayıncı hesabını kullanan TÜM Kutvoks uygulamalarını (OPS: Financial Support, Bütçe Takip) kapsar.
 google.com, pub-6479015583137008, DIRECT, f08c47fec0942fa0
