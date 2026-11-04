@@ -1,44 +1,198 @@
 <!DOCTYPE html>
 <html lang="tr">
 <head>
-<meta charset="UTF-8">
-<meta name="viewport" content="width=device-width, initial-scale=1">
-<title>FinansPro - Finans ve Portföy Takip Uygulaması</title>
-<style>
-  body { margin: 0; font-family: Arial, Helvetica, sans-serif; background: #f7f8fa; color: #1f2937; }
-  main { max-width: 720px; margin: 0 auto; padding: 32px 20px 64px; }
-  h1 { font-size: 26px; margin: 0 0 6px; }
-  h2 { font-size: 18px; margin: 28px 0 8px; color: #b45309; }
-  p, li { font-size: 15px; line-height: 1.65; }
-  ul { padding-left: 18px; }
-  .tag { color: #6b7280; font-size: 14px; }
-  a { color: #b45309; }
-  footer { border-top: 1px solid #e5e7eb; margin-top: 40px; padding-top: 12px; color: #6b7280; font-size: 13px; }
-</style>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Kutvoks — Android Uygulama Geliştiricisi</title>
+    <meta name="description" content="Kutvoks, Android uygulamaları geliştiren bir bağımsız geliştirici hesabıdır. FinansPro: BIST, kripto, döviz ve altın takibi. Bütçe Takip: pratik gider ve bütçe yönetimi.">
+    <meta property="og:title" content="Kutvoks — Android Uygulama Geliştiricisi">
+    <meta property="og:description" content="FinansPro ve Bütçe Takip — Google Play'de yayınlanan Android uygulamaları.">
+    <meta property="og:type" content="website">
+    <link rel="icon" type="image/png" href="images/kutvoks/kutvoks-icon.png">
+    <link rel="stylesheet" href="styles.css">
+    <link href="https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@400;500;600;700&display=swap" rel="stylesheet">
 </head>
 <body>
+
+<header class="site-header">
+    <div class="wrap">
+        <a class="brand" href="index.html">
+            <img src="images/kutvoks/kutvoks-icon.png" alt="Kutvoks logosu">
+            <span><b>Kutvoks</b><span>app studio</span></span>
+        </a>
+        <nav class="nav-links">
+            <a href="#uygulamalar">Uygulamalar</a>
+            <a href="#hakkinda">Hakkında</a>
+            <a href="mailto:support@finanspro.app">Destek</a>
+        </nav>
+    </div>
+</header>
+
 <main>
-  <h1>FinansPro</h1>
-  <p class="tag">Finans ve portföy takip uygulaması (Android)</p>
 
-  <h2>Nedir?</h2>
-  <p>FinansPro; BIST ve ABD hisseleri, kripto paralar, döviz, altın ve emtiayı tek ekranda takip etmeni sağlayan bir Android uygulamasıdır. Portföyünü kurar, kâr/zararını izler, yapay zeka asistanı OPS ile sohbet edersin.</p>
+    <!-- HERO -->
+    <section class="hero">
+        <div class="wrap hero-grid">
+            <div>
+                <span class="eyebrow"><span class="dot"></span>Google Play Geliştirici Hesabı</span>
+                <h1>Piyasa gözünü, bütçeni <em>tek yerde.</em></h1>
+                <p class="lead">Kutvoks, günlük finansta işe yarayan Android uygulamaları geliştirir. Piyasaları tek ekranda izle, giderlerini dakikalarca kaydet.</p>
+                <div class="hero-actions">
+                    <a href="#uygulamalar" class="btn btn-primary">Uygulamaları Gör</a>
+                    <a href="https://play.google.com/store/apps/developer?id=Kutvoks" target="_blank" class="btn btn-ghost">Play Store'da Kutvoks</a>
+                </div>
+                <p class="hero-en">Build · <b>Innovate</b> · Publish</p>
+            </div>
 
-  <h2>Nereden indirilir?</h2>
-  <p>Uygulama Google Play'de yayın aşamasındadır. Yayın sonrası mağaza bağlantısı burada paylaşılır.</p>
+            <div class="hero-visual">
+                <div class="brand-tile">
+                    <img src="images/kutvoks/kutvoks-icon.png" alt="Kutvoks KV kalkan logosu">
+                    <p><strong>Kutvoks</strong>Bağımsız bir geliştirici stüdyosu. Uygulamalar cihazda çalışır, veri cihazda kalır.</p>
+                </div>
+                <a class="chip" href="https://play.google.com/store/apps/details?id=com.finanspro" target="_blank">
+                    <img src="images/apps/finanspro-ops.png" alt="FinansPro simgesi">
+                    <span><span class="chip-name">FinansPro</span><br><span class="chip-tag">BIST · Kripto · Döviz · OPS yapay zekâ</span></span>
+                    <span class="go">→</span>
+                </a>
+                <a class="chip" href="https://play.google.com/store/apps/details?id=com.butceapp" target="_blank">
+                    <img src="images/apps/butce-icon.png" alt="Bütçe Takip simgesi">
+                    <span><span class="chip-name">Bütçe Takip</span><br><span class="chip-tag">Gider · Fiş tarama · Rapor · Projeksiyon</span></span>
+                    <span class="go">→</span>
+                </a>
+            </div>
+        </div>
+    </section>
 
-  <h2>Önemli bağlantılar</h2>
-  <ul>
-    <li><a href="gizlilik.html">Gizlilik Politikası</a></li>
-    <li><a href="app-ads.txt">app-ads.txt</a> (AdMob için, kök dizinde)</li>
-  </ul>
+    <!-- BANNER -->
+    <section class="banner-section">
+        <div class="wrap">
+            <figure class="banner-frame" style="margin:0">
+                <img src="images/kutvoks/banner.png" alt="Kutvoks — Developer: Build, Innovate, Publish" width="2000" height="1000">
+            </figure>
+            <figcaption class="banner-caption">
+                <span><b>Kutvoks</b> · Android app studio</span>
+                <span>Google Play · AdMob</span>
+            </figcaption>
+        </div>
+    </section>
 
-  <h2>İletişim</h2>
-  <p>Soru, öneri ve hata bildirimleri için: <a href="mailto:support@finanspro.app">support@finanspro.app</a></p>
+    <!-- APPS -->
+    <section class="section" id="uygulamalar">
+        <div class="wrap">
+            <div class="section-head">
+                <h2>Yayındaki uygulamalar</h2>
+                <p><span class="kick">Apps</span>Google Play'de ücretsiz olarak yayınlanır; reklamlar AdMob üzerinden gösterilir.</p>
+            </div>
 
-  <footer>
-    <p>FinansPro yatırım tavsiyesi sunmaz; içerikler bilgilendirme amaçlıdır. 2026.</p>
-  </footer>
+            <div class="apps-grid">
+                <!-- FinansPro -->
+                <article class="app-card">
+                    <div class="app-head">
+                        <img src="images/apps/finanspro-ops.png" alt="FinansPro simgesi">
+                        <div>
+                            <h3 class="name">FinansPro</h3>
+                            <p class="tagline">BIST, kripto, döviz ve altın tek ekranda</p>
+                        </div>
+                    </div>
+                    <p class="app-desc">Portföyünü kur, kâr/zararını anlık izle, fiyat alarmları kur ve OPS yapay zekâ asistanıyla piyasa sorularını sor.</p>
+                    <ul class="app-features">
+                        <li>BIST hisseleri, ABD borsaları, kripto, döviz, altın ve emtia akışı</li>
+                        <li>OPS yapay zekâ asistanı — kendi API anahtarınla</li>
+                        <li>Fiyat alarmları, favoriler ve finansal RSS haberleri</li>
+                    </ul>
+                    <div class="app-actions">
+                        <span class="live-dot">Google Play'de yayında</span>
+                        <a class="btn btn-accent btn-sm" href="https://play.google.com/store/apps/details?id=com.finanspro" target="_blank">İndir</a>
+                        <a class="btn btn-ghost btn-sm" href="finanspro.html">Detaylar</a>
+                    </div>
+                </article>
+
+                <!-- Bütçe Takip -->
+                <article class="app-card">
+                    <div class="app-head">
+                        <img src="images/apps/butce-icon.png" alt="Bütçe Takip simgesi">
+                        <div>
+                            <h3 class="name">Bütçe Takip</h3>
+                            <p class="tagline">Giderleri dakikalarca kaydet, aile bütceni yönet</p>
+                        </div>
+                    </div>
+                    <p class="app-desc">Hızlı gider girişi, fiş tarama, trend grafikleri, PDF raporlar ve yapay zekâ destekli bütçe projeksiyonu.</p>
+                    <ul class="app-features">
+                        <li>Kişi, kategori ve tekrarlayan gider takibi</li>
+                        <li>Kamera ile fiş tarama, PDF/Excel rapor çıkışı</li>
+                        <li>Ay sonu tahminleri ve birikim projeksiyonu</li>
+                    </ul>
+                    <div class="app-actions">
+                        <span class="live-dot">Google Play'de yayında</span>
+                        <a class="btn btn-accent btn-sm" href="https://play.google.com/store/apps/details?id=com.butceapp" target="_blank">İndir</a>
+                        <a class="btn btn-ghost btn-sm" href="butce-takip.html">Detaylar</a>
+                    </div>
+                </article>
+            </div>
+        </div>
+    </section>
+
+    <!-- ABOUT -->
+    <section class="section" id="hakkinda" style="padding-top: 12px;">
+        <div class="wrap">
+            <div class="section-head">
+                <h2>Uygulamalara nasıl inanıyoruz</h2>
+                <p>Takip ettiğin şey senindir. Kutvoks uygulamaları hesap açtırmadan çalışır ve verinin cihazında saklar.</p>
+            </div>
+            <div class="value-rows">
+                <div class="value-row">
+                    <span class="num">01</span>
+                    <h3>Veri cihazında kalır</h3>
+                    <p>Piyasa verisi dışına çıkmaz; portföyler, giderler ve raporlar cihazındaki veritabanında tutulur. Sunucu hesabı yoktur.</p>
+                </div>
+                <div class="value-row">
+                    <span class="num">02</span>
+                    <h3>Türkçe öncelik</h3>
+                    <p>Arayüzler Türkçe tasarlanır, İngilizce desteği ikinci dildir. BIST haber akışı ve TL birimleri yerleşiktir.</p>
+                </div>
+                <div class="value-row">
+                    <span class="num">03</span>
+                    <h3>Takip etmek kolay olmalı</h3>
+                    <p>Bir gider kaydetmek için dokuz alan doldurmak gerekmez. Hızlı giriş, fiş okutma ve akıllı kategoriler standart özelliktir.</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
 </main>
+
+<footer class="site-footer">
+    <div class="wrap">
+        <div class="footer-grid">
+            <div class="footer-col footer-brand">
+                <a class="brand" href="index.html">
+                    <img src="images/kutvoks/kutvoks-icon.png" alt="Kutvoks logosu">
+                    <span><b>Kutvoks</b><span>app studio</span></span>
+                </a>
+                <p>Android uygulamaları: Build · Innovate · Publish</p>
+            </div>
+            <div class="footer-col">
+                <h4>Uygulamalar</h4>
+                <a href="https://play.google.com/store/apps/details?id=com.finanspro" target="_blank">FinansPro</a>
+                <a href="https://play.google.com/store/apps/details?id=com.butceapp" target="_blank">Bütçe Takip</a>
+            </div>
+            <div class="footer-col">
+                <h4>Bilgiler</h4>
+                <a href="gizlilik.html">Gizlilik Politikası</a>
+                <a href="butce-gizlilik.html">Bütçe Takip Gizlilik</a>
+                <a href="app-ads.txt">app-ads.txt</a>
+            </div>
+            <div class="footer-col">
+                <h4>İletişim</h4>
+                <a href="mailto:support@finanspro.app">support@finanspro.app</a>
+            </div>
+        </div>
+        <div class="footer-bottom">
+            <span>© 2026 Kutvoks. Tüm hakları saklıdır.</span>
+            <span>Uygulamalar yatırım tavsiyesi sunmaz.</span>
+        </div>
+    </div>
+</footer>
+
 </body>
 </html>

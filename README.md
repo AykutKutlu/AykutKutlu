@@ -1,38 +1,51 @@
-Aykut Kutlu — Data Scientist Portfolio 🌐📊
-Welcome to my personal portfolio website, where I showcase my projects, skills, and professional background as a data scientist specializing in financial analysis, predictive modeling, and humanitarian data solutions.
+# Kutvoks — App Studio 🧭
 
-🚀 About Me
-I'm a data scientist with hands-on experience in financial forecasting, valuation modeling, and end-to-end data science workflows. My expertise spans machine learning, time series analysis, and data engineering. I have a strong background in designing interactive dashboards and data pipelines that transform complex datasets into actionable insights for strategic decision-making.
+Kutvoks, Google Play'de yayınlanan Android uygulamalarının geliştirici hesabına ait resmi web sitesidir.
+GitHub Pages üzerinden yayınlanır.
 
-🛠️ Tech Stack
-Programming Languages: Python, R, SQL, JavaScript
+## Yayındaki uygulamalar
 
-Data Science & ML: XGBoost, LSTM, ARIMA, Scikit-learn, Statsmodels
+| Uygulama | Açıklama | Play Store | Gizlilik |
+|---|---|---|---|
+| **FinansPro** | BIST, kripto, döviz, altın ve emtia takibi; OPS yapay zekâ asistanı | [Play](https://play.google.com/store/apps/details?id=com.finanspro) | [gizlilik.html](gizlilik.html) |
+| **Bütçe Takip** (Budget Tracker) | Hızlı gider kaydı, fiş tarama, raporlar, bütçe projeksiyonu | [Play](https://play.google.com/store/apps/details?id=com.butceapp) | [butce-gizlilik.html](butce-gizlilik.html) |
 
-Dashboards & Apps: Streamlit, R Shiny
+## Yayınla ilgili dosyalar (DOKUNMA!)
 
-GIS & Spatial Analysis: GeoPandas, QGIS, sf (R), tmap, Leaflet
+- **`app-ads.txt`** → AdMob satıcı beyanı. Kök dizinde olmalı; alt yolda AdMob doğrulamaz.
+  İçeriği: `google.com, pub-6479015583137008, DIRECT, f08c47fec0942fa0` — aynı yayıncı hesabını kullanan tüm uygulamaları (FinansPro, Bütçe Takip) kapsar, yeni uygulamada değiştirilmez.
+- **`gizlilik.html`** → FinansPro gizlilik politikası. Play Console ve AdMob veri güvenliği formlarında kullanılan URL'dir; adını değiştirme.
+- **`butce-gizlilik.html`** → Bütçe Takip gizlilik politikası.
 
-Data Engineering: Pandas, Numpy, ETL Pipelines, API Integrations
+## Sayfa yapısı
 
-Visualization: Plotly, ggplot2, Matplotlib, Power BI
+```
+index.html           Ana sayfa (hero, banner, uygulama kartları, değerler)
+finanspro.html       FinansPro uygulama sayfası
+butce-takip.html     Bütçe Takip uygulama sayfası
+gizlilik.html        FinansPro gizlilik politikası (kök düzeyinde kal — URL sabit)
+butce-gizlilik.html  Bütçe Takip gizlilik politikası
+styles.css           Tek ortak stil (Space Grotesk, mavi/turuncu Kutvoks marka paleti)
+images/kutvoks/      Marka: logo (kutvoks-icon.png) + developer banner (banner.png)
+images/apps/         Uygulama ikonları: finanspro-ops.png, butce-icon.png
+```
 
-Tools: Git, Docker, Jupyter, Posit Connect, ShinyApps.io
+## Yeni uygulama ekleme kontrol listesi
 
-📂 Featured Projects
-Project	Description	Link
-Real-Time Data Integration with ODK API	Automated data pipeline and dashboard for real-time monitoring.	Live App
-MEB Calculation Tool	Dynamic Shiny app for Minimum Expenditure Basket calculations.	Live App
-Financial Time Series Forecasting App	Interactive forecasting tool using ARIMA, XGBoost, and LSTM models.	Live App
-FSP Mapping Dashboard	Geospatial dashboard mapping financial service coverage and vulnerabilities.	Live App
-Sentiment Analysis App	Streamlit app for analyzing and visualizing user feedback sentiment.	Live App
+1. `images/apps/` içine 512×512 PNG ikon koy.
+2. `index.html` içindeki `.apps-grid` bölümüne yeni bir `.app-card` ekle (ikon, açıklama, Play linki).
+3. Ayrıca hero'daki `.chip` listesine de ekle.
+4. Uygulama detay sayfası oluştur: `finanspro.html`'i kopyalayıp uyarla.
+5. Gizlilik politikası ekle: `butce-gizlilik.html`'i kopyalayıp uyarla; footer'a linkini at.
+6. Aynı AdMob yayıncı hesabındaysan `app-ads.txt` değeri aynı kalır.
+7. Play Console'daki geliştirici web sitesi alanı bu sitenin adresiyle birebir aynı olmalı.
 
-📫 Contact
-Email: aykutkutlu811@gmail.com
+## Yayın (GitHub Pages)
 
-LinkedIn: [linkedin.com/in/aykutkutlu](https://www.linkedin.com/in/aykut-kutlu-562867236/)
+1. Push sonrası `Settings → Pages → Deploy from a branch → main / (root)`.
+2. Canlı adres: `https://aykutkutlu.github.io/AykutKutlu/`. Özel domain eklersen `app-ads.txt` kök dizinde kalmaya devam etmeli ve Play Console'daki site adresini güncellemelisin.
+3. AdMob → Uygulama ayarları → app-ads.txt sekmesinden doğrulamayı (gerekirse "Tekrar tarama") 24 saat sonra kontrol et.
 
-GitHub: [github.com/aykutkutlu](https://github.com/AykutKutlu)
+## İletişim
 
-My Personal Site: [Personal](https://aykutkutlu.github.io/AykutKutlu/)
-
+Destek ve hata bildirimleri: support@finanspro.app
