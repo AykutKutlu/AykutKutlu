@@ -26,8 +26,13 @@ butce-takip.html     Bütçe Takip uygulama sayfası
 gizlilik.html        OPS: Financial Support gizlilik politikası (kök düzeyinde kal — URL sabit)
 butce-gizlilik.html  Bütçe Takip gizlilik politikası
 styles.css           Tek ortak stil (Space Grotesk, mavi/turuncu Kutvoks marka paleti)
+lang.js              TR/EN dil seçimi (sadece index) + scroll animasyonları + video slot
 images/kutvoks/      Marka: logo (kutvoks-icon.png) + developer banner (banner.png)
 images/apps/         Uygulama ikonları: ops-icon.png, butce-icon.png
+images/ops/mood/     OPS "Şikko" maskot ruh hâlleri (idle/happy/thinking/alert/sleeping/listening)
+images/butce/        Bütçe Takip ekran görüntüleri + fiş örneği
+videos/              (Boş) Tanıtım videoları: videos/ops-demo.mp4, videos/butce-demo.mp4
+                     → dosya koyulduğunda sayfadaki video alanı otomatik olarak o oynatıcıya geçer
 ```
 
 ## Yeni uygulama ekleme kontrol listesi
@@ -48,4 +53,4 @@ images/apps/         Uygulama ikonları: ops-icon.png, butce-icon.png
 
 ## İletişim
 
-Destek ve hata bildirimleri: support@finanspro.app
+Destek ve hata bildirimleri: aykutkutlu08@gmail.com

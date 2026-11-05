@@ -4,14 +4,16 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>OPS: Financial Support — BIST, Kripto, Döviz ve Altın Takip | Kutvoks</title>
-    <meta name="description" content="OPS: Financial Support; BIST ve ABD hisseleri, kripto paralar, döviz, altın ve emtiayı tek ekranda takip etmeni sağlayan Android uygulamasıdır. OPS yapay zekâ asistanıyla piyasa sorularını sor.">
+    <meta name="description" content="OPS: Financial Support; BIST ve ABD hisseleri, 23 ülke borsası, kripto, döviz ve emtiayı tek ekranda takip edin. OPS yapay zekâ asistanıyla piyasa sorun, backtest ve Monte Carlo ile analiz edin.">
     <link rel="icon" type="image/png" href="images/kutvoks/kutvoks-icon.png">
     <link rel="stylesheet" href="styles.css">
     <link href="https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@400;500;600;700&display=swap" rel="stylesheet">
 </head>
 <body>
 
-<header class="site-header">
+<div class="scroll-progress" aria-hidden="true"><span id="scrollProgressBar"></span></div>
+
+<header class="site-header" id="siteHeader">
     <div class="wrap">
         <a class="brand" href="index.html">
             <img src="images/kutvoks/kutvoks-icon.png" alt="Kutvoks logosu">
@@ -19,95 +21,281 @@
         </a>
         <nav class="nav-links">
             <a href="index.html#uygulamalar">Uygulamalar</a>
-            <a href="mailto:support@finanspro.app">Destek</a>
+            <a href="mailto:aykutkutlu08@gmail.com">Destek</a>
         </nav>
     </div>
 </header>
 
+<nav class="subnav" aria-label="Sayfa bölümü">
+    <div class="wrap">
+        <a href="#genel">Genel Bakış</a>
+        <a href="#ozellikler">Özellikler</a>
+        <a href="#analiz">Analiz Kiti</a>
+        <a href="#tanitim">Tanıtım</a>
+        <a href="#ops-maskot">OPS Maskot</a>
+        <a href="#sss">SSS</a>
+    </div>
+</nav>
+
 <main>
 
-    <section class="app-hero">
-        <div class="wrap">
-            <a class="back-link" href="index.html#uygulamalar">Kutvoks uygulamaları</a>
-            <div class="app-hero-grid">
-                <img src="images/apps/ops-icon.png" alt="OPS: Financial Support simgesi">
-                <div>
-                    <h1>OPS: Financial Support</h1>
-                    <p class="tagline">BIST ve ABD hisseleri, kripto paralar, döviz, altın ve emtiayı tek ekranda takip et. Portföyünü kur, kâr/zararını izle, OPS ile sohbet et.</p>
-                    <div class="app-meta">
-                        <span class="meta-pill">Kategori: <b>Finans</b></span>
-                        <span class="meta-pill">Sürüm: <b>2.10.1</b></span>
-                        <span class="meta-pill">Fiyat: <b>Ücretsiz</b></span>
-                        <span class="meta-pill">Yapay zekâ: <b>OPS</b></span>
+    <!-- HERO -->
+    <section id="genel" class="appsplit">
+        <div class="wrap app-hero-grid">
+            <div>
+                <a class="back-link" href="index.html#uygulamalar">Kutvoks uygulamaları</a>
+                <h1 data-reveal>OPS: Financial Support</h1>
+                <p class="tagline" data-reveal style="--rd:80ms">BIST ve ABD hisseleri, 23 ülke borsası, kripto, döviz ve emtiayı tek ekranda takip et. Portföyünü kur, kâr/zararını anında gör, piyasayı OPS'ye sor.</p>
+                <div class="app-meta" data-reveal style="--rd:160ms">
+                    <span class="meta-pill">Kategori: <b>Finans</b></span>
+                    <span class="meta-pill">Sürüm: <b>2.11.0</b></span>
+                    <span class="meta-pill">Fiyat: <b>Ücretsiz</b></span>
+                    <span class="meta-pill">Dil: <b>Türkçe / English</b></span>
+                </div>
+                <div class="app-hero-actions" data-reveal style="--rd:240ms">
+                    <a class="btn btn-accent" href="https://play.google.com/store/apps/details?id=com.finanspro" target="_blank">Google Play'de Aç ↓</a>
+                    <a class="btn btn-ghost" href="gizlilik.html">Gizlilik Politikası</a>
+                </div>
+            </div>
+            <div class="phone-stage" data-reveal style="--rd:160ms">
+                <div class="phone" data-parallax>
+                    <div class="screen">
+                        <div class="demo-reel">
+                            <figure>
+                                <img src="images/ops/mood/coin-idle.png" alt="OPS maskotu — sakin mod">
+                                <figcaption>OPS hazır — piyasayı dinliyor</figcaption>
+                            </figure>
+                            <figure>
+                                <img src="images/ops/mood/coin-thinking.png" alt="OPS maskotu — düşünüyor">
+                                <figcaption>Analiz hesaplanıyor…</figcaption>
+                            </figure>
+                        </div>
                     </div>
                 </div>
-                <div class="app-hero-actions">
-                    <a class="btn btn-accent" href="https://play.google.com/store/apps/details?id=com.finanspro" target="_blank">
-                        Google Play'de Aç
-                    </a>
-                </div>
             </div>
         </div>
     </section>
 
-    <section class="section">
+    <!-- STAT BAND -->
+    <section class="section" style="padding-top: 26px;">
         <div class="wrap">
+            <div class="stat-band" data-reveal>
+                <div class="stat"><b>23</b><span>ülke borsası keşfi ve arama desteği</span></div>
+                <div class="stat"><b>10+ yıl</b><span>derin fiyat geçmişi (backtest kaynağı)</span></div>
+                <div class="stat accent"><b>400+</b><span>BIST hissesi, Türkçe adlarıyla</span></div>
+                <div class="stat"><b>5</b><span>varlık sınıfı: hisse · kripto · endeks · döviz · emtia</span></div>
+            </div>
+        </div>
+    </section>
+
+    <!-- FEATURES -->
+    <section class="section" id="ozellikler" style="padding-top: 10px;">
+        <div class="wrap">
+            <div class="section-head" data-reveal>
+                <h2>Tüm market, tek uygulamada</h2>
+                <p><span class="kick">Features</span>Basit takipten kurumsal analiz kitiye — her katman cihazında çalışır.</p>
+            </div>
             <div class="feature-grid">
-                <div class="feature-block tint-blue">
+                <div class="feature-block tint-blue" data-reveal>
                     <span class="flabel">Piyasa</span>
-                    <h3>Tüm market tek ekranda</h3>
-                    <p>Yahoo Finance fiyat geçmişleriyle hisse, endeks, döviz ve emtia; Binance akışıyla kripto.</p>
+                    <h3>Dünyanın marketi tek ekranda</h3>
+                    <p>Yahoo Finance fiyat geçmişleriyle hisse, endeks, döviz ve emtia; Binance akışıyla kripto. 15 dakikalık otomatik fiyat turları.</p>
                     <ul>
-                        <li>BIST, ABD borsaları, forex ve emtia fiyat akışı</li>
-                        <li>Kripto canlı fiyat takibi</li>
-                        <li>Favori listesi ve fiyat alarmları</li>
+                        <li>BIST, ABD, 23 ülke borsası + 10 yıl geçmiş</li>
+                        <li>Canlı kripto fiyatları (Binance)</li>
+                        <li>Favoriler, arama ve fiyat alarmları</li>
                     </ul>
                 </div>
-                <div class="feature-block tint-orange">
+                <div class="feature-block tint-orange" data-reveal style="--rd:120ms">
                     <span class="flabel">OPS — Yapay Zekâ Asistanı</span>
-                    <h3>Piyasayı soru sormadan anla</h3>
-                    <p>OPS, portföyünden ve piyasa verisinden bahseden bir sohbet asistanıdır. Kendi API anahtarını kullanırsın; anahtar cihazda şifreli saklanır.</p>
+                    <h3>Piyasayı soru sorarak anla</h3>
+                    <p>OPS, senin portföyünü ve gerçek piyasa verisini okuyup yanıt veren bir sohbet asistanıdır. Anahtarın sana aittir, cihazda şifreli saklanır.</p>
                     <ul>
-                        <li>OpenAI, Gemini, Moonshot (Kimi), DeepSeek, Ollama desteği</li>
-                        <li>Anahtar Android Keystore ile cihazda şifreli</li>
+                        <li>OpenAI · Gemini · DeepSeek · Kimi · Ollama</li>
+                        <li>Haber başlığı analizine kadar geniş bağlam</li>
+                        <li>Anahtar Android Keystore ile cihazda</li>
                     </ul>
                 </div>
-                <div class="feature-block">
+                <div class="feature-block" data-reveal>
                     <span class="flabel">Portföy</span>
                     <h3>Kâr/zararın anlık tablosu</h3>
-                    <p>Varlık, adet ve maliyetini gir; ortalama maliyet, anlık değer ve getiriyi tek tabloda izle.</p>
+                    <p>Varlık, adet ve maliyetini gir; ortalama maliyet, anlık değer ve getiriyi tek tabloda izle. CSV ile içe/dışa aktar.</p>
                     <ul>
-                        <li>Yerel SQLite — portföyün cihazdan dışarı çıkmaz</li>
-                        <li>Haber başlıkları için Türkçe finans kanalları RSS'i</li>
+                        <li>Aynı sembol otomatik birleştirilir</li>
+                        <li>Portföy verisi cihazdan dışarı çıkmaz</li>
+                        <li>Tekrarlayan alım/satımlar geçmişte</li>
                     </ul>
                 </div>
-                <div class="feature-block">
+                <div class="feature-block" data-reveal style="--rd:120ms">
                     <span class="flabel">Haberler</span>
-                    <h3>Günün finans gündemi</h3>
-                    <p>Türkçe finansal medya RSS kaynaklarından başlıklar; haber ve fiyat tek uygulamada.</p>
+                    <h3>Günün finans gündemi + etkisi</h3>
+                    <p>Türkçe finans RSS kaynaklarından başlıklar; haberin hangi sembolleri etkileyeceğini ve portföyüne maliyetini hesaplar.</p>
+                    <ul>
+                        <li>Haber etkisi: yön, büyüklük, güven</li>
+                        <li>Monte Carlo simülasyonlu senaryolar</li>
+                        <li>Sentiment ve sembol eşleme</li>
+                    </ul>
                 </div>
             </div>
         </div>
     </section>
 
-    <section class="safety">
+    <!-- ANALYSIS KIT -->
+    <section class="section" id="analiz" style="padding-top: 0;">
         <div class="wrap">
-            <div class="safety-box">
-                <div class="lock">🔒</div>
+            <div class="section-head" data-reveal>
+                <h2>Dahili profesyonel analiz kiti</h2>
+                <p><span class="kick">Analysis</span>Sınıf tabanlı değerleme, teknik sinyaller, stratejiler ve senaryo simülasyonu — hepsi uygulamanın içinde.</p>
+            </div>
+            <div class="apps-grid">
+                <article class="app-card" data-reveal>
+                    <div class="app-head">
+                        <span class="lock" style="width:64px;height:64px;border-radius:18px;background:var(--surface-blue);display:grid;place-items:center;font-size:26px;">📊</span>
+                        <div>
+                            <h3 class="name">Tarama &amp; Kıyas</h3>
+                            <p class="tagline">Scanner · Compare · Sectors</p>
+                        </div>
+                    </div>
+                    <p class="app-desc">Teknik skor 0–100 (RSI, EMA, Bollinger, ATR, ADX…), temel oran tabloları (P/E, P/B, ROIC, beta) ve sektör bazlı sağlık profili.</p>
+                    <div class="app-actions"><span class="live-dot">Dahili araç</span></div>
+                </article>
+                <article class="app-card" data-reveal style="--rd:120ms">
+                    <div class="app-head">
+                        <span class="lock" style="width:64px;height:64px;border-radius:18px;background:var(--surface-blue);display:grid;place-items:center;font-size:26px;">🔬</span>
+                        <div>
+                            <h3 class="name">Strateji Lab</h3>
+                            <p class="tagline">Backtest · Monte Carlo · Optimizer</p>
+                        </div>
+                    </div>
+                    <p class="app-desc">RSI/EMA/SMA kural çiftleriyle stratejini geçmiş verilerde test et; Markowitz ile maks-Sharpe / min-risk portföyü kur.</p>
+                    <div class="app-actions"><span class="live-dot">Dahili araç</span></div>
+                </article>
+                <article class="app-card" data-reveal>
+                    <div class="app-head">
+                        <span class="lock" style="width:64px;height:64px;border-radius:18px;background:var(--surface-blue);display:grid;place-items:center;font-size:26px;">⚠️</span>
+                        <div>
+                            <h3 class="name">Stres Senaryoları</h3>
+                            <p class="tagline">Modeling · News Impact</p>
+                        </div>
+                    </div>
+                    <p class="app-desc">Faiz artışı, enflasyon şoku, resesyon, petrol şoku… Betaya göre ölçeklenen senaryolar ve habere dayalı portföy etki simülasyonu.</p>
+                    <div class="app-actions"><span class="live-dot">Dahili araç</span></div>
+                </article>
+                <article class="app-card" data-reveal style="--rd:120ms">
+                    <div class="app-head">
+                        <span class="lock" style="width:64px;height:64px;border-radius:18px;background:var(--surface-blue);display:grid;place-items:center;font-size:26px;">🔔</span>
+                        <div>
+                            <h3 class="name">6 Kanal Bildirim</h3>
+                            <p class="tagline">Açılış · Kapanış · Alarmlar · Anomaliler</p>
+                        </div>
+                    </div>
+                    <p class="app-desc">BIST 09:45, ABD 16:15 açılış bildirimleri, kapanış özetleri, fiyat alarmları ve olağandışı hareket uyarıları (gün hareketi ≥ 2,5× medyan).</p>
+                    <div class="app-actions"><span class="live-dot">Cihazda zamanlama</span></div>
+                </article>
+            </div>
+        </div>
+    </section>
+
+    <!-- PROMO VIDEO -->
+    <section class="section" id="tanitim" style="padding-top: 0;">
+        <div class="wrap">
+            <div class="section-head" data-reveal>
+                <h2>Tanıtım videosu</h2>
+                <p><span class="kick">Video</span>Yayın alanında kısa bir tanıtım filmi. Şimdilik vitrinde OPS'nin canlı maskot animasyonu dönüyor — video eklendiğinde otomatik olarak oynar.</p>
+            </div>
+            <div class="vslot" data-video="videos/ops-demo.mp4" data-reveal>
+                <span class="vbadge">🎬 Tanıtım videosu · Yakında</span>
+                <div class="demo-reel">
+                    <figure>
+                        <img src="images/ops/mood/coin-thinking.png" alt="OPS maskotu — analiz">
+                        <figcaption>OPS piyasa verisini okuyor</figcaption>
+                    </figure>
+                    <figure>
+                        <img src="images/ops/mood/coin-happy.png" alt="OPS maskotu — gururlu">
+                        <figcaption>Kâr alarmların dostu 💎</figcaption>
+                    </figure>
+                </div>
+                <div class="reel-dim">
+                    <span class="playbtn">▶</span>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- MASCOT -->
+    <section class="section" id="ops-maskot" style="padding-top: 0;">
+        <div class="wrap">
+            <div class="section-head" data-reveal>
+                <h2>Şikko — senin piyasa maskotun</h2>
+                <p><span class="kick">Maskot</span>Şikko, cihazında hesaplanan piyasa ve portföy verisine göre altı farklı ruh hâlinde canlanır; sohbet ederken de durumuna göre tepki verir.</p>
+            </div>
+            <div class="moods" data-reveal>
+                <div class="mood-tile"><img src="images/ops/mood/coin-idle.png" alt="OPS maskotu sakin"><b>Sakin</b><span>Piyasa sakin ilerliyor</span></div>
+                <div class="mood-tile"><img src="images/ops/mood/coin-happy.png" alt="OPS maskotu mutlu"><b>Mutlu</b><span>Piyasa lehine gidiyor</span></div>
+                <div class="mood-tile"><img src="images/ops/mood/coin-thinking.png" alt="OPS maskotu düşünüyor"><b>Düşünüyor</b><span>Analiz motoru çalışıyor</span></div>
+                <div class="mood-tile"><img src="images/ops/mood/coin-alert.png" alt="OPS maskotu alarmda"><b>Alarmda</b><span>Olağandışı hareket var</span></div>
+                <div class="mood-tile"><img src="images/ops/mood/coin-sleeping.png" alt="OPS maskotu uyuyor"><b>Uyuyor</b><span>Piyasa kapalı</span></div>
+                <div class="mood-tile"><img src="images/ops/mood/coin-listening.png" alt="OPS maskotu dinliyor"><b>Dinliyor</b><span>Yeni haber geliyor</span></div>
+            </div>
+        </div>
+    </section>
+
+    <!-- SAFETY -->
+    <section class="section" style="padding-top: 0;">
+        <div class="wrap">
+            <div class="section-head" data-reveal>
+                <h2>Verin cihazında, hesap zorunlu değil</h2>
+            </div>
+            <div class="safety" data-reveal>
+                <div class="safety-box">
+                    <div class="lock">🔒</div>
+                    <div>
+                        <h3>Hesap olmadan da çalışır</h3>
+                        <p>Portföyün, favoriler, alarmlar ve sohbet geçmişi cihazındaki yerel veritabanında tutulur. Sunucu hesabı yoktur; Google ile giriş yapmak istemiyorsan uygulama yerel kullanıcı modunda tam çalışır.</p>
+                    </div>
+                    <a class="btn btn-ghost" href="gizlilik.html">Gizlilik Politikası</a>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- FAQ -->
+    <section class="section" id="sss" style="padding-top: 0;">
+        <div class="wrap">
+            <div class="section-head" data-reveal>
+                <h2>Sık sorulan sorular</h2>
+            </div>
+            <div class="faq" data-reveal>
+                <details>
+                    <summary>Uygulama tamamen ücretsiz mi?</summary>
+                    <p>Evet, indirme ve tüm özellikler ücretsizdir; reklamlar AdMob ile gösterilir. Sohbet için kullanacağın yapay zekâ sağlayıcısı anahtarının sana aittir ve uygulama tarafında ek ücret yoktur.</p>
+                </details>
+                <details>
+                    <summary>OPS bana yatırım tavsiyesi verir mi?</summary>
+                    <p>Hayır — tüm içerikler bilgilendirme amaçlıdır. Asistan mesajlarında ve analiz ekranlarında alım-satım çağrısı yapılması bilinçli olarak engellenir; yatırım kararları tamamen senin sorumluluğundadır.</p>
+                </details>
+                <details>
+                    <summary>Hangi fiyat kaynakları kullanılır?</summary>
+                    <p>Fiyat kaynakları Yahoo Finance ve Binance'tir. Kendi anahtarını eklersen opsiyonel olarak Twelve Data ve Alpha Vantage da kullanılır; geçersiz anahtar durumunda uygulama Yahoo'ya geri döner.</p>
+                </details>
+                <details>
+                    <summary>Verilerim ve sohbetlerim cihazdan çıkar mı?</summary>
+                    <p>Portföy, favoriler, alarmlar ve sohbetler yerel veritabanında saklanır. Ağ üzerinden yalnızca piyasa fiyatları ve RSS haberleri taşınır; kişisel ve portföy verin cihazından çıkmaz.</p>
+                </details>
+            </div>
+        </div>
+    </section>
+
+    <!-- CONTACT CTA -->
+    <section class="section contact-section" style="padding-top: 0;">
+        <div class="wrap" data-reveal>
+            <div class="contact-box">
+                <div class="contact-icon" aria-hidden="true">✉</div>
                 <div>
-                    <h3>Verilerinin büyük bölümü kendi cihazında</h3>
-                    <p>Portföyün, işlemlerin, favoriler, fiyat alarmlar ve sohbet geçmişi cihazındaki yerel veritabanında tutulur. Sunucu hesabı yoktur; portföy verin cihazından dışarı çıkmaz. Ayrıntılar için <a href="gizlilik.html">gizlilik politikasını</a> oku.</p>
+                    <h3>OPS hakkında bir sorunuz mu var?</h3>
+                    <p>Hata bildirimi, özellik önerisi ya da iş birliği fikirleri için yazın.</p>
                 </div>
-                <a class="btn btn-ghost" href="gizlilik.html">Gizlilik Politikası</a>
-            </div>
-        </div>
-    </section>
-
-    <section class="ad-note">
-        <div class="wrap">
-            <div class="strip">
-                Reklam şeffaflığı: OPS: Financial Support ücretsizdir ve AdMob ile gösterilen banner reklamlar içerir.
-                Satıcı beyanımızı <a href="app-ads.txt">app-ads.txt</a> dosyasında görebilirsin (IAB Tech Lab standardı).
+                <a class="btn btn-primary" href="mailto:aykutkutlu08@gmail.com">aykutkutlu08@gmail.com</a>
             </div>
         </div>
     </section>
@@ -137,7 +325,7 @@
             </div>
             <div class="footer-col">
                 <h4>İletişim</h4>
-                <a href="mailto:support@finanspro.app">support@finanspro.app</a>
+                <a href="mailto:aykutkutlu08@gmail.com">aykutkutlu08@gmail.com</a>
             </div>
         </div>
         <div class="footer-bottom">
@@ -146,6 +334,8 @@
         </div>
     </div>
 </footer>
+
+<script src="lang.js" defer></script>
 
 </body>
 </html>

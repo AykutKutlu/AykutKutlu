@@ -12,19 +12,26 @@
     <link rel="stylesheet" href="styles.css">
     <link href="https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@400;500;600;700&display=swap" rel="stylesheet">
 </head>
-<body>
+<body data-meta-i18n>
 
-<header class="site-header">
+<div class="scroll-progress" aria-hidden="true"><span id="scrollProgressBar"></span></div>
+
+<header class="site-header" id="siteHeader">
     <div class="wrap">
         <a class="brand" href="index.html">
             <img src="images/kutvoks/kutvoks-icon.png" alt="Kutvoks logosu">
-            <span><b>Kutvoks</b><span>app studio</span></span>
+            <span><b>Kutvoks</b><span data-i18n="brand.sub">app studio</span></span>
         </a>
         <nav class="nav-links">
-            <a href="#uygulamalar">Uygulamalar</a>
-            <a href="#hakkinda">Hakkında</a>
-            <a href="mailto:support@finanspro.app">Destek</a>
+            <a href="#uygulamalar" data-i18n="nav.apps">Uygulamalar</a>
+            <a href="#hakkinda" data-i18n="nav.about">Hakkında</a>
+            <a href="mailto:aykutkutlu08@gmail.com" data-i18n="nav.support">Destek</a>
         </nav>
+        <div class="lang-toggle" role="group" aria-label="Dil / Language">
+            <button type="button" class="lang-opt" data-lang="tr" aria-label="Türkçe">TR</button>
+            <span class="lang-sep" aria-hidden="true"></span>
+            <button type="button" class="lang-opt" data-lang="en" aria-label="English">EN</button>
+        </div>
     </div>
 </header>
 
@@ -34,29 +41,29 @@
     <section class="hero">
         <div class="wrap hero-grid">
             <div>
-                <span class="eyebrow"><span class="dot"></span>Google Play Geliştirici Hesabı</span>
-                <h1>Piyasa gözünü, bütçeni <em>tek yerde.</em></h1>
-                <p class="lead">Kutvoks, günlük finansta işe yarayan Android uygulamaları geliştirir. Piyasaları tek ekranda izle, giderlerini dakikalarca kaydet.</p>
-                <div class="hero-actions">
-                    <a href="#uygulamalar" class="btn btn-primary">Uygulamaları Gör</a>
-                    <a href="https://play.google.com/store/apps/developer?id=Kutvoks" target="_blank" class="btn btn-ghost">Play Store'da Kutvoks</a>
+                <span class="eyebrow" data-reveal><span class="dot"></span><span data-i18n="hero.eyebrow">Google Play Geliştirici Hesabı</span></span>
+                <h1 data-reveal style="--rd:80ms" data-i18n-html="hero.h1">Piyasa gözünü, bütçeni <em>tek yerde.</em></h1>
+                <p class="lead" data-reveal style="--rd:160ms" data-i18n="hero.lead">Kutvoks, günlük finansta işe yarayan Android uygulamaları geliştirir. Piyasaları tek ekranda izle, giderlerini dakikalarca kaydet.</p>
+                <div class="hero-actions" data-reveal style="--rd:240ms">
+                    <a href="#uygulamalar" class="btn btn-primary" data-i18n="hero.cta1">Uygulamaları Gör</a>
+                    <a href="https://play.google.com/store/apps/developer?id=Kutvoks" target="_blank" class="btn btn-ghost" data-i18n="hero.cta2">Play Store'da Kutvoks</a>
                 </div>
-                <p class="hero-en">Build · <b>Innovate</b> · Publish</p>
+                <p class="hero-en" data-reveal style="--rd:320ms">Build · <b>Innovate</b> · Publish</p>
             </div>
 
-            <div class="hero-visual">
-                <div class="brand-tile">
+            <div class="hero-visual" data-reveal style="--rd:200ms">
+                <div class="brand-tile" data-parallax>
                     <img src="images/kutvoks/kutvoks-icon.png" alt="Kutvoks KV kalkan logosu">
-                    <p><strong>Kutvoks</strong>Bağımsız bir geliştirici stüdyosu. Uygulamalar cihazda çalışır, veri cihazda kalır.</p>
+                    <p><strong>Kutvoks</strong><span data-i18n="hero.tile">Bağımsız bir geliştirici stüdyosu. Uygulamalar cihazda çalışır, veri cihazda kalır.</span></p>
                 </div>
                 <a class="chip" href="https://play.google.com/store/apps/details?id=com.finanspro" target="_blank">
                     <img src="images/apps/ops-icon.png" alt="OPS: Financial Support simgesi">
-                    <span><span class="chip-name">OPS: Financial Support</span><br><span class="chip-tag">BIST · Kripto · Döviz · Yapay zekâ asistanı</span></span>
+                    <span><span class="chip-name">OPS: Financial Support</span><br><span class="chip-tag" data-i18n="hero.chip1">BIST · Kripto · Döviz · Yapay zekâ asistanı</span></span>
                     <span class="go">→</span>
                 </a>
                 <a class="chip" href="https://play.google.com/store/apps/details?id=com.butceapp" target="_blank">
                     <img src="images/apps/butce-icon.png" alt="Bütçe Takip simgesi">
-                    <span><span class="chip-name">Bütçe Takip</span><br><span class="chip-tag">Gider · Fiş tarama · Rapor · Projeksiyon</span></span>
+                    <span><span class="chip-name">Bütçe Takip</span><br><span class="chip-tag" data-i18n="hero.chip2">Gider · Fiş tarama · Rapor · Projeksiyon</span></span>
                     <span class="go">→</span>
                 </a>
             </div>
@@ -65,7 +72,7 @@
 
     <!-- BANNER -->
     <section class="banner-section">
-        <div class="wrap">
+        <div class="wrap" data-reveal>
             <figure class="banner-frame" style="margin:0">
                 <img src="images/kutvoks/banner.png" alt="Kutvoks — Developer: Build, Innovate, Publish" width="2000" height="1000">
             </figure>
@@ -76,56 +83,66 @@
         </div>
     </section>
 
+    <!-- MARQUEE -->
+    <div class="marquee" aria-hidden="true">
+        <div class="marquee-track">
+            <span>Build</span><i></i><span>Innovate</span><i></i><span>Publish</span><i></i><span data-i18n="mq.ondevice">Veri cihazında kalır</span><i></i><span>Google Play</span><i></i>
+            <span>Build</span><i></i><span>Innovate</span><i></i><span>Publish</span><i></i><span data-i18n="mq.ondevice2">Veri cihazında kalır</span><i></i><span>Google Play</span><i></i>
+        </div>
+    </div>
+
     <!-- APPS -->
     <section class="section" id="uygulamalar">
         <div class="wrap">
-            <div class="section-head">
-                <h2>Yayındaki uygulamalar</h2>
-                <p><span class="kick">Apps</span>Google Play'de ücretsiz olarak yayınlanır; reklamlar AdMob üzerinden gösterilir.</p>
+            <div class="section-head" data-reveal>
+                <h2 data-i18n="apps.title">Yayındaki uygulamalar</h2>
+                <p><span class="kick">Apps</span><span data-i18n="apps.desc">Google Play'de ücretsiz olarak yayınlanır; reklamlar AdMob üzerinden gösterilir.</span></p>
             </div>
 
             <div class="apps-grid">
                 <!-- OPS: Financial Support -->
-                <article class="app-card">
+                <article class="app-card" data-reveal>
+                    <div class="shot-mood"><img src="images/ops/mood/coin-happy.png" alt="OPS Şikko maskotu" loading="lazy"></div>
                     <div class="app-head">
                         <img src="images/apps/ops-icon.png" alt="OPS: Financial Support simgesi">
                         <div>
                             <h3 class="name">OPS: Financial Support</h3>
-                            <p class="tagline">BIST, kripto, döviz ve altın tek ekranda</p>
+                            <p class="tagline" data-i18n="ops.tagline">BIST, kripto, döviz ve altın tek ekranda</p>
                         </div>
                     </div>
-                    <p class="app-desc">Portföyünü kur, kâr/zararını anlık izle, fiyat alarmları kur ve OPS yapay zekâ asistanıyla piyasa sorularını sor.</p>
+                    <p class="app-desc" data-i18n="ops.desc">Portföyünü kur, kâr/zararını anlık izle, fiyat alarmları kur ve OPS yapay zekâ asistanıyla piyasa sorularını sor.</p>
                     <ul class="app-features">
-                        <li>BIST hisseleri, ABD borsaları, kripto, döviz, altın ve emtia akışı</li>
-                        <li>OPS yapay zekâ asistanı — kendi API anahtarınla</li>
-                        <li>Fiyat alarmları, favoriler ve finansal RSS haberleri</li>
+                        <li data-i18n="ops.f1">BIST hisseleri, ABD borsaları, kripto, döviz, altın ve emtia akışı</li>
+                        <li data-i18n="ops.f2">OPS yapay zekâ asistanı — kendi API anahtarınla</li>
+                        <li data-i18n="ops.f3">Fiyat alarmları, favoriler ve finansal RSS haberleri</li>
                     </ul>
                     <div class="app-actions">
-                        <span class="live-dot">Google Play'de yayında</span>
-                        <a class="btn btn-accent btn-sm" href="https://play.google.com/store/apps/details?id=com.finanspro" target="_blank">İndir</a>
-                        <a class="btn btn-ghost btn-sm" href="ops.html">Detaylar</a>
+                        <span class="live-dot" data-i18n="live">Google Play'de yayında</span>
+                        <a class="btn btn-accent btn-sm" href="https://play.google.com/store/apps/details?id=com.finanspro" target="_blank" data-i18n="dl">İndir</a>
+                        <a class="btn btn-ghost btn-sm" href="ops.html" data-i18n="more">Detaylar</a>
                     </div>
                 </article>
 
                 <!-- Bütçe Takip -->
-                <article class="app-card">
+                <article class="app-card" data-reveal style="--rd:120ms">
+                    <img class="shot" src="images/butce/screen-home.png" alt="Bütçe Takip ana ekranı" loading="lazy">
                     <div class="app-head">
                         <img src="images/apps/butce-icon.png" alt="Bütçe Takip simgesi">
                         <div>
-                            <h3 class="name">Bütçe Takip</h3>
-                            <p class="tagline">Giderleri dakikalarca kaydet, aile bütceni yönet</p>
+                            <h3 class="name" data-i18n="butce.name">Bütçe Takip</h3>
+                            <p class="tagline" data-i18n="butce.tagline">Giderleri dakikalarca kaydet, aile bütceni yönet</p>
                         </div>
                     </div>
-                    <p class="app-desc">Hızlı gider girişi, fiş tarama, trend grafikleri, PDF raporlar ve yapay zekâ destekli bütçe projeksiyonu.</p>
+                    <p class="app-desc" data-i18n="butce.desc">Hızlı gider girişi, fiş tarama, trend grafikleri, PDF raporlar ve yapay zekâ destekli bütçe projeksiyonu.</p>
                     <ul class="app-features">
-                        <li>Kişi, kategori ve tekrarlayan gider takibi</li>
-                        <li>Kamera ile fiş tarama, PDF/Excel rapor çıkışı</li>
-                        <li>Ay sonu tahminleri ve birikim projeksiyonu</li>
+                        <li data-i18n="butce.f1">Kişi, kategori ve tekrarlayan gider takibi</li>
+                        <li data-i18n="butce.f2">Kamera ile fiş tarama, PDF/Excel rapor çıkışı</li>
+                        <li data-i18n="butce.f3">Ay sonu tahminleri ve birikim projeksiyonu</li>
                     </ul>
                     <div class="app-actions">
-                        <span class="live-dot">Google Play'de yayında</span>
-                        <a class="btn btn-accent btn-sm" href="https://play.google.com/store/apps/details?id=com.butceapp" target="_blank">İndir</a>
-                        <a class="btn btn-ghost btn-sm" href="butce-takip.html">Detaylar</a>
+                        <span class="live-dot" data-i18n="live2">Google Play'de yayında</span>
+                        <a class="btn btn-accent btn-sm" href="https://play.google.com/store/apps/details?id=com.butceapp" target="_blank" data-i18n="dl2">İndir</a>
+                        <a class="btn btn-ghost btn-sm" href="butce-takip.html" data-i18n="more2">Detaylar</a>
                     </div>
                 </article>
             </div>
@@ -135,26 +152,40 @@
     <!-- ABOUT -->
     <section class="section" id="hakkinda" style="padding-top: 12px;">
         <div class="wrap">
-            <div class="section-head">
-                <h2>Uygulamalara nasıl inanıyoruz</h2>
-                <p>Takip ettiğin şey senindir. Kutvoks uygulamaları hesap açtırmadan çalışır ve verinin cihazında saklar.</p>
+            <div class="section-head" data-reveal>
+                <h2 data-i18n="about.title">Uygulamalara nasıl inanıyoruz</h2>
+                <p data-i18n="about.desc">Takip ettiğin şey senindir. Kutvoks uygulamaları hesap açtırmadan çalışır ve verini cihazında saklar.</p>
             </div>
             <div class="value-rows">
-                <div class="value-row">
+                <div class="value-row" data-reveal>
                     <span class="num">01</span>
-                    <h3>Veri cihazında kalır</h3>
-                    <p>Piyasa verisi dışına çıkmaz; portföyler, giderler ve raporlar cihazındaki veritabanında tutulur. Sunucu hesabı yoktur.</p>
+                    <h3 data-i18n="about.h1">Veri cihazında kalır</h3>
+                    <p data-i18n="about.p1">Piyasa verisi dışına çıkmaz; portföyler, giderler ve raporlar cihazındaki veritabanında tutulur. Sunucu hesabı yoktur.</p>
                 </div>
-                <div class="value-row">
+                <div class="value-row" data-reveal style="--rd:100ms">
                     <span class="num">02</span>
-                    <h3>Türkçe öncelik</h3>
-                    <p>Arayüzler Türkçe tasarlanır, İngilizce desteği ikinci dildir. BIST haber akışı ve TL birimleri yerleşiktir.</p>
+                    <h3 data-i18n="about.h2">Türkçe öncelik</h3>
+                    <p data-i18n="about.p2">Arayüzler Türkçe tasarlanır, İngilizce desteği ikinci dildir. BIST haber akışı ve TL birimleri yerleşiktir.</p>
                 </div>
-                <div class="value-row">
+                <div class="value-row" data-reveal style="--rd:200ms">
                     <span class="num">03</span>
-                    <h3>Takip etmek kolay olmalı</h3>
-                    <p>Bir gider kaydetmek için dokuz alan doldurmak gerekmez. Hızlı giriş, fiş okutma ve akıllı kategoriler standart özelliktir.</p>
+                    <h3 data-i18n="about.h3">Takip etmek kolay olmalı</h3>
+                    <p data-i18n="about.p3">Bir gider kaydetmek için dokuz alan doldurmak gerekmez. Hızlı giriş, fiş okutma ve akıllı kategoriler standart özelliktir.</p>
                 </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- CONTACT -->
+    <section class="section contact-section" id="iletisim" style="padding-top: 0;">
+        <div class="wrap" data-reveal>
+            <div class="contact-box">
+                <div class="contact-icon" aria-hidden="true">✉</div>
+                <div>
+                    <h3 data-i18n="contact.title">Bir sorunuz mu var?</h3>
+                    <p data-i18n="contact.desc">Geri bildirim, hata bildirimi veya iş birliği için bize yazın — genellikle bir gün içinde yanıtlarız.</p>
+                </div>
+                <a class="btn btn-primary" href="mailto:aykutkutlu08@gmail.com">aykutkutlu08@gmail.com</a>
             </div>
         </div>
     </section>
@@ -167,32 +198,34 @@
             <div class="footer-col footer-brand">
                 <a class="brand" href="index.html">
                     <img src="images/kutvoks/kutvoks-icon.png" alt="Kutvoks logosu">
-                    <span><b>Kutvoks</b><span>app studio</span></span>
+                    <span><b>Kutvoks</b><span data-i18n="brand.sub2">app studio</span></span>
                 </a>
-                <p>Android uygulamaları: Build · Innovate · Publish</p>
+                <p data-i18n="footer.tagline">Android uygulamaları: Build · Innovate · Publish</p>
             </div>
             <div class="footer-col">
-                <h4>Uygulamalar</h4>
+                <h4 data-i18n="footer.apps">Uygulamalar</h4>
                 <a href="https://play.google.com/store/apps/details?id=com.finanspro" target="_blank">OPS: Financial Support</a>
-                <a href="https://play.google.com/store/apps/details?id=com.butceapp" target="_blank">Bütçe Takip</a>
+                <a href="https://play.google.com/store/apps/details?id=com.butceapp" target="_blank" data-i18n="butce.name2">Bütçe Takip</a>
             </div>
             <div class="footer-col">
-                <h4>Bilgiler</h4>
-                <a href="gizlilik.html">Gizlilik Politikası</a>
-                <a href="butce-gizlilik.html">Bütçe Takip Gizlilik</a>
+                <h4 data-i18n="footer.info">Bilgiler</h4>
+                <a href="gizlilik.html" data-i18n="footer.privacy">Gizlilik Politikası</a>
+                <a href="butce-gizlilik.html" data-i18n="footer.privacy2">Bütçe Takip Gizlilik</a>
                 <a href="app-ads.txt">app-ads.txt</a>
             </div>
             <div class="footer-col">
-                <h4>İletişim</h4>
-                <a href="mailto:support@finanspro.app">support@finanspro.app</a>
+                <h4 data-i18n="footer.contact">İletişim</h4>
+                <a href="mailto:aykutkutlu08@gmail.com">aykutkutlu08@gmail.com</a>
             </div>
         </div>
         <div class="footer-bottom">
-            <span>© 2026 Kutvoks. Tüm hakları saklıdır.</span>
-            <span>Uygulamalar yatırım tavsiyesi sunmaz.</span>
+            <span data-i18n="footer.rights">© 2026 Kutvoks. Tüm hakları saklıdır.</span>
+            <span data-i18n="footer.disclaimer">Uygulamalar yatırım tavsiyesi sunmaz.</span>
         </div>
     </div>
 </footer>
+
+<script src="lang.js" defer></script>
 
 </body>
 </html>
