@@ -31,8 +31,10 @@ images/kutvoks/      Marka: logo (kutvoks-icon.png) + developer banner (banner.p
 images/apps/         Uygulama ikonları: ops-icon.png, butce-icon.png
 images/ops/mood/     OPS "Şikko" maskot ruh hâlleri (idle/happy/thinking/alert/sleeping/listening)
 images/butce/        Bütçe Takip ekran görüntüleri + fiş örneği
-videos/              (Boş) Tanıtım videoları: videos/ops-demo.mp4, videos/butce-demo.mp4
-                     → dosya koyulduğunda sayfadaki video alanı otomatik olarak o oynatıcıya geçer
+ops.html#tanitim     OPS'nin ilk tanıtımı: YouTube Shorts (5iqZ6PtnM9A)
+                     → 9:16 gömülü oynatıcı + YouTube'da aç bağlantısı
+videos/              Bütçe Takip için isteğe bağlı videos/butce-demo.mp4
+                     → dosya koyulduğunda Bütçe sayfasındaki video alanı oynatıcıya geçer
 ```
 
 ## Yeni uygulama ekleme kontrol listesi
