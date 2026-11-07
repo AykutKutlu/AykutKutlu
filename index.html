@@ -1,232 +1,344 @@
-﻿<!DOCTYPE html>
+<!DOCTYPE html>
 <html lang="tr">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Kutvoks — Android Uygulama Geliştiricisi</title>
-    <meta name="description" content="Kutvoks, Android uygulamaları geliştiren bir bağımsız geliştirici hesabıdır. OPS: Financial Support: BIST, kripto, döviz ve altın takibi. Bütçe Takip: pratik gider ve bütçe yönetimi.">
-    <meta property="og:title" content="Kutvoks — Android Uygulama Geliştiricisi">
-    <meta property="og:description" content="OPS: Financial Support ve Bütçe Takip — Google Play'de yayınlanan Android uygulamaları.">
-    <meta property="og:type" content="website">
-    <link rel="icon" type="image/png" href="images/kutvoks/kutvoks-icon.png">
-    <link rel="stylesheet" href="styles.css">
-    <link href="https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@400;500;600;700&display=swap" rel="stylesheet">
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Kutvoks — Piyasayı keşfet. Bütçeni yönet.</title>
+<meta name="description" content="OPS ile piyasaları ve portföyünü keşfet. Bütçe Takip ile gelir, gider, fiş ve ekstrelerini düzenle. Kutvoks Android uygulamalarını tanı.">
+<link rel="canonical" href="https://aykutkutlu.github.io/AykutKutlu/index.html">
+<meta property="og:title" content="Kutvoks — Piyasayı keşfet. Bütçeni yönet.">
+<meta property="og:description" content="OPS ile piyasaları ve portföyünü keşfet. Bütçe Takip ile gelir, gider, fiş ve ekstrelerini düzenle. Kutvoks Android uygulamalarını tanı.">
+<meta property="og:type" content="website">
+<meta property="og:url" content="https://aykutkutlu.github.io/AykutKutlu/index.html">
+<meta property="og:image" content="https://aykutkutlu.github.io/AykutKutlu/images/kutvoks/banner.png">
+<meta name="twitter:card" content="summary_large_image">
+<meta name="theme-color" content="#153c70">
+<link rel="icon" type="image/png" href="images/kutvoks/kutvoks-icon.png">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@400;500;600;700&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="styles.css">
 </head>
-<body data-meta-i18n>
-
-<div class="scroll-progress" aria-hidden="true"><span id="scrollProgressBar"></span></div>
-
+<body class="home-page" data-meta-i18n>
+<!-- THESIS: Two independent apps turn market research and everyday budgeting into clear choices.
+OWN-WORLD: Existing Kutvoks navy/blue/orange, Space Grotesk, genuine icons and budget screenshots.
+STORY: Choose a task, see the matching app, inspect complete features, open Google Play.
+FIRST VIEWPORT: Large two-line benefit at left, equally sized OPS/Budget product exhibits at right; both routes visible.
+FORM: Task journey, grounded candidate 5, seed a935e462; user chose equal emphasis and direct code preserving the brand.
+FINISH: unreviewed and undocumented is unfinished; this build ends with the finish review, the verdict, and DESIGN.md -->
+<a class="skip-link" href="#icerik">
+<span data-i18n="nav.skip">İçeriğe geç</span>
+</a>
 <header class="site-header" id="siteHeader">
-    <div class="wrap">
-        <a class="brand" href="index.html">
-            <img src="images/kutvoks/kutvoks-icon.png" alt="Kutvoks logosu">
-            <span><b>Kutvoks</b><span data-i18n="brand.sub">app studio</span></span>
-        </a>
-        <nav class="nav-links">
-            <a href="#uygulamalar" data-i18n="nav.apps">Uygulamalar</a>
-            <a href="#hakkinda" data-i18n="nav.about">Hakkında</a>
-            <a href="mailto:aykutkutlu08@gmail.com" data-i18n="nav.support">Destek</a>
-        </nav>
-        <div class="lang-toggle" role="group" aria-label="Dil / Language">
-            <button type="button" class="lang-opt" data-lang="tr" aria-label="Türkçe">TR</button>
-            <span class="lang-sep" aria-hidden="true"></span>
-            <button type="button" class="lang-opt" data-lang="en" aria-label="English">EN</button>
-        </div>
-    </div>
+<div class="wrap header-inner">
+<a class="brand" href="index.html" aria-label="Kutvoks">
+<img src="images/kutvoks/kutvoks-icon.png" alt="" width="44" height="44">
+<span>
+<b>Kutvoks</b>
+<span>app studio</span>
+</span>
+</a>
+<nav class="nav-links" aria-label="Ana menü">
+<a href="#uygulamalar">
+<span data-i18n="nav.apps">Uygulamalar</span>
+</a>
+<a href="#hakkinda">
+<span data-i18n="nav.about">Kutvoks hakkında</span>
+</a>
+<a href="mailto:aykutkutlu08@gmail.com">
+<span data-i18n="nav.support">Destek</span>
+</a>
+</nav>
+<div class="lang-toggle" role="group" aria-label="Dil / Language">
+<button class="lang-opt" type="button" data-lang="tr" aria-label="Türkçe">TR</button>
+<button class="lang-opt" type="button" data-lang="en" aria-label="English">EN</button>
+</div>
+</div>
 </header>
-
-<main>
-
-    <!-- HERO -->
-    <section class="hero">
-        <div class="wrap hero-grid">
-            <div>
-                <span class="eyebrow" data-reveal><span class="dot"></span><span data-i18n="hero.eyebrow">Google Play Geliştirici Hesabı</span></span>
-                <h1 data-reveal style="--rd:80ms" data-i18n-html="hero.h1">Piyasa gözünü, bütçeni <em>tek yerde.</em></h1>
-                <p class="lead" data-reveal style="--rd:160ms" data-i18n="hero.lead">Kutvoks, günlük finansta işe yarayan Android uygulamaları geliştirir. Piyasaları tek ekranda izle, giderlerini dakikalarca kaydet.</p>
-                <div class="hero-actions" data-reveal style="--rd:240ms">
-                    <a href="#uygulamalar" class="btn btn-primary" data-i18n="hero.cta1">Uygulamaları Gör</a>
-                    <a href="https://play.google.com/store/apps/developer?id=Kutvoks" target="_blank" class="btn btn-ghost" data-i18n="hero.cta2">Play Store'da Kutvoks</a>
-                </div>
-                <p class="hero-en" data-reveal style="--rd:320ms">Build · <b>Innovate</b> · Publish</p>
-            </div>
-
-            <div class="hero-visual" data-reveal style="--rd:200ms">
-                <div class="brand-tile" data-parallax>
-                    <img src="images/kutvoks/kutvoks-icon.png" alt="Kutvoks KV kalkan logosu">
-                    <p><strong>Kutvoks</strong><span data-i18n="hero.tile">Bağımsız bir geliştirici stüdyosu. Uygulamalar cihazda çalışır, veri cihazda kalır.</span></p>
-                </div>
-                <a class="chip" href="https://play.google.com/store/apps/details?id=com.finanspro" target="_blank">
-                    <img src="images/apps/ops-icon.png" alt="OPS: Financial Support simgesi">
-                    <span><span class="chip-name">OPS: Financial Support</span><br><span class="chip-tag" data-i18n="hero.chip1">BIST · Kripto · Döviz · Yapay zekâ asistanı</span></span>
-                    <span class="go">→</span>
-                </a>
-                <a class="chip" href="https://play.google.com/store/apps/details?id=com.butceapp" target="_blank">
-                    <img src="images/apps/butce-icon.png" alt="Bütçe Takip simgesi">
-                    <span><span class="chip-name">Bütçe Takip</span><br><span class="chip-tag" data-i18n="hero.chip2">Gider · Fiş tarama · Rapor · Projeksiyon</span></span>
-                    <span class="go">→</span>
-                </a>
-            </div>
-        </div>
-    </section>
-
-    <!-- BANNER -->
-    <section class="banner-section">
-        <div class="wrap" data-reveal>
-            <figure class="banner-frame" style="margin:0">
-                <img src="images/kutvoks/banner.png" alt="Kutvoks — Developer: Build, Innovate, Publish" width="2000" height="1000">
-            </figure>
-            <figcaption class="banner-caption">
-                <span><b>Kutvoks</b> · Android app studio</span>
-                <span>Google Play · AdMob</span>
-            </figcaption>
-        </div>
-    </section>
-
-    <!-- MARQUEE -->
-    <div class="marquee" aria-hidden="true">
-        <div class="marquee-track">
-            <span>Build</span><i></i><span>Innovate</span><i></i><span>Publish</span><i></i><span data-i18n="mq.ondevice">Veri cihazında kalır</span><i></i><span>Google Play</span><i></i>
-            <span>Build</span><i></i><span>Innovate</span><i></i><span>Publish</span><i></i><span data-i18n="mq.ondevice2">Veri cihazında kalır</span><i></i><span>Google Play</span><i></i>
-        </div>
-    </div>
-
-    <!-- APPS -->
-    <section class="section" id="uygulamalar">
-        <div class="wrap">
-            <div class="section-head" data-reveal>
-                <h2 data-i18n="apps.title">Yayındaki uygulamalar</h2>
-                <p><span class="kick">Apps</span><span data-i18n="apps.desc">Google Play'de ücretsiz olarak yayınlanır; reklamlar AdMob üzerinden gösterilir.</span></p>
-            </div>
-
-            <div class="apps-grid">
-                <!-- OPS: Financial Support -->
-                <article class="app-card" data-reveal>
-                    <div class="shot-mood"><img src="images/ops/mood/coin-happy.png" alt="OPS Şikko maskotu" loading="lazy"></div>
-                    <div class="app-head">
-                        <img src="images/apps/ops-icon.png" alt="OPS: Financial Support simgesi">
-                        <div>
-                            <h3 class="name">OPS: Financial Support</h3>
-                            <p class="tagline" data-i18n="ops.tagline">BIST, kripto, döviz ve altın tek ekranda</p>
-                        </div>
-                    </div>
-                    <p class="app-desc" data-i18n="ops.desc">Portföyünü kur, kâr/zararını anlık izle, fiyat alarmları kur ve OPS yapay zekâ asistanıyla piyasa sorularını sor.</p>
-                    <ul class="app-features">
-                        <li data-i18n="ops.f1">BIST hisseleri, ABD borsaları, kripto, döviz, altın ve emtia akışı</li>
-                        <li data-i18n="ops.f2">OPS yapay zekâ asistanı — kendi API anahtarınla</li>
-                        <li data-i18n="ops.f3">Fiyat alarmları, favoriler ve finansal RSS haberleri</li>
-                    </ul>
-                    <div class="app-actions">
-                        <span class="live-dot" data-i18n="live">Google Play'de yayında</span>
-                        <a class="btn btn-accent btn-sm" href="https://play.google.com/store/apps/details?id=com.finanspro" target="_blank" data-i18n="dl">İndir</a>
-                        <a class="btn btn-ghost btn-sm" href="ops.html" data-i18n="more">Detaylar</a>
-                        <a class="btn btn-ghost btn-sm" href="ops.html#tanitim" data-i18n="ops.video">Tanıtımı izle</a>
-                    </div>
-                </article>
-
-                <!-- Bütçe Takip -->
-                <article class="app-card" data-reveal style="--rd:120ms">
-                    <img class="shot" src="images/butce/screen-home.png" alt="Bütçe Takip ana ekranı" loading="lazy">
-                    <div class="app-head">
-                        <img src="images/apps/butce-icon.png" alt="Bütçe Takip simgesi">
-                        <div>
-                            <h3 class="name" data-i18n="butce.name">Bütçe Takip</h3>
-                            <p class="tagline" data-i18n="butce.tagline">Giderleri dakikalarca kaydet, aile bütceni yönet</p>
-                        </div>
-                    </div>
-                    <p class="app-desc" data-i18n="butce.desc">Hızlı gider girişi, fiş tarama, trend grafikleri, PDF raporlar ve yapay zekâ destekli bütçe projeksiyonu.</p>
-                    <ul class="app-features">
-                        <li data-i18n="butce.f1">Kişi, kategori ve tekrarlayan gider takibi</li>
-                        <li data-i18n="butce.f2">Kamera ile fiş tarama, PDF/Excel rapor çıkışı</li>
-                        <li data-i18n="butce.f3">Ay sonu tahminleri ve birikim projeksiyonu</li>
-                    </ul>
-                    <div class="app-actions">
-                        <span class="live-dot" data-i18n="live2">Google Play'de yayında</span>
-                        <a class="btn btn-accent btn-sm" href="https://play.google.com/store/apps/details?id=com.butceapp" target="_blank" data-i18n="dl2">İndir</a>
-                        <a class="btn btn-ghost btn-sm" href="butce-takip.html" data-i18n="more2">Detaylar</a>
-                    </div>
-                </article>
-            </div>
-        </div>
-    </section>
-
-    <!-- ABOUT -->
-    <section class="section" id="hakkinda" style="padding-top: 12px;">
-        <div class="wrap">
-            <div class="section-head" data-reveal>
-                <h2 data-i18n="about.title">Uygulamalara nasıl inanıyoruz</h2>
-                <p data-i18n="about.desc">Takip ettiğin şey senindir. Kutvoks uygulamaları hesap açtırmadan çalışır ve verini cihazında saklar.</p>
-            </div>
-            <div class="value-rows">
-                <div class="value-row" data-reveal>
-                    <span class="num">01</span>
-                    <h3 data-i18n="about.h1">Veri cihazında kalır</h3>
-                    <p data-i18n="about.p1">Piyasa verisi dışına çıkmaz; portföyler, giderler ve raporlar cihazındaki veritabanında tutulur. Sunucu hesabı yoktur.</p>
-                </div>
-                <div class="value-row" data-reveal style="--rd:100ms">
-                    <span class="num">02</span>
-                    <h3 data-i18n="about.h2">Türkçe öncelik</h3>
-                    <p data-i18n="about.p2">Arayüzler Türkçe tasarlanır, İngilizce desteği ikinci dildir. BIST haber akışı ve TL birimleri yerleşiktir.</p>
-                </div>
-                <div class="value-row" data-reveal style="--rd:200ms">
-                    <span class="num">03</span>
-                    <h3 data-i18n="about.h3">Takip etmek kolay olmalı</h3>
-                    <p data-i18n="about.p3">Bir gider kaydetmek için dokuz alan doldurmak gerekmez. Hızlı giriş, fiş okutma ve akıllı kategoriler standart özelliktir.</p>
-                </div>
-            </div>
-        </div>
-    </section>
-
-    <!-- CONTACT -->
-    <section class="section contact-section" id="iletisim" style="padding-top: 0;">
-        <div class="wrap" data-reveal>
-            <div class="contact-box">
-                <div class="contact-icon" aria-hidden="true">✉</div>
-                <div>
-                    <h3 data-i18n="contact.title">Bir sorunuz mu var?</h3>
-                    <p data-i18n="contact.desc">Geri bildirim, hata bildirimi veya iş birliği için bize yazın — genellikle bir gün içinde yanıtlarız.</p>
-                </div>
-                <a class="btn btn-primary" href="mailto:aykutkutlu08@gmail.com">aykutkutlu08@gmail.com</a>
-            </div>
-        </div>
-    </section>
-
+<main id="icerik">
+<section class="studio-hero">
+<div class="wrap hero-grid">
+<div class="hero-copy">
+<h1>
+<span data-i18n="hero.first">Piyasayı keşfet.</span>
+<br>
+<span data-i18n="hero.second" class="text-blue">Bütçeni yönet.</span>
+</h1>
+<p data-i18n="hero.desc" class="hero-lead">Finansın iki farklı tarafı için, aynı özenle geliştirilen iki Android uygulaması. Kutvoks ile verilerini anlamlandır, günlük takibini kolaylaştır.</p>
+<div class="hero-actions">
+<a class="btn btn-primary" href="#uygulamalar">
+<span data-i18n="hero.cta">Uygulamaları keşfet</span>
+</a>
+<a class="btn btn-text" href="#nasil-calisir">
+<span data-i18n="hero.how">Sana hangisi uygun?</span>
+</a>
+</div>
+<p data-i18n="hero.platform" class="platform-note">Android için · Türkçe ve İngilizce · Google Play</p>
+</div>
+<div class="hero-products">
+<a class="product-exhibit exhibit-ops" href="ops.html">
+<div class="exhibit-title">
+<img src="images/apps/ops-icon.png" alt="" width="38" height="38">
+<strong>OPS</strong>
+<span aria-hidden="true">↗</span>
+</div>
+<img class="hero-mascot" src="images/ops/mood/coin-happy.png" alt="OPS maskotu" width="270" height="270" fetchpriority="high">
+<div class="exhibit-bottom">
+<h2 data-i18n="hero.ops">Piyasanın büyük resmi.</h2>
+<p data-i18n="hero.ops.sub">Piyasalar · Portföy · Analiz</p>
+</div>
+</a>
+<a class="product-exhibit exhibit-budget" href="butce-takip.html">
+<div class="exhibit-title">
+<img src="images/apps/butce-icon.png" alt="" width="38" height="38">
+<strong>Bütçe Takip</strong>
+<span aria-hidden="true">↗</span>
+</div>
+<div class="hero-budget-screen">
+<img src="images/butce/screen-home.png" alt="Bütçe Takip uygulamasının gerçek ana ekranı" width="1080" height="2460">
+</div>
+<div class="exhibit-bottom">
+<h2 data-i18n="hero.budget">Günlük hayatın hesabı.</h2>
+<p data-i18n="hero.budget.sub">Gelir · Gider · Tasarruf</p>
+</div>
+</a>
+</div>
+</div>
+</section>
+<section class="section products-section" id="uygulamalar">
+<div class="wrap">
+<div class="section-heading">
+<h2 data-i18n="products.title">İhtiyacına göre seç. Ayrıntılarıyla tanı.</h2>
+<p data-i18n="products.desc">Biri piyasayı anlamana, diğeri kendi bütçeni görmene yardımcı olur.</p>
+</div>
+<article class="product-story story-ops">
+<div class="story-identity">
+<img src="images/apps/ops-icon.png" alt="" width="68" height="68">
+<h3>OPS: Financial Support</h3>
+<span>Android 8.0+</span>
+</div>
+<div class="story-body">
+<h4 data-i18n="ops.heading">Portföyünün ötesini gör.</h4>
+<p data-i18n="ops.intro">Piyasa takibini, sayısal analizleri ve kendi sağlayıcınla çalışan OPS asistanını aynı uygulamada keşfet.</p>
+<ul class="story-features">
+<li data-i18n="ops.bullet.0">Piyasalar ve portföy</li>
+<li data-i18n="ops.bullet.1">Backtest ve Monte Carlo</li>
+<li data-i18n="ops.bullet.2">Sesli maskot ve widget</li>
+</ul>
+<div class="story-actions">
+<a class="btn btn-primary" href="ops.html">
+<span data-i18n="ops.all">Tüm özellikleri incele</span>
+</a>
+<a class="btn btn-text" href="https://play.google.com/store/apps/details?id=com.finanspro" target="_blank" rel="noopener noreferrer">
+<span data-i18n="ops.play">Google Play&#x27;de aç</span>
+</a>
+</div>
+<p data-i18n="ops.conditions" class="small-note">Reklamlar ve analiz hakları · Harici sağlayıcı koşulları geçerli</p>
+</div>
+</article>
+<article class="product-story story-butce">
+<div class="story-identity">
+<img src="images/apps/butce-icon.png" alt="" width="68" height="68">
+<h3>Bütçe Takip</h3>
+<span>Android 9+</span>
+</div>
+<div class="story-body">
+<h4 data-i18n="butce.heading">Küçük kayıtlar. Daha net bir bütçe.</h4>
+<p data-i18n="butce.intro">Gelir/gider takibi, fiş OCR, kart ekstresi içe aktarma, tasarruf hedefleri ve 12 aylık bütçe görünümü.</p>
+<ul class="story-features">
+<li data-i18n="butce.bullet.0">Fiş ve PDF ekstre işleme</li>
+<li data-i18n="butce.bullet.1">Takvim, raporlar ve tasarruf</li>
+<li data-i18n="butce.bullet.2">Çevrimdışı bütçe asistanı</li>
+</ul>
+<div class="story-actions">
+<a class="btn btn-primary" href="butce-takip.html">
+<span data-i18n="butce.all">Tüm özellikleri incele</span>
+</a>
+<a class="btn btn-text" href="https://play.google.com/store/apps/details?id=com.butceapp" target="_blank" rel="noopener noreferrer">
+<span data-i18n="butce.play">Google Play&#x27;de aç</span>
+</a>
+</div>
+<p data-i18n="butce.conditions" class="small-note">Ücretsiz temel takip · İsteğe bağlı Premium</p>
+</div>
+</article>
+</div>
+</section>
+<section class="section journey-section" id="nasil-calisir">
+<div class="wrap">
+<div class="section-heading">
+<h2 data-i18n="journey.title">Sen neyi takip etmek istiyorsun?</h2>
+<p data-i18n="journey.desc">İki uygulama, birbirinden farklı ihtiyaçlar. Başlamak için sana uygun yolu seç.</p>
+</div>
+<div class="journey-controls" role="group" aria-label="Uygulama seçimi" hidden data-journey-controls>
+<button type="button" data-journey="ops" aria-pressed="true">OPS</button>
+<button type="button" data-journey="butce" aria-pressed="false">Bütçe Takip</button>
+</div>
+<div class="journey-panel" id="journey-ops" data-journey-panel="ops">
+<h3 data-i18n="journey.ops">Piyasalar ve yatırımlarım</h3>
+<ol class="steps">
+<li>
+<h4 data-i18n="journey.ops.0.title">Piyasalarını seç</h4>
+<p data-i18n="journey.ops.0.text">İlk kurulumda takip etmek istediğin ülkeleri seç, varlıkları ara ve favorilerini oluştur.</p>
+</li>
+<li>
+<h4 data-i18n="journey.ops.1.title">Portföyünü ekle</h4>
+<p data-i18n="journey.ops.1.text">Adet ve ortalama maliyetini kaydet. Toplam değerini ve kâr/zararını incele.</p>
+</li>
+<li>
+<h4 data-i18n="journey.ops.2.title">Araçlarını keşfet</h4>
+<p data-i18n="journey.ops.2.text">Yerel analizlerle başla. Sohbet veya Haber Etkisi için tercih ettiğin sağlayıcıyı bağla.</p>
+</li>
+</ol>
+<a class="btn btn-text" href="ops.html">
+<span data-i18n="journey.ops.link">OPS ile tanış</span>
+</a>
+</div>
+<div class="journey-panel" id="journey-butce" data-journey-panel="butce">
+<h3 data-i18n="journey.butce">Harcamalarım ve gelecek planlarım</h3>
+<ol class="steps">
+<li>
+<h4 data-i18n="journey.butce.0.title">Düzenini kur</h4>
+<p data-i18n="journey.butce.0.text">Kişilerini ve kategorilerini ekle. Bütçe dönemini maaş gününe göre seç.</p>
+</li>
+<li>
+<h4 data-i18n="journey.butce.1.title">İlk kaydını oluştur</h4>
+<p data-i18n="journey.butce.1.text">Giderini elle gir veya fiş/ekstre tarayıp okunan işlemleri kontrol ederek kaydet.</p>
+</li>
+<li>
+<h4 data-i18n="journey.butce.2.title">Resmin bütününü gör</h4>
+<p data-i18n="journey.butce.2.text">Takvim ve raporlara bak, bir tasarruf hedefi belirle; 12 aylık görünümü incele.</p>
+</li>
+</ol>
+<a class="btn btn-text" href="butce-takip.html">
+<span data-i18n="journey.butce.link">Bütçe Takip ile tanış</span>
+</a>
+</div>
+</div>
+</section>
+<section class="section home-videos" id="videolar">
+<div class="wrap">
+<div class="section-heading heading-inline">
+<div>
+<h2 data-i18n="videos.title">OPS&#x27;yi izleyerek tanı.</h2>
+<p data-i18n="videos.desc">İki yeni tanıtım filmi yayında. İlk Shorts videosuyla birlikte tüm seri OPS sayfasında.</p>
+</div>
+<a class="btn btn-text" href="ops.html#tanitim">
+<span data-i18n="videos.all">Üç videoyu da gör</span>
+</a>
+</div>
+<div class="home-video-grid">
+<article class="video-card">
+<div class="video-frame">
+<iframe src="https://www.youtube-nocookie.com/embed/zaQTnNX64Eg" title="OPS dikkatinizi dağıtabilir!" width="640" height="360" loading="lazy" referrerpolicy="strict-origin-when-cross-origin" allow="accelerometer; encrypted-media; gyroscope; picture-in-picture; web-share; fullscreen" allowfullscreen>
+</iframe>
+</div>
+<div class="video-caption">
+<h3>
+<span data-i18n="video.zaQTnNX64Eg">OPS dikkatinizi dağıtabilir!</span>
+</h3>
+<a href="https://www.youtube.com/watch?v=zaQTnNX64Eg" target="_blank" rel="noopener noreferrer">
+<span data-i18n="video.watch.zaQTnNX64Eg">YouTube&#x27;da aç</span>
+<span aria-hidden="true"> ↗</span>
+</a>
+</div>
+</article>
+<article class="video-card video-short">
+<div class="video-frame">
+<iframe src="https://www.youtube-nocookie.com/embed/CSgLeQA-TLk" title="OPS sevdiklerinizle daha çok vakit geçirin!" width="360" height="640" loading="lazy" referrerpolicy="strict-origin-when-cross-origin" allow="accelerometer; encrypted-media; gyroscope; picture-in-picture; web-share; fullscreen" allowfullscreen>
+</iframe>
+</div>
+<div class="video-caption">
+<h3>
+<span data-i18n="video.CSgLeQA-TLk">OPS sevdiklerinizle daha çok vakit geçirin!</span>
+</h3>
+<a href="https://www.youtube.com/watch?v=CSgLeQA-TLk" target="_blank" rel="noopener noreferrer">
+<span data-i18n="video.watch.CSgLeQA-TLk">YouTube&#x27;da aç</span>
+<span aria-hidden="true"> ↗</span>
+</a>
+</div>
+</article>
+</div>
+</div>
+</section>
+<section class="section about-section" id="hakkinda">
+<div class="wrap about-grid">
+<div>
+<h2 data-i18n="about.title">Günlük hayatta yer bulan uygulamalar.</h2>
+<p data-i18n="about.desc">Kutvoks, günlük finans ihtiyaçlarına odaklanan bağımsız bir Android uygulama stüdyosu. Karmaşık verileri anlaşılır kılmak ve düzenli takibi kolaylaştırmak için geliştiriyoruz.</p>
+</div>
+<div class="about-principles">
+<div>
+<h3 data-i18n="about.local.title">Yerel kayıt, açık veri akışı</h3>
+<p data-i18n="about.local.body">Kayıtların cihazında tutulur. İnternet, hesap, reklam veya yapay zekâ kullanan özelliklerin bağlantılarını ürün sayfalarında açıklarız.</p>
+</div>
+<div>
+<h3 data-i18n="about.language.title">Türkçe ve İngilizce</h3>
+<p data-i18n="about.language.body">İki uygulamada da dilini seçebilirsin. Piyasa ve bütçe işlerini kendi alışkanlıklarınla takip et.</p>
+</div>
+<div>
+<h3 data-i18n="about.terms.title">Özellikler kadar koşullar da net</h3>
+<p data-i18n="about.terms.body">Analiz hakları, ücretsiz kullanım sınırları ve Premium farklarını indirmeden önce inceleyebilirsin.</p>
+</div>
+</div>
+</div>
+</section>
+<section class="section contact-section" id="iletisim">
+<div class="wrap">
+<div class="contact-box">
+<div>
+<h2 data-i18n="contact.title">Birlikte daha iyiye.</h2>
+<p data-i18n="contact.desc">Bir özellik önerin veya hata bildirimin mi var? Kullandığın uygulamayı ve sürümü belirterek bize yaz.</p>
+</div>
+<a class="btn btn-primary" href="mailto:aykutkutlu08@gmail.com">
+<span data-i18n="contact.cta">Kutvoks’a yaz</span>
+</a>
+</div>
+</div>
+</section>
 </main>
-
 <footer class="site-footer">
-    <div class="wrap">
-        <div class="footer-grid">
-            <div class="footer-col footer-brand">
-                <a class="brand" href="index.html">
-                    <img src="images/kutvoks/kutvoks-icon.png" alt="Kutvoks logosu">
-                    <span><b>Kutvoks</b><span data-i18n="brand.sub2">app studio</span></span>
-                </a>
-                <p data-i18n="footer.tagline">Android uygulamaları: Build · Innovate · Publish</p>
-            </div>
-            <div class="footer-col">
-                <h4 data-i18n="footer.apps">Uygulamalar</h4>
-                <a href="https://play.google.com/store/apps/details?id=com.finanspro" target="_blank">OPS: Financial Support</a>
-                <a href="https://play.google.com/store/apps/details?id=com.butceapp" target="_blank" data-i18n="butce.name2">Bütçe Takip</a>
-            </div>
-            <div class="footer-col">
-                <h4 data-i18n="footer.info">Bilgiler</h4>
-                <a href="gizlilik.html" data-i18n="footer.privacy">Gizlilik Politikası</a>
-                <a href="butce-gizlilik.html" data-i18n="footer.privacy2">Bütçe Takip Gizlilik</a>
-                <a href="app-ads.txt">app-ads.txt</a>
-            </div>
-            <div class="footer-col">
-                <h4 data-i18n="footer.contact">İletişim</h4>
-                <a href="mailto:aykutkutlu08@gmail.com">aykutkutlu08@gmail.com</a>
-            </div>
-        </div>
-        <div class="footer-bottom">
-            <span data-i18n="footer.rights">© 2026 Kutvoks. Tüm hakları saklıdır.</span>
-            <span data-i18n="footer.disclaimer">Uygulamalar yatırım tavsiyesi sunmaz.</span>
-        </div>
-    </div>
+<div class="wrap">
+<div class="footer-grid">
+<div class="footer-col footer-brand">
+<a class="brand" href="index.html">
+<img src="images/kutvoks/kutvoks-icon.png" alt="" width="44" height="44">
+<span>
+<b>Kutvoks</b>
+<span>app studio</span>
+</span>
+</a>
+<p data-i18n="footer.note">Günlük finans için bağımsız Android uygulamaları.</p>
+</div>
+<div class="footer-col">
+<h3>Kutvoks</h3>
+<a href="ops.html">OPS: Financial Support</a>
+<a href="butce-takip.html">Bütçe Takip</a>
+<a href="mailto:aykutkutlu08@gmail.com">aykutkutlu08@gmail.com</a>
+</div>
+<div class="footer-col">
+<h3>
+<span data-i18n="footer.privacy">Gizlilik ve bilgiler</span>
+</h3>
+<a href="gizlilik.html">
+<span data-i18n="footer.opsPrivacy">OPS · Gizlilik</span>
+</a>
+<a href="butce-gizlilik.html">
+<span data-i18n="footer.budgetPrivacy">Bütçe Takip · Gizlilik</span>
+</a>
+<a href="app-ads.txt">app-ads.txt</a>
+</div>
+</div>
+<div class="footer-bottom">
+<span>© 2026 Kutvoks</span>
+<span>
+<span data-i18n="footer.disclaimer">OPS içerikleri bilgilendirme amaçlıdır; yatırım tavsiyesi değildir.</span>
+</span>
+</div>
+</div>
 </footer>
-
-<script src="lang.js" defer></script>
-
+<script src="home-copy.js" defer>
+</script>
+<script src="lang.js" defer>
+</script>
 </body>
 </html>

@@ -1,307 +1,441 @@
-﻿<!DOCTYPE html>
+<!DOCTYPE html>
 <html lang="tr">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Bütçe Takip — Gider, Fiş ve Ekstre Yönetimi | Kutvoks</title>
-    <meta name="description" content="Bütçe Takip; hızlı gider girişi, kamera ile fiş tarama, banka ekstresi okuma, seçilebilir bütçe döngüsü, PDF/Excel raporlar ve offline yapay zekâ asistanı sunan Android uygulamasıdır.">
-    <link rel="icon" type="image/png" href="images/kutvoks/kutvoks-icon.png">
-    <link rel="stylesheet" href="styles.css">
-    <link href="https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@400;500;600;700&display=swap" rel="stylesheet">
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Bütçe Takip — Özellikler ve Kullanım | Kutvoks</title>
+<meta name="description" content="Bütçe Takip; gelir/gider, fiş OCR, PDF ekstre içe aktarma, taksitler, takvim, raporlar, tasarruf hedefleri ve çevrimdışı bütçe asistanı sunar.">
+<link rel="canonical" href="https://aykutkutlu.github.io/AykutKutlu/butce-takip.html">
+<meta property="og:title" content="Bütçe Takip — Özellikler ve Kullanım | Kutvoks">
+<meta property="og:description" content="Bütçe Takip; gelir/gider, fiş OCR, PDF ekstre içe aktarma, taksitler, takvim, raporlar, tasarruf hedefleri ve çevrimdışı bütçe asistanı sunar.">
+<meta property="og:type" content="website">
+<meta property="og:url" content="https://aykutkutlu.github.io/AykutKutlu/butce-takip.html">
+<meta property="og:image" content="https://aykutkutlu.github.io/AykutKutlu/images/apps/butce-icon.png">
+<meta name="twitter:card" content="summary_large_image">
+<meta name="theme-color" content="#153c70">
+<link rel="icon" type="image/png" href="images/kutvoks/kutvoks-icon.png">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@400;500;600;700&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="styles.css">
 </head>
-<body>
-
-<div class="scroll-progress" aria-hidden="true"><span id="scrollProgressBar"></span></div>
-
+<body class="product-page product-butce">
+<a class="skip-link" href="#icerik">İçeriğe geç</a>
 <header class="site-header" id="siteHeader">
-    <div class="wrap">
-        <a class="brand" href="index.html">
-            <img src="images/kutvoks/kutvoks-icon.png" alt="Kutvoks logosu">
-            <span><b>Kutvoks</b><span>app studio</span></span>
-        </a>
-        <nav class="nav-links">
-            <a href="index.html#uygulamalar">Uygulamalar</a>
-            <a href="mailto:aykutkutlu08@gmail.com">Destek</a>
-        </nav>
-    </div>
-</header>
-
-<nav class="subnav" aria-label="Sayfa bölümü">
-    <div class="wrap">
-        <a href="#genel">Genel Bakış</a>
-        <a href="#ozellikler">Özellikler</a>
-        <a href="#ekranlar">Ekranlar</a>
-        <a href="#tanitim">Tanıtım</a>
-        <a href="#sss">SSS</a>
-    </div>
+<div class="wrap header-inner">
+<a class="brand" href="index.html" aria-label="Kutvoks">
+<img src="images/kutvoks/kutvoks-icon.png" alt="" width="44" height="44">
+<span>
+<b>Kutvoks</b>
+<span>app studio</span>
+</span>
+</a>
+<nav class="nav-links" aria-label="Ana menü">
+<a href="index.html#uygulamalar">Uygulamalar</a>
+<a href="index.html#hakkinda">Kutvoks hakkında</a>
+<a href="mailto:aykutkutlu08@gmail.com">Destek</a>
 </nav>
-
-<main>
-
-    <!-- HERO -->
-    <section id="genel" class="appsplit">
-        <div class="wrap app-hero-grid">
-            <div>
-                <a class="back-link" href="index.html#uygulamalar">Kutvoks uygulamaları</a>
-                <h1 data-reveal>Bütçe Takip <i style="font-style:normal;font-size:.45em;color:var(--ink-faint);letter-spacing:.08em;">· Budget Tracker</i></h1>
-                <p class="tagline" data-reveal style="--rd:80ms">Giderleri dakikalarca kaydet. Fişini okut, banka ekstreni işlet, takvimden gün gün bak, ay sonunu önceden gör.</p>
-                <div class="app-meta" data-reveal style="--rd:160ms">
-                    <span class="meta-pill">Kategori: <b>Finans</b></span>
-                    <span class="meta-pill">Sürüm: <b>1.25.3</b></span>
-                    <span class="meta-pill">Fiyat: <b>Ücretsiz</b></span>
-                    <span class="meta-pill">Dil: <b>Türkçe / English</b></span>
-                </div>
-                <div class="app-hero-actions" data-reveal style="--rd:240ms">
-                    <a class="btn btn-accent" href="https://play.google.com/store/apps/details?id=com.butceapp" target="_blank">Google Play'de Aç ↓</a>
-                    <a class="btn btn-ghost" href="butce-gizlilik.html">Gizlilik Politikası</a>
-                </div>
-            </div>
-            <div class="phone-stage" data-reveal style="--rd:160ms">
-                <div class="phone" data-parallax>
-                    <div class="screen">
-                        <div class="demo-reel">
-                            <figure>
-                                <img src="images/butce/screen-home.png" alt="Bütçe Takip ana ekran">
-                                <figcaption>Aylık gelir · gider · tasarruf</figcaption>
-                            </figure>
-                            <figure>
-                                <img src="images/butce/screen-calendar.png" alt="Bütçe Takip takvim ekranı">
-                                <figcaption>Takvimden gün gün</figcaption>
-                            </figure>
-                        </div>
-                    </div>
-                </div>
-            </div>
-        </div>
-    </section>
-
-    <!-- STAT BAND -->
-    <section class="section" style="padding-top: 26px;">
-        <div class="wrap">
-            <div class="stat-band" data-reveal>
-                <div class="stat"><b>≈ 3 dokunuş</b><span>bir gider kaydetmek için gereken adım: tutar + kategori</span></div>
-                <div class="stat accent"><b>1-28</b><span>senin seçtiğin bütçe döngüsü başlangıç günü</span></div>
-                <div class="stat"><b>2 dil</b><span>Türkçe ve İngilizce arayüz</span></div>
-                <div class="stat"><b>%100</b><span>veriler cihazda; hesap ve sunucu yok</span></div>
-            </div>
-        </div>
-    </section>
-
-    <!-- FEATURES -->
-    <section class="section" id="ozellikler" style="padding-top: 10px;">
-        <div class="wrap">
-            <div class="section-head" data-reveal>
-                <h2>Kâğıt fişten Excel rapora, tam zincir</h2>
-                <p><span class="kick">Features</span>Her şey cihazında otomatik işlenir: fiş, ekstre, kategori, rapor.</p>
-            </div>
-            <div class="feature-grid">
-                <div class="feature-block tint-orange" data-reveal>
-                    <span class="flabel">Hızlı giriş</span>
-                    <h3>Gider kaydetmek dokuz tık değil</h3>
-                    <p>Tutar ve kategori — bu kadar. Tekrarlayan ödemeleri ay sayısıyla tanımlarsın; uygulama ayları otomatik işler.</p>
-                    <ul>
-                        <li>Kişi ve kategori bazlı takip (aile için ideal)</li>
-                        <li>Aylık tekrar sayısı ile ileri tarihli kayıt</li>
-                        <li>Maaş ve zam planlaması</li>
-                    </ul>
-                </div>
-                <div class="feature-block tint-green" data-reveal style="--rd:120ms">
-                    <span class="flabel">Fiş tarama</span>
-                    <h3>Fişi okut, tutarı bul</h3>
-                    <p>Kamera ile fiş fotoğrafı çek; ML Kit OCR tutarı okur, gider kaydı hızlıca oluşur. Görseller yalnızca cihazında işlenir.</p>
-                    <ul>
-                        <li>Fiş kaydını giderle eşleştirme</li>
-                        <li>Ücretsiz: aylık 5 tarama (+ödüllü reklam ile ek)</li>
-                        <li>Aylık fiş limitini premium ile kaldır</li>
-                    </ul>
-                </div>
-                <div class="feature-block tint-blue" data-reveal>
-                    <span class="flabel">Ekstre okuma</span>
-                    <h3>Banka PDF'ini otomatik işlet</h3>
-                    <p>PDFBox ile ekleme yapmadan metin okunur; gerektiğinde OCR'a düşer. Türkçe kategori başlıkları tanınır, giderler otomatik sınıflanır.</p>
-                    <ul>
-                        <li>5 katmanlı kategori eşleyici: tam eşleşme → normalize → takma ad → içerir → Diğer</li>
-                        <li>Tarih, tutar, taksit ayrıştırma</li>
-                        <li>Ayda 1 ücretsiz ekstre (premium ile sınırsız)</li>
-                    </ul>
-                </div>
-                <div class="feature-block" data-reveal style="--rd:120ms">
-                    <span class="flabel">Raporlar</span>
-                    <h3>Trend, projeksiyon ve PDF</h3>
-                    <p>Gelir/gider dengesini grafiklerde gör, kategori kırılımını izle, ay sonu tahminine göre birikim planla; PDF/Excel olarak paylaş.</p>
-                    <ul>
-                        <li>Aylık gelir, gider ve birikim özeti</li>
-                        <li>Kategori kırılımı ve trend grafikleri</li>
-                        <li>Bütçe projeksiyonu ve tasarruf hedefleri</li>
-                    </ul>
-                </div>
-                <div class="feature-block" data-reveal>
-                    <span class="flabel">Bütçe döngüsü</span>
-                    <h3>Ay herkes için 1'i değildir</h3>
-                    <p>Maaş günün 15'i mi? Döngüyü kendi gününle kur; 1-28 arası başlangıç seçersin, tüm raporlar o döngüye göre hesaplanır.</p>
-                    <ul>
-                        <li>Takvimde döngüye göre gün işaretleri</li>
-                        <li>Döngü bazlı gelir/gider/kalan özeti</li>
-                    </ul>
-                </div>
-                <div class="feature-block tint-blue" data-reveal style="--rd:120ms">
-                    <span class="flabel">Yapay zekâ</span>
-                    <h3>Bütçe asistanı — çevrimdışı</h3>
-                    <p>Asistan verilerini cihazındaki kayıtlardan okuyup aylık özet, kıyas ve harcama alışkanlığı yorumları üretir. Network yoksa bile çalışır.</p>
-                    <ul>
-                        <li>Aylık özet ve kıyas yorumları</li>
-                        <li>Ücretsiz günlük 3 soru (premium ile sınırsız)</li>
-                    </ul>
-                </div>
-            </div>
-        </div>
-    </section>
-
-    <!-- SCREENS -->
-    <section class="section" id="ekranlar" style="padding-top: 0;">
-        <div class="wrap">
-            <div class="section-head" data-reveal>
-                <h2>Uygulamadan gerçek ekranlar</h2>
-                <p><span class="kick">Screens</span>Karanlık temada sade netlik: ana sayfada özet, takvimde gün gün.</p>
-            </div>
-            <div class="shots" data-reveal>
-                <div class="shot-card">
-                    <img src="images/butce/screen-home.png" alt="Bütçe Takip ana ekranı" loading="lazy">
-                    <b>Ana Sayfa</b>
-                    <span>Aylık gelir · gider · tasarruf özeti, hızlı işlemler ve son giderler</span>
-                </div>
-                <div class="shot-card">
-                    <img src="images/butce/screen-calendar.png" alt="Bütçe Takip takvim ekranı" loading="lazy">
-                    <b>Takvim</b>
-                    <span>Gün gün gider işaretleri + döngü bazlı gelir / gider / kalan</span>
-                </div>
-            </div>
-        </div>
-    </section>
-
-    <!-- PROMO VIDEO -->
-    <section class="section" id="tanitim" style="padding-top: 0;">
-        <div class="wrap">
-            <div class="section-head" data-reveal>
-                <h2>Tanıtım videosu</h2>
-                <p><span class="kick">Video</span>Yayın alanında kısa tanıtım filmi; şimdilik vitrinde gerçek ekran animasyonu dönüyor — video eklendiğinde otomatik olarak oynar.</p>
-            </div>
-            <div class="vslot" data-video="videos/butce-demo.mp4" data-reveal>
-                <span class="vbadge">🎬 Tanıtım videosu · Yakında</span>
-                <div class="demo-reel">
-                    <figure>
-                        <img src="images/butce/screen-home.png" alt="Bütçe Takip ana ekran">
-                        <figcaption>Ana sayfada özetin</figcaption>
-                    </figure>
-                    <figure>
-                        <img src="images/butce/screen-calendar.png" alt="Bütçe Takip takvim ekranı">
-                        <figcaption>Takvimden gün gün</figcaption>
-                    </figure>
-                </div>
-                <div class="reel-dim">
-                    <span class="playbtn">▶</span>
-                </div>
-            </div>
-        </div>
-    </section>
-
-    <!-- SAFETY -->
-    <section class="section" style="padding-top: 0;">
-        <div class="wrap">
-            <div class="safety" data-reveal>
-                <div class="safety-box">
-                    <div class="lock">🔒</div>
-                    <div>
-                        <h3>Hesap yok, sunucu yok, senkronizasyon yok</h3>
-                        <p>Tüm gider, gelir ve rapor verileri cihazındaki yerel veritabanında saklanır; yedeklemeye de kapalıdır. Uygulamayı kaldırdığında veriler de silinir; ayarlardan "Tüm Verilerimi Sil" seçeneğiyle tek tuşta sıfırlayabilirsin.</p>
-                    </div>
-                    <a class="btn btn-ghost" href="butce-gizlilik.html">Gizlilik Politikası</a>
-                </div>
-            </div>
-        </div>
-    </section>
-
-    <!-- FAQ -->
-    <section class="section" id="sss" style="padding-top: 0;">
-        <div class="wrap">
-            <div class="section-head" data-reveal>
-                <h2>Sık sorulan sorular</h2>
-            </div>
-            <div class="faq" data-reveal>
-                <details>
-                    <summary>Ücretsiz mi? Premium ne ekler?</summary>
-                    <p>Uygulama ücretsizdir; reklamlar AdMob ile gösterilir. Premium (aylık/yıllık) ile fiş tarama ve ekstre okuma limitleri kalkar, yapay zekâ soru sayısı sınırsız olur ve reklamları kaldırmayı seçebilirsin.</p>
-                </details>
-                <details>
-                    <summary>Fişlerim ve fotoğraflarım nerede saklanır?</summary>
-                    <p>Fiş fotoğrafları cihazında işlenir ve saklanır; hiçbir sunucuya gönderilmez. Fiş taraması ML Kit OCR kullanır ve işlem tamamen cihazda gerçekleştirilir.</p>
-                </details>
-                <details>
-                    <summary>Banka ekstremi yükleyebilir miyim?</summary>
-                    <p>Evet — PDF ekstrenizi uygulamaya verin; metin katmanı okunur, gerekirse sayfalar görsel OCR'a çevrilir. Türkçe kategori başlıkları tanınır ve giderler otomatik olarak alt kategorilere ayrılır. Ayda 1 ücretsiz okuma; premium ile sınırsız.</p>
-                </details>
-                <details>
-                    <summary>Verilerimi nasıl tamamen silerim?</summary>
-                    <p>Ayarlar > "Tüm Verilerimi Sil" ile veritabanı ve tercihleri tek adımda silinir; uygulamayı kaldırmak da tüm verileri birlikte siler — veriler cihazın dışına hiç çıkmadığı için başka temizlik gerekmez.</p>
-                </details>
-                <details>
-                    <summary>Türkçe bankaların ekstrelerinde çalışıyor mu?</summary>
-                    <p>Ayrıştırıcı Türkçe banka ekstreleri (kategoriler, tarih ve tutar desenleri) için yazıldı ve diğer bankalarda da çalışır; en iyi sonucu Türkçe ekstrelerde alır.</p>
-                </details>
-            </div>
-        </div>
-    </section>
-
-    <!-- CONTACT CTA -->
-    <section class="section contact-section" style="padding-top: 0;">
-        <div class="wrap" data-reveal>
-            <div class="contact-box">
-                <div class="contact-icon" aria-hidden="true">✉</div>
-                <div>
-                    <h3>Bütçe Takip hakkında sorunuz mu var?</h3>
-                    <p>Hata bildirimi, özellik önerisi ya da iş birliği için yazın.</p>
-                </div>
-                <a class="btn btn-primary" href="mailto:aykutkutlu08@gmail.com">aykutkutlu08@gmail.com</a>
-            </div>
-        </div>
-    </section>
-
+</div>
+</header>
+<nav class="subnav" aria-label="Sayfa bölümleri">
+<div class="wrap">
+<a href="#genel">Genel bakış</a>
+<a href="#ozellikler">Tüm özellikler</a>
+<a href="#kullanim">Kullanım koşulları</a>
+<a href="#baslangic">Başlangıç</a>
+<a href="#ekranlar">Ekranlar</a>
+<a href="#sss">SSS</a>
+</div>
+</nav>
+<main id="icerik">
+<section class="product-hero" id="genel">
+<div class="wrap product-hero-grid">
+<div>
+<a class="back-link" href="index.html#uygulamalar">← Kutvoks uygulamaları</a>
+<div class="product-name">
+<img src="images/apps/butce-icon.png" alt="" width="52" height="52">
+<span>Bütçe Takip</span>
+</div>
+<h1>Harcamaların netleşsin. Planların yerini bulsun.</h1>
+<p class="hero-lead">Gelirini ve giderini kaydet, fişlerini ve kart ekstrelerini işle, takvimini ve tasarruf hedeflerini aynı yerde takip et.</p>
+<div class="app-meta">
+<span>Android 9+</span>
+<span>Türkçe / English</span>
+<span>Ücretsiz + Premium</span>
+</div>
+<div class="hero-actions">
+<a class="btn btn-primary" href="https://play.google.com/store/apps/details?id=com.butceapp" target="_blank" rel="noopener noreferrer">Google Play'de aç</a>
+<a class="btn btn-text" href="#ekranlar">Ekranları gör</a>
+</div>
+<p class="small-note">Cihazına uygun sürümü ve güncellemeleri Google Play’de bulabilirsin.</p>
+</div>
+<figure class="product-hero-art budget-art">
+<img src="images/butce/screen-home.png" alt="Bütçe Takip ana ekranı: gelir, gider ve tasarruf özeti" width="1080" height="2460" fetchpriority="high">
+<figcaption>Uygulamadan gerçek ekran görüntüsü</figcaption>
+</figure>
+</div>
+</section>
+<section class="section catalog-section" id="ozellikler">
+<div class="wrap">
+<div class="section-heading">
+<h2>İlk kayıttan gelecek planlarına, tüm özellikler.</h2>
+<p>İhtiyacın olan başlığa geç veya bütün özellikleri aşağıda incele.</p>
+</div>
+<nav class="feature-index" aria-label="Özellik başlıkları">
+<a href="#gunluk-takip">Gelir, gider ve bütçe özeti</a>
+<a href="#duzenli-odemeler">Tekrarlayan gider ve taksit planı</a>
+<a href="#kisiler-kategoriler">Kişiler ve kişisel kategoriler</a>
+<a href="#takvim">Takvim ve bütçe dönemi</a>
+<a href="#fis">Kamera ve galeriden fiş tarama</a>
+<a href="#ekstre">Kart ekstresini içe aktar</a>
+<a href="#raporlar">Grafikler ve harcama raporları</a>
+<a href="#projeksiyon">12 aylık bütçe projeksiyonu</a>
+<a href="#tasarruf">Tasarruf hedefleri</a>
+<a href="#butce-asistani">Çevrimdışı bütçe asistanı</a>
+<a href="#hatirlatmalar">Hatırlatmalar ve haftalık özet</a>
+<a href="#kisisellestirme">Tema, dil ve mahremiyet</a>
+</nav>
+<div class="feature-catalog">
+<article class="catalog-entry" id="gunluk-takip">
+<h3>Gelir, gider ve bütçe özeti</h3>
+<div>
+<p>Ayın gelirini, giderini ve kalan bütçeni tek ekrandan takip et.</p>
+<ul>
+<li>Tutar, tarih, kişi, kategori ve açıklamayla gider kaydı.</li>
+<li>Kayıtları düzenleme, silme ve toplu seçim/silme.</li>
+<li>Aylık gelir, gider ve birikim özeti.</li>
+<li>Aile üyeleri ve gelir kalemlerini ayrı ayrı yönetme.</li>
+</ul>
+</div>
+</article>
+<article class="catalog-entry" id="duzenli-odemeler">
+<h3>Tekrarlayan gider ve taksit planı</h3>
+<div>
+<p>Düzenli ödemelerini veya taksitli bir harcamanı gelecek aylara dağıt.</p>
+<ul>
+<li>1–60 ay aralığında aylık tekrar sayısı seçimi.</li>
+<li>Taksitli harcamayı aylara bölerek ayrı gider kayıtları oluşturma.</li>
+<li>Kişiye bağlı gelirler, gelir tekrarı, birikim ve maaş zammı tarihi bilgileri.</li>
+</ul>
+<p class="feature-note">Banka bağlantısı veya kredi/borç hesabı yönetimi değildir; planlanan kayıtlar üzerinden çalışır.</p>
+</div>
+</article>
+<article class="catalog-entry" id="kisiler-kategoriler">
+<h3>Kişiler ve kişisel kategoriler</h3>
+<div>
+<p>Harcamalarını sana ve evine uygun bir düzende sınıflandır.</p>
+<ul>
+<li>Kişi ekleme, düzenleme ve kişiye bağlı gelirler.</li>
+<li>Gelir ve gider kategorileri oluşturma ve düzenleme.</li>
+<li>Kişi ve kategori bazında dağılımları raporlarda inceleme.</li>
+</ul>
+</div>
+</article>
+<article class="catalog-entry" id="takvim">
+<h3>Takvim ve bütçe dönemi</h3>
+<div>
+<p>Bütçe ayını maaş gününe uyarla; günlük hareketlerini takvimde gör.</p>
+<ul>
+<li>Günlük ve aylık gelir/gider görünümü.</li>
+<li>Bütçe dönemi için ayın 1–28. günleri arasında başlangıç seçimi.</li>
+<li>Seçtiğin dönemle uyumlu rapor hesapları.</li>
+</ul>
+</div>
+</article>
+<article class="catalog-entry" id="fis">
+<h3>Kamera ve galeriden fiş tarama</h3>
+<div>
+<p>Fiş fotoğrafını seç, okunan bilgileri kontrol et ve gider kaydına dönüştür.</p>
+<ul>
+<li>Kamera veya galeriden fotoğraf seçimi.</li>
+<li>Google ML Kit ile OCR ve yerel fiş ayrıştırma.</li>
+<li>Tespit edilen bilgileri kayıt öncesinde kontrol etme.</li>
+<li>Harici üretken yapay zekâ anahtarı gerektirmeyen işleme.</li>
+</ul>
+<p class="feature-note">Ücretsiz kullanımda ayda 5 fiş; limitte ödüllü reklamla +1 tarama. Premium'da sınırsız. Sonuç, fotoğrafın netliğine ve fiş düzenine bağlıdır.</p>
+</div>
+</article>
+<article class="catalog-entry" id="ekstre">
+<h3>Kart ekstresini içe aktar</h3>
+<div>
+<p>PDF veya fotoğraftaki işlemleri seçerek bütçene ekle; satırları kaydetmeden önce kontrol et.</p>
+<ul>
+<li>PDF dosyası, kamera veya galeriden ekstre işleme.</li>
+<li>PDF metin çıkarımı; gerektiğinde sayfa görüntüsünden OCR.</li>
+<li>İşlem seçme, kategorileri kontrol etme ve tüm işlemlere kişi atama.</li>
+<li>Taksit bilgilerinin ayrıştırılması ve Türk bankalarının ekstre düzenlerine yönelik kurallar.</li>
+<li>Ayrıştırma sorunu için isteğe bağlı, maskelenmiş ve düzenlenebilir destek raporu paylaşımı.</li>
+</ul>
+<p class="feature-note">Ücretsiz kullanımda ayda 1 PDF ekstre; Premium'da sınırsız. Her bankanın her dosya biçiminde başarı garantisi yoktur. PDF işleme, PDF rapor dışa aktarma anlamına gelmez.</p>
+</div>
+</article>
+<article class="catalog-entry" id="raporlar">
+<h3>Grafikler ve harcama raporları</h3>
+<div>
+<p>Paranın nereye gittiğini kişi, kategori ve zaman içinde incele.</p>
+<ul>
+<li>Gelir/gider dağılımları ve aylık eğilim grafikleri.</li>
+<li>Kişi ve kategori bazında kırılımlar.</li>
+<li>Birikim görünümü ve uygulama içi raporlar.</li>
+<li>Premium ile giderleri tarih, kategori, kişi, kalem, tutar ve açıklama sütunlarıyla CSV olarak dışa aktarma.</li>
+</ul>
+<p class="feature-note">PDF ekstreleri içe aktarabilir, giderlerini CSV olarak dışa aktarabilirsin.</p>
+</div>
+</article>
+<article class="catalog-entry" id="projeksiyon">
+<h3>12 aylık bütçe projeksiyonu</h3>
+<div>
+<p>Mevcut kayıtlarınla önündeki 12 aya ilişkin varsayımsal bir görünüm oluştur.</p>
+<ul>
+<li>Son üç ayın pozitif gider ortalamasına dayalı hesap.</li>
+<li>Kişilere bağlı gelirlerin ve tanımlı maaş zamlarının hesaba katılması.</li>
+<li>Gelecek aylar için gelir, gider ve birikim görünümü.</li>
+</ul>
+<p class="feature-note">Üretken yapay zekâ tahmini değildir; geçmiş ortalamalara ve girdiğin bilgilere dayalı bir planlama hesabıdır. Gerçekleşecek sonucu garanti etmez.</p>
+</div>
+</article>
+<article class="catalog-entry" id="tasarruf">
+<h3>Tasarruf hedefleri</h3>
+<div>
+<p>Bir hedef belirle, biriktirdiğin tutarı güncelle ve ilerlemeni izle.</p>
+<ul>
+<li>Hedef adı, hedef tutarı ve biriken tutarla kayıt.</li>
+<li>Aktif ve tamamlanan hedefleri ayrı görme.</li>
+<li>Hedefleri düzenleme ve silme.</li>
+</ul>
+<p class="feature-note">Birikim tutarını sen güncellersin; banka hesabından otomatik bakiye çekilmez.</p>
+</div>
+</article>
+<article class="catalog-entry" id="butce-asistani">
+<h3>Çevrimdışı bütçe asistanı</h3>
+<div>
+<p>Kayıtlarından hesaplanan gelir, gider ve harcama bilgilerine sorularla ulaş.</p>
+<ul>
+<li>Cihazda çalışan, kural tabanlı yanıtlar.</li>
+<li>Gelir/gider ve harcama alışkanlıkların hakkında yerel kayıtlardan bilgi.</li>
+<li>İnternet veya harici yapay zekâ sağlayıcısı/API anahtarı gerektirmeyen temel asistan.</li>
+<li>Kategoriye özel harcama, en büyük/son harcamalar ve aylık ortalama sorguları.</li>
+<li>Geçen ay kıyası, kişi/aile dağılımı, hedef ilerlemesi ve özetler.</li>
+<li>Kayıtlara göre kurallı tasarruf ipuçları.</li>
+</ul>
+<p class="feature-note">Ücretsiz kullanımda günde 3 soru; Premium'da sınırsız. Üretken yapay zekâ sohbet modeli değildir.</p>
+</div>
+</article>
+<article class="catalog-entry" id="hatirlatmalar">
+<h3>Hatırlatmalar ve haftalık özet</h3>
+<div>
+<p>Düzenli kayıt alışkanlığını cihazında planlanan bildirimlerle sürdür.</p>
+<ul>
+<li>Gider kaydı hatırlatmaları.</li>
+<li>Haftalık bütçe özeti.</li>
+<li>Ayarlanabilir hatırlatma saati.</li>
+<li>Bütçenin %80’ine yaklaşma ve bütçe aşımı uyarıları.</li>
+<li>Yaklaşan üç günlük ödemeler, olağandışı harcama artışları ve maaş zammı hatırlatmaları.</li>
+</ul>
+<p class="feature-note">Bildirim izni gerekir. Android'in arka plan ve pil koşulları nedeniyle tam dakikada teslim garantisi verilmez.</p>
+</div>
+</article>
+<article class="catalog-entry" id="kisisellestirme">
+<h3>Tema, dil ve mahremiyet</h3>
+<div>
+<p>Bütçeni sana uygun görünüm ve ayarlarla takip et.</p>
+<ul>
+<li>Türkçe/İngilizce dil seçimi; açık, koyu veya sistem teması.</li>
+<li>Tutarları yıldızlarla gizleyen mahremiyet modu.</li>
+<li>Başlangıç ayı ve para simgesi/biçimi tercihleri.</li>
+<li>Temel kullanımda zorunlu hesap yok; isteğe bağlı Google ile giriş.</li>
+<li>Aylık/yıllık Premium abonelik ve satın alımları geri yükleme.</li>
+<li>Ayarlar üzerinden yerel uygulama verilerini silme.</li>
+</ul>
+<p class="feature-note">Para simgesi seçimi canlı döviz dönüşümü yapmaz. Satın alımı geri yükleme, bütçe verilerini yedekten geri yükleme değildir.</p>
+</div>
+</article>
+</div>
+</div>
+</section>
+<section class="section usage-section" id="kullanim">
+<div class="wrap">
+<div class="section-heading">
+<h2>Ücretsiz ve Premium, açıkça yan yana.</h2>
+<p>Temel manuel takip ücretsizdir. Tarama, asistan ve dışa aktarma sınırlarını indirmeden önce gör.</p>
+</div>
+<div class="table-scroll" role="region" aria-label="Kullanım koşulları tablosu" tabindex="0">
+<table class="comparison-table">
+<caption>Bütçe Takip özellik ve limit karşılaştırması</caption>
+<thead>
+<tr>
+<th scope="col">Özellik</th>
+<th scope="col">Ücretsiz</th>
+<th scope="col">Premium</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<th scope="row">Temel manuel takip</th>
+<td>Var</td>
+<td>Var</td>
+</tr>
+<tr>
+<th scope="row">Fiş tarama</th>
+<td>5 / ay</td>
+<td>Sınırsız</td>
+</tr>
+<tr>
+<th scope="row">PDF ekstre işleme</th>
+<td>1 / ay</td>
+<td>Sınırsız</td>
+</tr>
+<tr>
+<th scope="row">Bütçe asistanı</th>
+<td>3 soru / gün</td>
+<td>Sınırsız</td>
+</tr>
+<tr>
+<th scope="row">CSV gider çıktısı</th>
+<td>Yok</td>
+<td>Var</td>
+</tr>
+<tr>
+<th scope="row">Reklamlar</th>
+<td>Var</td>
+<td>Yok</td>
+</tr>
+</tbody>
+</table>
+</div>
+<p class="small-note">Fiş limitinde ödüllü reklamla +1 tarama kazanılabilir. Aylık/yıllık Premium fiyatları ve abonelik koşulları Google Play satın alma ekranında gösterilir.</p>
+</div>
+</section>
+<section class="section" id="baslangic">
+<div class="wrap">
+<div class="section-heading">
+<h2>Üç adımda başla.</h2>
+</div>
+<ol class="steps">
+<li>
+<h3>Düzenini kur</h3>
+<p>Kişilerini ve kategorilerini ekle. Bütçe dönemini maaş gününe göre seç.</p>
+</li>
+<li>
+<h3>İlk kaydını oluştur</h3>
+<p>Giderini elle gir veya fiş/ekstre tarayıp okunan işlemleri kontrol ederek kaydet.</p>
+</li>
+<li>
+<h3>Resmin bütününü gör</h3>
+<p>Takvim ve raporlara bak, bir tasarruf hedefi belirle; 12 aylık görünümü incele.</p>
+</li>
+</ol>
+</div>
+</section>
+<section class="section" id="ekranlar">
+<div class="wrap">
+<div class="section-heading">
+<h2>Kendi ekranlarından tanı.</h2>
+<p>Gelir, gider ve birikim özeti; gün gün hareketlerini görebileceğin takvim.</p>
+</div>
+<div class="screenshot-gallery">
+<figure>
+<a href="images/butce/screen-home.png" target="_blank" rel="noopener noreferrer">
+<img src="images/butce/screen-home.png" alt="Bütçe Takip — Ana ekran · gelir, gider ve tasarruf" width="1080" height="2460" loading="lazy">
+</a>
+<figcaption>Ana ekran · gelir, gider ve tasarruf · Tam boyut için aç</figcaption>
+</figure>
+<figure>
+<a href="images/butce/screen-calendar.png" target="_blank" rel="noopener noreferrer">
+<img src="images/butce/screen-calendar.png" alt="Bütçe Takip — Takvim · günlük hareketler" width="1080" height="2460" loading="lazy">
+</a>
+<figcaption>Takvim · günlük hareketler · Tam boyut için aç</figcaption>
+</figure>
+</div>
+</div>
+</section>
+<section class="section privacy-section">
+<div class="wrap privacy-grid">
+<h2>Yerel kayıtlar.<br>Açık veri akışı.</h2>
+<div>
+<p>Gelir, gider ve bütçe kayıtları cihazındaki veritabanında tutulur. Fiş ve ekstreler OCR ve yerel kurallarla işlenir. İsteğe bağlı Google girişi, reklamlar ve satın alımlar ilgili hizmetlerle bağlantı kurar; destek raporu yalnızca sen paylaşmayı seçersen gönderilir.</p>
+<a class="btn btn-text" href="butce-gizlilik.html">Gizlilik politikasını oku</a>
+</div>
+</div>
+</section>
+<section class="section" id="sss">
+<div class="wrap">
+<div class="section-heading">
+<h2>Aklındaki sorular.</h2>
+</div>
+<div class="faq">
+<details>
+<summary>Ücretsiz kullanım neleri kapsıyor?</summary>
+<p>Temel manuel takip ücretsizdir. Fiş tarama ayda 5, PDF ekstre ayda 1, asistana soru günde 3 ile sınırlıdır. Fiş limitinde ödüllü reklamla 1 ek tarama kazanılabilir.</p>
+</details>
+<details>
+<summary>Premium neler ekliyor?</summary>
+<p>Sınırsız fiş ve PDF ekstre işleme, sınırsız asistan sorusu, CSV gider dışa aktarma ve reklamsız kullanım. Aylık/yıllık aboneliklerin güncel fiyatı ve koşulları Google Play'de gösterilir.</p>
+</details>
+<details>
+<summary>Asistan için internet veya API anahtarı gerekiyor mu?</summary>
+<p>Hayır. Bütçe asistanı, cihazındaki kayıtlardan kurallarla yanıt üretir. Harici üretken yapay zekâ modeline bağlanmaz.</p>
+</details>
+<details>
+<summary>Ekstreyi tarayınca işlemler doğrudan kaydedilir mi?</summary>
+<p>Tespit edilen işlemleri önce kontrol edebilir, seçim yapabilir ve kişi atayabilirsin. Farklı banka/ekstre düzenlerinde okuma hataları olabileceğinden kayıt öncesi kontrol önemlidir.</p>
+</details>
+<details>
+<summary>Verilerim yedekleniyor mu?</summary>
+<p>Bütçe kayıtları yerel veritabanında tutulur. Bu sürümde otomatik bulut yedekleme veya cihazlar arası bütçe senkronizasyonu sunulmaz. Uygulamayı kaldırmadan veya cihaz değiştirmeden önce veri kaybı ihtimalini değerlendir; Premium CSV gider çıktısı tam veritabanı yedeği değildir.</p>
+</details>
+<details>
+<summary>Hangi Android sürümü gerekiyor?</summary>
+<p>Android 9 ve üzeri gerekir. Cihazına uygun sürüm ve güncellemeler için Google Play sayfasını kontrol edebilirsin.</p>
+</details>
+</div>
+</div>
+</section>
+<section class="section contact-section">
+<div class="wrap">
+<div class="contact-box">
+<div>
+<h2>Bütçe Takip hakkında konuşalım.</h2>
+<p>Hata bildirirken uygulama sürümünü, Android sürümünü ve sorunu tekrar etme adımlarını yazabilirsin. Özel finansal bilgilerini paylaşmana gerek yok.</p>
+</div>
+<a class="btn btn-primary" href="mailto:aykutkutlu08@gmail.com">Destek için yaz</a>
+</div>
+</div>
+</section>
 </main>
-
 <footer class="site-footer">
-    <div class="wrap">
-        <div class="footer-grid">
-            <div class="footer-col footer-brand">
-                <a class="brand" href="index.html">
-                    <img src="images/kutvoks/kutvoks-icon.png" alt="Kutvoks logosu">
-                    <span><b>Kutvoks</b><span>app studio</span></span>
-                </a>
-                <p>Android uygulamaları: Build · Innovate · Publish</p>
-            </div>
-            <div class="footer-col">
-                <h4>Uygulamalar</h4>
-                <a href="https://play.google.com/store/apps/details?id=com.finanspro" target="_blank">OPS: Financial Support</a>
-                <a href="https://play.google.com/store/apps/details?id=com.butceapp" target="_blank">Bütçe Takip</a>
-            </div>
-            <div class="footer-col">
-                <h4>Bilgiler</h4>
-                <a href="gizlilik.html">Gizlilik Politikası</a>
-                <a href="butce-gizlilik.html">Bütçe Takip Gizlilik</a>
-                <a href="app-ads.txt">app-ads.txt</a>
-            </div>
-            <div class="footer-col">
-                <h4>İletişim</h4>
-                <a href="mailto:aykutkutlu08@gmail.com">aykutkutlu08@gmail.com</a>
-            </div>
-        </div>
-        <div class="footer-bottom">
-            <span>© 2026 Kutvoks. Tüm hakları saklıdır.</span>
-            <span>Bütçe verileri yalnızca cihazda saklanır.</span>
-        </div>
-    </div>
+<div class="wrap">
+<div class="footer-grid">
+<div class="footer-col footer-brand">
+<a class="brand" href="index.html">
+<img src="images/kutvoks/kutvoks-icon.png" alt="" width="44" height="44">
+<span>
+<b>Kutvoks</b>
+<span>app studio</span>
+</span>
+</a>
+<p>Günlük finans için bağımsız Android uygulamaları.</p>
+</div>
+<div class="footer-col">
+<h3>Kutvoks</h3>
+<a href="ops.html">OPS: Financial Support</a>
+<a href="butce-takip.html">Bütçe Takip</a>
+<a href="mailto:aykutkutlu08@gmail.com">aykutkutlu08@gmail.com</a>
+</div>
+<div class="footer-col">
+<h3>Gizlilik ve bilgiler</h3>
+<a href="gizlilik.html">OPS · Gizlilik</a>
+<a href="butce-gizlilik.html">Bütçe Takip · Gizlilik</a>
+<a href="app-ads.txt">app-ads.txt</a>
+</div>
+</div>
+<div class="footer-bottom">
+<span>© 2026 Kutvoks</span>
+<span>OPS içerikleri bilgilendirme amaçlıdır; yatırım tavsiyesi değildir.</span>
+</div>
+</div>
 </footer>
-
-<script src="lang.js" defer></script>
-
+<script src="lang.js" defer>
+</script>
 </body>
 </html>

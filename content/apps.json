@@ -1,0 +1,374 @@
+{
+  "ops": {
+    "name": "OPS: Financial Support",
+    "short": "OPS",
+    "page": "ops.html",
+    "package": "com.finanspro",
+    "version": "2.11.2",
+    "android": "8.0+",
+    "icon": "images/apps/ops-icon.png",
+    "headline": "Piyasayı takip et. Olasılıkları keşfet.",
+    "intro": "Hisselerden kriptoya, portföyünden senaryo analizine: finansal verilerini keşfetmek için ihtiyacın olan araçlar ve konuşabileceğin bir OPS asistanı.",
+    "description": "OPS: Financial Support; piyasa ve portföy takibi, teknik ve temel analiz, backtest, Monte Carlo, optimizasyon, yapay zekâ sohbeti ve sesli maskot sunar.",
+    "groups": [
+      {
+        "id": "piyasalar",
+        "title": "Piyasa panosu ve varlık keşfi",
+        "text": "BIST ve seçili uluslararası hisseleri, kriptoyu, endeksleri, döviz ve emtiayı bir arada incele.",
+        "items": [
+          "Endeks, döviz ve emtia özetleri; BIST ve kripto yükselen/düşen listeleri.",
+          "Varlık arama, favoriye ekleme ve favorilerden portföye geçiş.",
+          "Varlık detayında fiyat grafiği, teknik göstergeler ve temel oranlar.",
+          "Ülke seçerek veri tabanını genişletme, eksik verileri indirme ve onarma."
+        ],
+        "note": "Güncel fiyatlar ve yeni verilerin indirilmesi internet bağlantısı gerektirir. Kapsam ve güncellik veri sağlayıcısına bağlıdır."
+      },
+      {
+        "id": "portfoy",
+        "title": "Portföy ve maliyet takibi",
+        "text": "Varlıklarını adet ve ortalama maliyetle kaydet; toplam değerini ve kâr/zararını Türk lirası bazında gör.",
+        "items": [
+          "Sembol, varlık adı, adet ve ortalama maliyetle pozisyon ekleme.",
+          "Mevcut kayıtları düzenleme ve silme.",
+          "Toplam maliyet, güncel değer ve kâr/zarar özeti.",
+          "Yükselen/düşen pozisyon sayıları, çeşitlilik özeti ve varlık detayına geçiş."
+        ]
+      },
+      {
+        "id": "tarayici",
+        "title": "Tarayıcı, karşılaştırma ve sektörler",
+        "text": "Takip listeni sayısal göstergelerle incele; birden fazla varlığı ve sektörleri yan yana değerlendir.",
+        "items": [
+          "Tarayıcıda teknik ve model skorları.",
+          "En az iki sembol için fiyat, değişim, piyasa değeri ve temel oran karşılaştırması.",
+          "Sektörlerde varlık sayısı, ortalama değişim, F/K, PD/DD, ROE ve öne çıkan hisseler.",
+          "Farklı değerleme yöntemleri; kalite, risk, büyüme ve değerleme skorları; finansal sağlık göstergeleri."
+        ],
+        "note": "Karşılaştırma ve değerleme çalıştırmaları ayrı ayrı 1 analiz hakkı kullanır."
+      },
+      {
+        "id": "modelleme",
+        "title": "Modelleme ve stres senaryoları",
+        "text": "Farklı varsayımların sonuçlarını yerel hesaplanan modellerle incele.",
+        "items": [
+          "Lineer, momentum, EMA kesişimi ve birleşik model seçenekleri.",
+          "Tahmin grafikleri, risk istatistikleri ve model hata ölçütleri.",
+          "Faiz, enflasyon, resesyon ve benzeri stres senaryoları."
+        ],
+        "note": "Her çalıştırma 2 analiz hakkı kullanır. Bu istatistiksel araçlar için harici yapay zekâ anahtarı gerekmez; sonuçlar geleceği garanti etmez."
+      },
+      {
+        "id": "backtest",
+        "title": "Geçmiş verilerle strateji testi",
+        "text": "Bir strateji kur, geçmişte nasıl davrandığını işlem günlüğü ve risk ölçütleriyle incele.",
+        "items": [
+          "RSI, EMA ve hareketli ortalama tabanlı giriş/çıkış kuralları.",
+          "Başlangıç sermayesi seçimi ve sermaye eğrisi.",
+          "Getiri, yıllıklandırılmış getiri, maksimum düşüş ve Sharpe oranı.",
+          "Kazanma oranı, işlem sayısı ve işlem günlüğü."
+        ],
+        "note": "1 analiz hakkı ve yeterli geçmiş veri gerekir. Gerçek emir iletmez; geçmiş veri simülasyonudur."
+      },
+      {
+        "id": "simulasyon",
+        "title": "Monte Carlo ve portföy optimizasyonu",
+        "text": "Tek bir sonuç yerine olası fiyat yollarını, dağılımları ve portföy ağırlıklarını keşfet.",
+        "items": [
+          "63, 126, 252 veya 504 günlük simülasyon ufku.",
+          "1.000, 5.000 veya 10.000 simülasyon; yüzdelik dağılımlar ve örnek fiyat yolları.",
+          "Maksimum Sharpe, minimum risk ve maksimum getiri hedefleri.",
+          "Varlık ağırlığı önerileri ve etkin sınır görünümü."
+        ],
+        "note": "Monte Carlo ve optimizasyonun her çalıştırması 2 analiz hakkı kullanır. Veri yeterliliğine ve seçtiğin varsayımlara bağlıdır."
+      },
+      {
+        "id": "asistan",
+        "title": "Kendi sağlayıcınla yapay zekâ sohbeti",
+        "text": "Piyasa verileri ve uygun bağlamla desteklenen sorularını OPS'ye sor.",
+        "items": [
+          "OpenAI, Gemini, DeepSeek, Kimi/Moonshot, Ollama Cloud veya özel uyumlu uç nokta.",
+          "Sağlayıcı/model seçimi ve akış halinde yanıtlar.",
+          "Gerektiğinde portföy, favoriler, piyasa ve sohbet bağlamı.",
+          "Sağlayıcı hata ve kota bilgilerinin gösterilmesi; sağlayıcı kurulmadan sınırlı demo yanıtları."
+        ],
+        "note": "İnternet, sağlayıcı yapılandırması ve sağlayıcıya göre kendi API anahtarın gerekir. Soruların ve gereken bağlam seçtiğin sağlayıcıya iletilir; onun ücret/kota koşulları geçerlidir."
+      },
+      {
+        "id": "ses-widget",
+        "title": "Konuşan maskot ve Android widget",
+        "text": "OPS'yle sesli iletişim kur; ana ekranından portföy durumuna veya sohbete ulaş.",
+        "items": [
+          "Konuşmayı metne çevirme, metin balonunda yanıt ve yanıtı seslendirme.",
+          "Seslendirmeyi kapatma seçeneği.",
+          "Ana ekran widget'ından uygulamayı açma, sesli sohbet ve portföy durumu.",
+          "Portföyün günlük yönüne tepki veren animasyonlar; gündüz hareketleri ve gece uyku durumu."
+        ],
+        "note": "Sesli giriş mikrofon izni ve Android konuşma hizmetini kullanır. Konuşma tanıma ve seslendirme hizmetine göre ağ bağlantısı gerekebilir. Tam sesli sohbet, yapılandırılmış yapay zekâ sağlayıcısı, internet ve sağlayıcının kullanım koşullarına bağlıdır."
+      },
+      {
+        "id": "haberler",
+        "title": "Haber akışı ve haber etkisi",
+        "text": "Finans gündemini oku; bir haberin olası varlık ve portföy etkisini senaryolarla incele.",
+        "items": [
+          "RSS haber akışı ve sentiment göstergeleri.",
+          "Haber/olay seçerek etki analizi; yön, büyüklük ve güven göstergeleri.",
+          "Portföy etkisi hesapları ve tarihsel örneklerle Replay Test."
+        ],
+        "note": "Haber indirme internet gerektirir. Haber Etkisi analizi harici yapay zekâ sağlayıcısı ve 2 analiz hakkı kullanır; kesin fiyat etkisi vaat etmez."
+      },
+      {
+        "id": "ayarlar",
+        "title": "Dil, veri kaynağı ve kullanım ayarları",
+        "text": "Uygulamayı ve veri kapsamını ihtiyaçlarına göre düzenle.",
+        "items": [
+          "Türkçe/İngilizce uygulama içi dil seçimi.",
+          "Hesap zorunluluğu olmadan yerel kullanım; isteğe bağlı Google ile giriş.",
+          "Seçili ülkelerin verilerini indirme ve veri onarımı.",
+          "Kendi anahtarlarınla isteğe bağlı Twelve Data ve Alpha Vantage veri kaynakları.",
+          "Bildirim açma/kapatma; Android bildirim ve tam alarm izinlerini yönetme."
+        ],
+        "note": "Veri sağlayıcısının kendi aboneliği ve koşulları geçerlidir. Google ile giriş portföyünü buluta taşımaz; portföy kayıtları cihazında tutulur."
+      }
+    ],
+    "steps": [
+      {
+        "title": "Piyasalarını seç",
+        "text": "İlk kurulumda takip etmek istediğin ülkeleri seç, varlıkları ara ve favorilerini oluştur."
+      },
+      {
+        "title": "Portföyünü ekle",
+        "text": "Adet ve ortalama maliyetini kaydet. Toplam değerini ve kâr/zararını incele."
+      },
+      {
+        "title": "Araçlarını keşfet",
+        "text": "Yerel analizlerle başla. Sohbet veya Haber Etkisi için tercih ettiğin sağlayıcıyı bağla."
+      }
+    ],
+    "faq": [
+      [
+        "OPS ücretsiz mi?",
+        "Uygulamada reklamlar ve analiz hakkı sistemi bulunur. Bazı analizler 1 veya 2 hak kullanır. Harici yapay zekâ ve veri sağlayıcılarının kendi ücret ve kota koşulları olabilir."
+      ],
+      [
+        "Analiz hakları nasıl çalışıyor?",
+        "Kapasite 20 haktır. Karşılaştırma, değerleme ve backtest 1; modelleme, Monte Carlo, optimizasyon ve Haber Etkisi 2 hak kullanır. Haklar sıfırlandığında 2 saat sonra yenilenir; ödüllü reklam mevcut hakları 20'ye tamamlar."
+      ],
+      [
+        "API anahtarı olmadan kullanabilir miyim?",
+        "Piyasa ve portföy ekranları ile yerel istatistiksel analizler harici yapay zekâ anahtarı gerektirmez. Tam sohbet ve Haber Etkisi için uygun bir sağlayıcı yapılandırılmalıdır; sağlayıcı kurulmadan sınırlı demo yanıtları gösterilir."
+      ],
+      [
+        "Verilerim nerede tutuluyor?",
+        "Portföy, favoriler ve sohbet kayıtları yerel veritabanında saklanır. Yapay zekâyı kullandığında soruların, sohbet geçmişin ve yanıt için gereken portföy/favori bağlamı seçtiğin sağlayıcıya iletilebilir. Google ile giriş, reklamlar, piyasa ve ses hizmetleri de ilgili harici servislerle bağlantı kurar."
+      ],
+      [
+        "Gerçek alım satım veya yatırım tavsiyesi sunuyor mu?",
+        "Hayır. OPS bir takip ve analiz uygulamasıdır; aracı kurum üzerinden emir iletmez. Analiz, simülasyon ve asistan içerikleri bilgilendirme amaçlıdır; yatırım kararı veya gelecekteki sonuç garantisi değildir."
+      ],
+      [
+        "Hangi Android sürümü gerekiyor?",
+        "Android 8.0 ve üzeri gerekir. Cihazına uygun sürüm ve güncellemeler için Google Play sayfasını kontrol edebilirsin."
+      ]
+    ],
+    "privacy": "Portföy ve uygulama kayıtların cihazında saklanır. Güncel piyasa verileri, isteğe bağlı Google ile giriş, reklamlar ve yapay zekâ/ses özellikleri ilgili harici hizmetlerle bağlantı kurar. Yapay zekâya soruların ve yanıt için gerekli portföy bağlamın iletilebilir.",
+    "privacyPage": "gizlilik.html"
+  },
+  "butce": {
+    "name": "Bütçe Takip",
+    "short": "Bütçe Takip",
+    "page": "butce-takip.html",
+    "package": "com.butceapp",
+    "version": "1.25.3",
+    "android": "9+",
+    "icon": "images/apps/butce-icon.png",
+    "headline": "Harcamaların netleşsin. Planların yerini bulsun.",
+    "intro": "Gelirini ve giderini kaydet, fişlerini ve kart ekstrelerini işle, takvimini ve tasarruf hedeflerini aynı yerde takip et.",
+    "description": "Bütçe Takip; gelir/gider, fiş OCR, PDF ekstre içe aktarma, taksitler, takvim, raporlar, tasarruf hedefleri ve çevrimdışı bütçe asistanı sunar.",
+    "groups": [
+      {
+        "id": "gunluk-takip",
+        "title": "Gelir, gider ve bütçe özeti",
+        "text": "Ayın gelirini, giderini ve kalan bütçeni tek ekrandan takip et.",
+        "items": [
+          "Tutar, tarih, kişi, kategori ve açıklamayla gider kaydı.",
+          "Kayıtları düzenleme, silme ve toplu seçim/silme.",
+          "Aylık gelir, gider ve birikim özeti.",
+          "Aile üyeleri ve gelir kalemlerini ayrı ayrı yönetme."
+        ]
+      },
+      {
+        "id": "duzenli-odemeler",
+        "title": "Tekrarlayan gider ve taksit planı",
+        "text": "Düzenli ödemelerini veya taksitli bir harcamanı gelecek aylara dağıt.",
+        "items": [
+          "1–60 ay aralığında aylık tekrar sayısı seçimi.",
+          "Taksitli harcamayı aylara bölerek ayrı gider kayıtları oluşturma.",
+          "Kişiye bağlı gelirler, gelir tekrarı, birikim ve maaş zammı tarihi bilgileri."
+        ],
+        "note": "Banka bağlantısı veya kredi/borç hesabı yönetimi değildir; planlanan kayıtlar üzerinden çalışır."
+      },
+      {
+        "id": "kisiler-kategoriler",
+        "title": "Kişiler ve kişisel kategoriler",
+        "text": "Harcamalarını sana ve evine uygun bir düzende sınıflandır.",
+        "items": [
+          "Kişi ekleme, düzenleme ve kişiye bağlı gelirler.",
+          "Gelir ve gider kategorileri oluşturma ve düzenleme.",
+          "Kişi ve kategori bazında dağılımları raporlarda inceleme."
+        ]
+      },
+      {
+        "id": "takvim",
+        "title": "Takvim ve bütçe dönemi",
+        "text": "Bütçe ayını maaş gününe uyarla; günlük hareketlerini takvimde gör.",
+        "items": [
+          "Günlük ve aylık gelir/gider görünümü.",
+          "Bütçe dönemi için ayın 1–28. günleri arasında başlangıç seçimi.",
+          "Seçtiğin dönemle uyumlu rapor hesapları."
+        ]
+      },
+      {
+        "id": "fis",
+        "title": "Kamera ve galeriden fiş tarama",
+        "text": "Fiş fotoğrafını seç, okunan bilgileri kontrol et ve gider kaydına dönüştür.",
+        "items": [
+          "Kamera veya galeriden fotoğraf seçimi.",
+          "Google ML Kit ile OCR ve yerel fiş ayrıştırma.",
+          "Tespit edilen bilgileri kayıt öncesinde kontrol etme.",
+          "Harici üretken yapay zekâ anahtarı gerektirmeyen işleme."
+        ],
+        "note": "Ücretsiz kullanımda ayda 5 fiş; limitte ödüllü reklamla +1 tarama. Premium'da sınırsız. Sonuç, fotoğrafın netliğine ve fiş düzenine bağlıdır."
+      },
+      {
+        "id": "ekstre",
+        "title": "Kart ekstresini içe aktar",
+        "text": "PDF veya fotoğraftaki işlemleri seçerek bütçene ekle; satırları kaydetmeden önce kontrol et.",
+        "items": [
+          "PDF dosyası, kamera veya galeriden ekstre işleme.",
+          "PDF metin çıkarımı; gerektiğinde sayfa görüntüsünden OCR.",
+          "İşlem seçme, kategorileri kontrol etme ve tüm işlemlere kişi atama.",
+          "Taksit bilgilerinin ayrıştırılması ve Türk bankalarının ekstre düzenlerine yönelik kurallar.",
+          "Ayrıştırma sorunu için isteğe bağlı, maskelenmiş ve düzenlenebilir destek raporu paylaşımı."
+        ],
+        "note": "Ücretsiz kullanımda ayda 1 PDF ekstre; Premium'da sınırsız. Her bankanın her dosya biçiminde başarı garantisi yoktur. PDF işleme, PDF rapor dışa aktarma anlamına gelmez."
+      },
+      {
+        "id": "raporlar",
+        "title": "Grafikler ve harcama raporları",
+        "text": "Paranın nereye gittiğini kişi, kategori ve zaman içinde incele.",
+        "items": [
+          "Gelir/gider dağılımları ve aylık eğilim grafikleri.",
+          "Kişi ve kategori bazında kırılımlar.",
+          "Birikim görünümü ve uygulama içi raporlar.",
+          "Premium ile giderleri tarih, kategori, kişi, kalem, tutar ve açıklama sütunlarıyla CSV olarak dışa aktarma."
+        ],
+        "note": "PDF ekstreleri içe aktarabilir, giderlerini CSV olarak dışa aktarabilirsin."
+      },
+      {
+        "id": "projeksiyon",
+        "title": "12 aylık bütçe projeksiyonu",
+        "text": "Mevcut kayıtlarınla önündeki 12 aya ilişkin varsayımsal bir görünüm oluştur.",
+        "items": [
+          "Son üç ayın pozitif gider ortalamasına dayalı hesap.",
+          "Kişilere bağlı gelirlerin ve tanımlı maaş zamlarının hesaba katılması.",
+          "Gelecek aylar için gelir, gider ve birikim görünümü."
+        ],
+        "note": "Üretken yapay zekâ tahmini değildir; geçmiş ortalamalara ve girdiğin bilgilere dayalı bir planlama hesabıdır. Gerçekleşecek sonucu garanti etmez."
+      },
+      {
+        "id": "tasarruf",
+        "title": "Tasarruf hedefleri",
+        "text": "Bir hedef belirle, biriktirdiğin tutarı güncelle ve ilerlemeni izle.",
+        "items": [
+          "Hedef adı, hedef tutarı ve biriken tutarla kayıt.",
+          "Aktif ve tamamlanan hedefleri ayrı görme.",
+          "Hedefleri düzenleme ve silme."
+        ],
+        "note": "Birikim tutarını sen güncellersin; banka hesabından otomatik bakiye çekilmez."
+      },
+      {
+        "id": "butce-asistani",
+        "title": "Çevrimdışı bütçe asistanı",
+        "text": "Kayıtlarından hesaplanan gelir, gider ve harcama bilgilerine sorularla ulaş.",
+        "items": [
+          "Cihazda çalışan, kural tabanlı yanıtlar.",
+          "Gelir/gider ve harcama alışkanlıkların hakkında yerel kayıtlardan bilgi.",
+          "İnternet veya harici yapay zekâ sağlayıcısı/API anahtarı gerektirmeyen temel asistan.",
+          "Kategoriye özel harcama, en büyük/son harcamalar ve aylık ortalama sorguları.",
+          "Geçen ay kıyası, kişi/aile dağılımı, hedef ilerlemesi ve özetler.",
+          "Kayıtlara göre kurallı tasarruf ipuçları."
+        ],
+        "note": "Ücretsiz kullanımda günde 3 soru; Premium'da sınırsız. Üretken yapay zekâ sohbet modeli değildir."
+      },
+      {
+        "id": "hatirlatmalar",
+        "title": "Hatırlatmalar ve haftalık özet",
+        "text": "Düzenli kayıt alışkanlığını cihazında planlanan bildirimlerle sürdür.",
+        "items": [
+          "Gider kaydı hatırlatmaları.",
+          "Haftalık bütçe özeti.",
+          "Ayarlanabilir hatırlatma saati.",
+          "Bütçenin %80’ine yaklaşma ve bütçe aşımı uyarıları.",
+          "Yaklaşan üç günlük ödemeler, olağandışı harcama artışları ve maaş zammı hatırlatmaları."
+        ],
+        "note": "Bildirim izni gerekir. Android'in arka plan ve pil koşulları nedeniyle tam dakikada teslim garantisi verilmez."
+      },
+      {
+        "id": "kisisellestirme",
+        "title": "Tema, dil ve mahremiyet",
+        "text": "Bütçeni sana uygun görünüm ve ayarlarla takip et.",
+        "items": [
+          "Türkçe/İngilizce dil seçimi; açık, koyu veya sistem teması.",
+          "Tutarları yıldızlarla gizleyen mahremiyet modu.",
+          "Başlangıç ayı ve para simgesi/biçimi tercihleri.",
+          "Temel kullanımda zorunlu hesap yok; isteğe bağlı Google ile giriş.",
+          "Aylık/yıllık Premium abonelik ve satın alımları geri yükleme.",
+          "Ayarlar üzerinden yerel uygulama verilerini silme."
+        ],
+        "note": "Para simgesi seçimi canlı döviz dönüşümü yapmaz. Satın alımı geri yükleme, bütçe verilerini yedekten geri yükleme değildir."
+      }
+    ],
+    "steps": [
+      {
+        "title": "Düzenini kur",
+        "text": "Kişilerini ve kategorilerini ekle. Bütçe dönemini maaş gününe göre seç."
+      },
+      {
+        "title": "İlk kaydını oluştur",
+        "text": "Giderini elle gir veya fiş/ekstre tarayıp okunan işlemleri kontrol ederek kaydet."
+      },
+      {
+        "title": "Resmin bütününü gör",
+        "text": "Takvim ve raporlara bak, bir tasarruf hedefi belirle; 12 aylık görünümü incele."
+      }
+    ],
+    "faq": [
+      [
+        "Ücretsiz kullanım neleri kapsıyor?",
+        "Temel manuel takip ücretsizdir. Fiş tarama ayda 5, PDF ekstre ayda 1, asistana soru günde 3 ile sınırlıdır. Fiş limitinde ödüllü reklamla 1 ek tarama kazanılabilir."
+      ],
+      [
+        "Premium neler ekliyor?",
+        "Sınırsız fiş ve PDF ekstre işleme, sınırsız asistan sorusu, CSV gider dışa aktarma ve reklamsız kullanım. Aylık/yıllık aboneliklerin güncel fiyatı ve koşulları Google Play'de gösterilir."
+      ],
+      [
+        "Asistan için internet veya API anahtarı gerekiyor mu?",
+        "Hayır. Bütçe asistanı, cihazındaki kayıtlardan kurallarla yanıt üretir. Harici üretken yapay zekâ modeline bağlanmaz."
+      ],
+      [
+        "Ekstreyi tarayınca işlemler doğrudan kaydedilir mi?",
+        "Tespit edilen işlemleri önce kontrol edebilir, seçim yapabilir ve kişi atayabilirsin. Farklı banka/ekstre düzenlerinde okuma hataları olabileceğinden kayıt öncesi kontrol önemlidir."
+      ],
+      [
+        "Verilerim yedekleniyor mu?",
+        "Bütçe kayıtları yerel veritabanında tutulur. Bu sürümde otomatik bulut yedekleme veya cihazlar arası bütçe senkronizasyonu sunulmaz. Uygulamayı kaldırmadan veya cihaz değiştirmeden önce veri kaybı ihtimalini değerlendir; Premium CSV gider çıktısı tam veritabanı yedeği değildir."
+      ],
+      [
+        "Hangi Android sürümü gerekiyor?",
+        "Android 9 ve üzeri gerekir. Cihazına uygun sürüm ve güncellemeler için Google Play sayfasını kontrol edebilirsin."
+      ]
+    ],
+    "privacy": "Gelir, gider ve bütçe kayıtları cihazındaki veritabanında tutulur. Fiş ve ekstreler OCR ve yerel kurallarla işlenir. İsteğe bağlı Google girişi, reklamlar ve satın alımlar ilgili hizmetlerle bağlantı kurar; destek raporu yalnızca sen paylaşmayı seçersen gönderilir.",
+    "privacyPage": "butce-gizlilik.html"
+  }
+}

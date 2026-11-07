@@ -1,0 +1,104 @@
+{
+  "app": "Bütçe Takip",
+  "sourceRepo": "Bütçe Takip Android source",
+  "method": "Read-only Android source review; no device execution, store publication or parser accuracy certification.",
+  "sourcePathConvention": "Java paths are relative to android/app/src/main/java/com/butceapp/; other paths are repository-relative.",
+  "contentReviewed": "content/apps.json#butce",
+  "contentVerdict": "Existing feature groups and free/Premium conditions agree with inspected implementation. Notification subfeatures, detailed assistant capabilities and local data deletion can be expanded.",
+  "platform": {
+    "versionName": "1.25.3",
+    "versionCode": 37,
+    "minimumAndroid": "9 / API 28",
+    "targetSdk": 36,
+    "evidence": ["android/app/build.gradle:17-23"],
+    "condition": "Source version; current Google Play publication was not checked."
+  },
+  "features": [
+    {
+      "group": "gunluk-takip",
+      "verified": ["Monthly income, expense and remaining/savings dashboard", "Manual expense creation with person, category, date and description", "Expense editing, deletion and bulk selection/deletion", "Person-associated income management"],
+      "evidence": ["ui/dashboard/DashboardFragment.java:195", "ui/expense/AddExpenseViewModel.java:64", "ui/expense/ExpenseListFragment.java:70", "ui/expense/ExpenseListFragment.java:92", "ui/income/IncomeListViewModel.java:95"]
+    },
+    {
+      "group": "duzenli-odemeler",
+      "verified": ["Monthly repeated expenses for a selected count from 1 to 60", "Installments stored as separate monthly expenses", "Income frequency, savings and raise-date fields associated with people"],
+      "conditions": ["Generated expense records, not bank connectivity or a separate loan/debt account system"],
+      "evidence": ["ui/expense/AddExpenseFragment.java:388-403", "data/repository/GiderRepository.java:87", "data/repository/GiderRepository.java:106", "ui/person/AddPersonDialogFragment.java:210", "ui/person/AddPersonDialogFragment.java:337-410"]
+    },
+    {
+      "group": "kisiler-kategoriler",
+      "verified": ["Person creation/editing and associated income items", "Income and expense category management", "Person and category breakdown in reports"],
+      "evidence": ["ui/person/AddPersonDialogFragment.java:337", "ui/category/CategoryListFragment.java:1", "ui/report/ReportFragment.java:132-163"]
+    },
+    {
+      "group": "takvim",
+      "verified": ["Daily and monthly expenses and incomes", "Budget-cycle start day selectable from 1 to 28", "Cycle-based report calculations"],
+      "evidence": ["ui/calendar/CalendarViewModel.java:51-72", "ui/settings/SettingsFragment.java:332-363", "data/repository/RaporRepository.java:274"]
+    },
+    {
+      "group": "fis",
+      "verified": ["Camera and gallery input", "ML Kit OCR with local receipt parsing", "Review before expense creation", "Rewarded ad grants one extra receipt scan"],
+      "conditions": ["No external generative AI/API key", "Free: 5 scans per calendar month; Premium has no application quota", "OCR accuracy depends on photo and receipt layout"],
+      "evidence": ["vlm/VlmProcessor.java:28-72", "ui/ai/ReceiptScanFragment.java:94", "ui/ai/ReceiptScanFragment.java:319-356", "data/local/PreferencesManager.java:219-260"]
+    },
+    {
+      "group": "ekstre",
+      "verified": ["PDF, camera and gallery input", "PDFBox text extraction with page-render/OCR fallback", "Transaction selection and assigning a person", "Installment parsing", "User-reviewed masked support-report sharing on failed parsing"],
+      "conditions": ["Free: 1 PDF scan per calendar month; Premium has no application quota", "Image import is distinct from PDF quota", "Bank-specific code does not prove all statement layouts work", "Previous-period comparison is not isolated per bank"],
+      "evidence": ["ui/statement/StatementViewModel.java:157", "ui/statement/StatementViewModel.java:257-307", "ui/statement/StatementViewModel.java:369", "ui/statement/StatementViewModel.java:411", "ui/statement/StatementFragment.java:237", "ai/StatementParser.java:196-276", "ui/statement/ValvePreviewFragment.java:89-120", "ui/statement/ValvePreviewFragment.java:148-160", "ui/statement/StatementViewModel.java:105-112"]
+    },
+    {
+      "group": "raporlar",
+      "verified": ["Income/expense distributions, person and category breakdowns", "Monthly bar/line/pie charts and cumulative savings", "Premium CSV export of all expense records"],
+      "conditions": ["CSV fields: date, category, person, item, amount, description", "No implemented PDF or XLSX report export was found", "CSV is not a restorable database backup"],
+      "evidence": ["ui/report/ReportFragment.java:132-163", "ui/report/ReportFragment.java:229-250", "data/repository/RaporRepository.java:111", "data/repository/RaporRepository.java:184", "ui/settings/SettingsFragment.java:365-432"]
+    },
+    {
+      "group": "projeksiyon",
+      "verified": ["12-month projection", "Expense average from positive-expense months in the last three months", "Person incomes and applicable salary raises"],
+      "conditions": ["Formula-based planning, not a generative AI prediction or guaranteed future result"],
+      "evidence": ["ui/projection/ProjectionViewModel.java:32", "data/repository/RaporRepository.java:259-333"]
+    },
+    {
+      "group": "tasarruf",
+      "verified": ["Goal name, target amount and saved amount", "Manual progress updates", "Active/completed goals", "Editing and deletion"],
+      "conditions": ["No automatic bank-balance import or verified goal deadline feature"],
+      "evidence": ["ui/savings/AddSavingsGoalDialogFragment.java:83-122", "ui/savings/SavingsViewModel.java:30-78"]
+    },
+    {
+      "group": "butce-asistani",
+      "verified": ["Local rule-based Turkish/English responses", "Category-specific spending", "Largest and recent expenses", "Income and expense totals", "Category distribution and averages", "Remaining budget and savings", "Monthly trends/comparison", "Person/family breakdown", "Goal progress", "Budget overview and rule-based savings tips", "Summary and supported past-month questions"],
+      "conditions": ["Free: 3 questions per calendar day; Premium has no application quota", "No external AI provider or API key", "Keyword routing is limited; not every wording or compound question is understood"],
+      "evidence": ["ui/ai/ChatViewModel.java:78-108", "ui/ai/ChatViewModel.java:340-744", "ui/ai/ChatFragment.java:57-64", "data/local/PreferencesManager.java:294-322"]
+    },
+    {
+      "group": "hatirlatmalar",
+      "verified": ["Daily expense-entry reminder", "Weekly summary", "Configurable reminder hour", "80-percent and exceeded-income budget alerts", "Upcoming payments within three days", "Unusual spending increase and month-end budget-ratio alerts", "Salary raise date notification"],
+      "conditions": ["Notification permission and relevant switches apply", "WorkManager delivery depends on Android scheduling/battery restrictions; no exact-minute guarantee", "Alerts are local rules, not AI forecasts"],
+      "evidence": ["data/notification/NotificationScheduler.java:22-69", "data/notification/DailyReminderWorker.java:41-65", "data/notification/SmartAnalysisHelper.java:26", "data/notification/SmartAnalysisHelper.java:80", "data/notification/SmartAnalysisHelper.java:127", "data/notification/SmartAnalysisHelper.java:161", "ui/settings/SettingsFragment.java:506-580"]
+    },
+    {
+      "group": "kisisellestirme",
+      "verified": ["Turkish/English/system language", "Light/dark/system theme", "Display amounts as stars", "Starting month", "TL/USD/EUR format and symbol selection", "Optional Google sign-in", "Monthly/yearly subscriptions and purchase restoration", "Delete all local data and preferences after confirmation"],
+      "conditions": ["Currency preference does not perform exchange-rate conversion", "Privacy display mode is not screenshot protection", "Purchase restoration does not restore budget data", "Deleting local data is destructive; user confirmation is required in the app"],
+      "evidence": ["ui/settings/SettingsFragment.java:265-299", "domain/util/CurrencyUtils.java:28-46", "ui/settings/SettingsFragment.java:178-214", "data/local/PremiumManager.java:29-30", "data/local/PremiumManager.java:293", "ui/settings/SettingsFragment.java:145-174"]
+    }
+  ],
+  "dataFlow": {
+    "local": ["Room database stores income, expenses, people, categories, raises and savings goals", "OCR and budget-assistant processing occur locally"],
+    "external": ["Optional Google Sign-In", "Google Play billing and updates", "AdMob and consent services", "Firebase Analytics dependency is included; actual telemetry payload was not independently audited", "Masked statement support text may leave the device only through user-initiated sharing", "Premium CSV is written to a user-selected document destination"],
+    "backup": "Android allowBackup=false; no budget cloud sync or database restore implementation found",
+    "evidence": ["data/local/AppDatabase.java:28-40", "android/app/src/main/AndroidManifest.xml:16", "android/app/build.gradle:1", "ui/statement/ValvePreviewFragment.java:148-160", "ui/settings/SettingsFragment.java:380-432"]
+  },
+  "deliberateExclusions": [
+    {"claim": "PDF/Excel report export", "reason": "String resource advertises CSV/PDF, but implemented export only writes expense CSV", "evidence": ["android/app/src/main/res/values/strings.xml:296", "ui/settings/SettingsFragment.java:365-432"]},
+    {"claim": "Cloud backup, full restore, multi-device sync", "reason": "No implementation found; Android backup explicitly disabled", "evidence": ["android/app/src/main/AndroidManifest.xml:16"]},
+    {"claim": "Generative AI or external AI provider integration", "reason": "Assistant calls a local rule-based response generator", "evidence": ["ui/ai/ChatViewModel.java:104", "ui/ai/ChatViewModel.java:340"]},
+    {"claim": "Bank account connection, separate debt/loan management", "reason": "No corresponding navigation destination or database entity found; installments are expense records", "evidence": ["android/app/src/main/res/navigation/nav_graph.xml:1", "data/local/AppDatabase.java:28-40", "data/repository/GiderRepository.java:106"]},
+    {"claim": "Live currency conversion", "reason": "Currency selection changes display format and symbol only", "evidence": ["domain/util/CurrencyUtils.java:28-36"]},
+    {"claim": "No data ever leaves the device", "reason": "External account, ad, billing services and user-selected export/sharing are present", "evidence": ["ui/settings/SettingsFragment.java:178-214", "ads/AdsManager.java:33", "ui/statement/ValvePreviewFragment.java:148-160"]},
+    {"claim": "All bank formats parse correctly", "reason": "Bank-specific code paths are not a compatibility or accuracy certification", "evidence": ["ai/StatementParser.java:196-276"]}
+  ],
+  "publicScreenshots": ["images/butce/screen-home.png", "images/butce/screen-calendar.png"],
+  "privacyOfReview": "Credentials, environment files, signing configuration values, private sample statements/receipts and memory files were not inspected or copied. No absolute source-machine paths are included."
+}

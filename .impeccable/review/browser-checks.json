@@ -1,0 +1,97 @@
+{
+  "date": "2026-11-07",
+  "overflow": [
+    {
+      "client": 305,
+      "overflow": false,
+      "path": "/index.html",
+      "scroll": 305,
+      "width": 320
+    },
+    {
+      "client": 375,
+      "overflow": false,
+      "path": "/index.html",
+      "scroll": 375,
+      "width": 390
+    },
+    {
+      "client": 699,
+      "overflow": false,
+      "path": "/index.html",
+      "scroll": 699,
+      "width": 714
+    },
+    {
+      "client": 1425,
+      "overflow": false,
+      "path": "/index.html",
+      "scroll": 1425,
+      "width": 1440
+    },
+    {
+      "client": 305,
+      "overflow": false,
+      "path": "/ops.html",
+      "scroll": 305,
+      "width": 320
+    },
+    {
+      "client": 375,
+      "overflow": false,
+      "path": "/ops.html",
+      "scroll": 375,
+      "width": 390
+    },
+    {
+      "client": 699,
+      "overflow": false,
+      "path": "/ops.html",
+      "scroll": 699,
+      "width": 714
+    },
+    {
+      "client": 1425,
+      "overflow": false,
+      "path": "/ops.html",
+      "scroll": 1425,
+      "width": 1440
+    },
+    {
+      "client": 305,
+      "overflow": false,
+      "path": "/butce-takip.html",
+      "scroll": 305,
+      "width": 320
+    },
+    {
+      "client": 375,
+      "overflow": false,
+      "path": "/butce-takip.html",
+      "scroll": 375,
+      "width": 390
+    },
+    {
+      "client": 699,
+      "overflow": false,
+      "path": "/butce-takip.html",
+      "scroll": 699,
+      "width": 714
+    },
+    {
+      "client": 1425,
+      "overflow": false,
+      "path": "/butce-takip.html",
+      "scroll": 1425,
+      "width": 1440
+    }
+  ],
+  "verifiedInteractions": [
+    "TR/EN toggle",
+    "Budget journey selector",
+    "English homepage to Turkish detail retains tr language",
+    "Premium table visible",
+    "OPS YouTube player loaded"
+  ],
+  "nativeAppsDeviceTested": false
+}

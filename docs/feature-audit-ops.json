@@ -1,0 +1,50 @@
+{
+  "sourceRepo": "OPS Android source",
+  "auditDate": "2026-11-07",
+  "scope": "Read-only source review of reachable Compose screens and implementation; no device behavior or Google Play publication verification.",
+  "sourceVersion": "2.11.2",
+  "minimumAndroidApi": 26,
+  "evidence": [
+    {"feature":"Version and minimum Android","sources":["app/build.gradle.kts:24","app/build.gradle.kts:28"]},
+    {"feature":"Reachable screens","sources":["app/src/main/java/com/finanspro/ui/FinansProApp.kt:573"]},
+    {"feature":"Initial country selection and optional download","sources":["app/src/main/java/com/finanspro/ui/FinansProApp.kt:68","app/src/main/java/com/finanspro/ui/FinansProApp.kt:137"]},
+    {"feature":"Dashboard, search, favorites and adding holdings","sources":["app/src/main/java/com/finanspro/ui/FinansProApp.kt:618","app/src/main/java/com/finanspro/ui/FinansProApp.kt:1016"]},
+    {"feature":"Holding creation, editing, deletion and TRY portfolio totals","sources":["app/src/main/java/com/finanspro/ui/FinansProApp.kt:791","app/src/main/java/com/finanspro/ui/FinansProApp.kt:907"]},
+    {"feature":"Asset graph, indicators and fundamentals","sources":["app/src/main/java/com/finanspro/ui/NewScreens.kt:873","app/src/main/java/com/finanspro/ui/NewScreens.kt:958"]},
+    {"feature":"Scanner scores, comparison and sector summaries","sources":["app/src/main/java/com/finanspro/ui/FinansProApp.kt:1156","app/src/main/java/com/finanspro/ui/NewScreens.kt:31","app/src/main/java/com/finanspro/ui/NewScreens.kt:84","app/src/main/java/com/finanspro/repository/MarketRepository.kt:291"]},
+    {"feature":"Valuation and health scores; not external generative AI","sources":["app/src/main/java/com/finanspro/ui/NewScreens.kt:757","app/src/main/java/com/finanspro/ui/ViewModels.kt:624","app/src/main/java/com/finanspro/analysis/SectorAnalysis.kt:220"],"conditions":["1 analysis right per valuation run","Health metrics are simplified implementations, not independently certified financial assessments"]},
+    {"feature":"Modeling choices, model error metrics and stress scenarios","sources":["app/src/main/java/com/finanspro/ui/NewScreens.kt:168","app/src/main/java/com/finanspro/service/ModelingService.kt:30","app/src/main/java/com/finanspro/service/ModelingService.kt:170"],"conditions":["2 analysis rights per run","Sufficient local history","No external generative AI key required"]},
+    {"feature":"Backtest rules, capital, trade log and risk metrics","sources":["app/src/main/java/com/finanspro/ui/NewScreens.kt:425","app/src/main/java/com/finanspro/ui/ViewModels.kt:544","app/src/main/java/com/finanspro/service/AnalysisServices.kt:10"],"conditions":["1 analysis right per run","Historical simulation only; no real order execution"]},
+    {"feature":"Monte Carlo horizons and simulation counts","sources":["app/src/main/java/com/finanspro/ui/NewScreens.kt:556","app/src/main/java/com/finanspro/ui/ViewModels.kt:569"],"conditions":["2 analysis rights per run","63/126/252/504 days","1000/5000/10000 simulations","Sufficient local history"]},
+    {"feature":"Portfolio optimization weights, targets and frontier","sources":["app/src/main/java/com/finanspro/ui/NewScreens.kt:641","app/src/main/java/com/finanspro/ui/ViewModels.kt:591"],"conditions":["2 analysis rights per run","Sufficient common historical data"]},
+    {"feature":"Configurable streaming AI chat and limited unconfigured demo","sources":["app/src/main/java/com/finanspro/ui/FinansProApp.kt:1249","app/src/main/java/com/finanspro/ui/FinansProApp.kt:1440","app/src/main/java/com/finanspro/service/ChatService.kt:60"],"conditions":["Network and configured provider for full chat","Provider-dependent key, quota and fees","Own custom compatible endpoint supported"]},
+    {"feature":"AI request data flow","sources":["app/src/main/java/com/finanspro/service/AiContextService.kt:144","app/src/main/java/com/finanspro/service/AiContextService.kt:166","app/src/main/java/com/finanspro/service/AiContextService.kt:200","app/src/main/java/com/finanspro/service/ChatService.kt:69","app/src/main/java/com/finanspro/service/ChatService.kt:85"],"conditions":["Messages and generated context sent to selected provider","Context can contain holding symbols, quantities, costs and favorites","API key is transmitted to provider for authentication"]},
+    {"feature":"Voice mascot, mute and text answer","sources":["app/src/main/java/com/finanspro/ui/MascotScreen.kt:158","app/src/main/java/com/finanspro/ui/MascotScreen.kt:203","app/src/main/java/com/finanspro/ui/MascotViewModel.kt:85","app/src/main/java/com/finanspro/mascot/OpsVoice.kt:35"],"conditions":["Microphone permission","Android speech service availability","Configured AI provider for full voice chat","Recognition and preferred network TTS may involve external services"]},
+    {"feature":"Widget menu, voice overlay, portfolio status and moods","sources":["app/src/main/java/com/finanspro/widget/OpsWidgetProvider.kt:83","app/src/main/java/com/finanspro/widget/OpsWidgetProvider.kt:119","app/src/main/java/com/finanspro/widget/OpsWidgetProvider.kt:385","app/src/main/java/com/finanspro/ui/VoiceOverlayActivity.kt:151"]},
+    {"feature":"RSS news, news impact and historical replay","sources":["app/src/main/java/com/finanspro/ui/FinansProApp.kt:1372","app/src/main/java/com/finanspro/ui/NewsImpactScreen.kt:28","app/src/main/java/com/finanspro/ui/NewsImpactScreen.kt:92","app/src/main/java/com/finanspro/service/newsimpact/NewsImpactService.kt:34","app/src/main/java/com/finanspro/service/newsimpact/NewsImpactService.kt:197"],"conditions":["Internet for fresh RSS","Configured external AI provider for news impact","2 analysis rights per impact run"]},
+    {"feature":"Analysis rights and advertising","sources":["app/src/main/java/com/finanspro/ads/AnalysisRights.kt:19","app/src/main/java/com/finanspro/ads/AnalysisRights.kt:43","app/src/main/java/com/finanspro/ads/AnalysisRights.kt:76","app/src/main/java/com/finanspro/ui/FinansProApp.kt:497","app/src/main/java/com/finanspro/ui/FinansProApp.kt:547"],"conditions":["20 rights capacity","Refill 2 hours after reaching zero","Rewarded ad resets to 20; not additive +20","Persistent banner"]},
+    {"feature":"Settings, optional Google sign-in, language, source selection and notification controls","sources":["app/src/main/java/com/finanspro/ui/FinansProApp.kt:1605","app/src/main/java/com/finanspro/ui/FinansProApp.kt:1683","app/src/main/java/com/finanspro/ui/FinansProApp.kt:1768","app/src/main/java/com/finanspro/ui/FinansProApp.kt:1889","app/src/main/java/com/finanspro/auth/AuthManager.kt:47","app/src/main/java/com/finanspro/auth/UserSyncManager.kt:30"],"conditions":["Third-party premium data subscription is not an OPS app subscription","Notifications require relevant Android permissions"]},
+    {"feature":"Storage security and backup limits","sources":["app/src/main/java/com/finanspro/core/Env.kt:89","app/src/main/java/com/finanspro/core/Env.kt:97","app/src/main/res/xml/backup_rules.xml:4","app/src/main/res/xml/data_extraction_rules.xml:5"],"conditions":["Encrypted preferences attempted, plaintext fallback exists","Database and key preferences excluded from configured Android backup/transfer"]}
+  ],
+  "deliberateExclusions": [
+    {"claim":"CSV import/export is a reachable user feature","reason":"Helper exists but no active UI call found","sources":["app/src/main/java/com/finanspro/service/CsvUtils.kt:16"]},
+    {"claim":"User can create price alerts in current UI","reason":"Repository and worker exist; no active alert-creation UI found","sources":["app/src/main/java/com/finanspro/repository/Repositories.kt:355","app/src/main/java/com/finanspro/work/PriceRefreshWorker.kt:73"]},
+    {"claim":"User-managed portfolio groups and transaction history","reason":"Repository methods exist but are not linked from inspected portfolio UI","sources":["app/src/main/java/com/finanspro/repository/Repositories.kt:169","app/src/main/java/com/finanspro/repository/Repositories.kt:191","app/src/main/java/com/finanspro/ui/FinansProApp.kt:791"]},
+    {"claim":"In-app reset or account deletion is available","reason":"No such active settings action found in inspected settings screen","sources":["app/src/main/java/com/finanspro/ui/FinansProApp.kt:1440"]},
+    {"claim":"Cloud portfolio sync or database restore","reason":"Profile synchronization is to local database; database excluded from configured backup","sources":["app/src/main/java/com/finanspro/auth/UserSyncManager.kt:30","app/src/main/res/xml/backup_rules.xml:4"]},
+    {"claim":"No data or API key ever leaves device","reason":"Provider requests contain messages, context and bearer authentication","sources":["app/src/main/java/com/finanspro/service/ChatService.kt:69","app/src/main/java/com/finanspro/service/ChatService.kt:85"]},
+    {"claim":"API keys are always encrypted at rest","reason":"Plaintext fallback exists if encrypted preferences initialization fails","sources":["app/src/main/java/com/finanspro/core/Env.kt:97"]},
+    {"claim":"Current release covers exactly 23 countries","reason":"Current source has 24 country definitions; availability still provider-dependent","sources":["app/src/main/java/com/finanspro/service/GlobalSymbolDiscoveryService.kt:37"]},
+    {"claim":"OPS subscription, guaranteed live data, guaranteed forecast, brokerage execution or iOS availability","reason":"Not established by inspected active Android UI and implementation","sources":["app/src/main/java/com/finanspro/ui/FinansProApp.kt:573"]}
+  ],
+  "contentReview": {
+    "target": "content/apps.json:ops",
+    "verdict": "Broadly faithful to inspected source",
+    "suggestedCorrections": [
+      "Clarify full voice chat also requires configured AI provider, network and provider terms",
+      "Mention notification enable/disable and Android permission controls as an active settings feature",
+      "Separate quality/risk/growth/valuation scores from financial-health metrics rather than combining them",
+      "Move internal audit phrasing and deliberate-exclusion notes out of user-facing product prose"
+    ]
+  }
+}

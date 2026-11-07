@@ -28,31 +28,36 @@
     <article class="prose wrap">
         <a class="back-link" href="butce-takip.html">Bütçe Takip sayfası</a>
         <h1>Bütçe Takip Gizlilik Politikası</h1>
-        <p class="meta">Son güncelleme: 4 Kasım 2026</p>
+        <p class="meta">Son güncelleme: 7 Kasım 2026</p>
 
         <div class="toc">
-            <b>Özet:</b> Bütçe Takip (Budget Tracker), tüm gider/gelir verilerini <strong>cihazında</strong> saklayan bir bütçe uygulamasıdır. Hesap açtırılmaz, veri sunucusu yoktur; verin cihazından dışarı çıkmaz.
+            <b>Özet:</b> Bütçe Takip, gelir ve gider kayıtlarını <strong>cihazında</strong> saklar; temel kullanım için hesap zorunlu değildir. İsteğe bağlı Google girişi, reklamlar ve Premium satın alımlar ilgili hizmetlerle iletişim kurar. Ekstre destek raporu yalnızca paylaşmayı seçersen gönderilir.
         </div>
 
         <h2>1. Hangi verileri işleriz?</h2>
         <ul>
             <li><strong>Cihaz içi veriler:</strong> Giderler, gelirler, kişiler, kategoriler, fiş kayıtları ve rapor verileri yalnızca cihazındaki yerel veritabanında (SQLite/Room) saklanır. Sunucumuz yoktur.</li>
-            <li><strong>Kamera (fiş tarama):</strong> Fiş okutmak için verdiğin izinle çekilen fotoğraflar yalnızca cihazda işlem görür; sunucuya gönderilmez. Fotoğrafı saklamak istemezsen fiş kaydını silebilirsin.</li>
+            <li><strong>Fiş ve ekstre:</strong> Kamera, galeri veya PDF dosyasından gelen içerikler OCR, PDF metin çıkarımı ve yerel ayrıştırma kurallarıyla işlenir; harici üretken yapay zekâ sağlayıcısına otomatik yüklenmez. Ayrıştırma sorunu için isteğe bağlı destek raporunu maskeleyebilir, düzenleyebilir ve Android paylaşım menüsünden göndermeyi seçebilirsin.</li>
             <li><strong>Hesap verisi (opsiyonel):</strong> Ayarlar'dan hesap bağlarsan e-posta ve ad yalnızca hesabın tanınması için işlenir; bütçe verin bu bilgiyle ilişkilendirilmez.</li>
             <li><strong>Bildirimler:</strong> Ödeme ve hatırlatma bildirimleri cihaz yerelinde planlanır; bilgi sunucudan gönderilmez.</li>
-            <li><strong>Reklam:</strong> AdMob banner reklamcılığı reklam kimliği (advertising ID) cihaz kimliğine erişebilir; ayrıntılar Google'ın gizlilik politikasındadır.</li>
+            <li><strong>Reklam:</strong> AdMob banner, geçiş ve ödüllü reklam özellikleri reklam kimliği, cihaz ve reklam etkileşimi bilgilerini işleyebilir. Premium kullanımda reklam gösterilmez.</li>
+            <li><strong>Satın alımlar:</strong> Premium abonelik ve satın alımı geri yükleme işlemleri Google Play Billing üzerinden yürütülür.</li>
+            <li><strong>Uygulama ölçümü:</strong> Uygulama Firebase Analytics bileşeni içerir; uygulama kullanım ve cihaz bilgileri ilgili hizmetin yapılandırması ve koşulları kapsamında işlenebilir.</li>
         </ul>
 
         <h2>2. Verileri hangi durumda paylaşırız?</h2>
-        <p>Bütçe verin uygulamadan dışarı çıkmaz. Uygulama yalnızca şu servislerle iletişim kurar:</p>
+        <p>Bütçe kayıtları yerelde saklanır. İlgili özellikleri kullanırken şu servislerle iletişim kurulabilir:</p>
         <ul>
-            <li><strong>AdMob / Google:</strong> Reklam gösterimi ve yüklemesi</li>
-            <li><strong>Google Play:</strong> Lisans kontrolü ve uygulama güncellemeleri</li>
+            <li><strong>AdMob / Google:</strong> Reklam yükleme, gösterim ve ödüllü reklam etkileşimleri</li>
+            <li><strong>Google ile giriş:</strong> İsteğe bağlı hesap tanıma</li>
+            <li><strong>Google Play:</strong> Uygulama güncellemeleri, abonelik ve satın alım işlemleri</li>
+            <li><strong>Firebase Analytics:</strong> Yapılandırmaya göre kullanım ve cihaz ölçümü</li>
+            <li><strong>Senin seçtiğin alıcı:</strong> Açıkça paylaşmayı seçtiğin maskelenmiş destek raporu veya dışa aktardığın CSV dosyası</li>
         </ul>
-        <p>Uygulama, gider ve gelir verilerini hiçbir üçüncü tarafa iletmez.</p>
+        <p>Yerel bütçe asistanı kural tabanlıdır; sorularını yanıtlamak için harici bir üretken yapay zekâ hizmetine bağlanmaz.</p>
 
         <h2>3. Verilerini nasıl silersin?</h2>
-        <p>Uygulamayı kaldırman yeterlidir; kaldırma sırasında tüm veriler (giderler, fiş kayıtları ve raporlar) cihazla birlikte silinir. Uygulama içi Ayarlar'dan verileri sıfırlayabilirsin. Destek istersen: <a href="mailto:aykutkutlu08@gmail.com">aykutkutlu08@gmail.com</a></p>
+        <p>Yerel kayıtları Android uygulama ayarlarından depolama verilerini temizleyerek veya uygulamayı kaldırarak silebilirsin. Bu sürümde otomatik bulut bütçe yedeği veya cihazlar arası senkronizasyon sunulmaz; uygulamayı kaldırmak yerel veri kaybına yol açabilir. Paylaştığın CSV/destek dosyalarını ve harici hizmetlerdeki kayıtları ayrıca yönetmen gerekir. Destek: <a href="mailto:aykutkutlu08@gmail.com">aykutkutlu08@gmail.com</a></p>
 
         <h2>4. Çocuklar</h2>
         <p>Bütçe Takip genel kullanıcılar için tasarlanmıştır; 13 yaş altı kullanım desteklenmez.</p>

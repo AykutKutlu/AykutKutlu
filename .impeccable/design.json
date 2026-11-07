@@ -1,0 +1,298 @@
+{
+  "schemaVersion": 2,
+  "generatedAt": "2026-11-07T14:32:21.792Z",
+  "title": "Design System: Kutvoks",
+  "extensions": {
+    "colorMeta": {
+      "ink": {
+        "role": "neutral",
+        "displayName": "ink",
+        "tonalRamp": [
+          "oklch(15.00% 0.05089 252.11)",
+          "oklch(26.43% 0.05089 252.11)",
+          "oklch(37.86% 0.05089 252.11)",
+          "oklch(49.29% 0.05089 252.11)",
+          "oklch(60.71% 0.05089 252.11)",
+          "oklch(72.14% 0.05089 252.11)",
+          "oklch(83.57% 0.05089 252.11)",
+          "oklch(95.00% 0.05089 252.11)"
+        ]
+      },
+      "ink-soft": {
+        "role": "neutral",
+        "displayName": "ink-soft",
+        "tonalRamp": [
+          "oklch(15.00% 0.04075 252.56)",
+          "oklch(26.43% 0.04075 252.56)",
+          "oklch(37.86% 0.04075 252.56)",
+          "oklch(49.29% 0.04075 252.56)",
+          "oklch(60.71% 0.04075 252.56)",
+          "oklch(72.14% 0.04075 252.56)",
+          "oklch(83.57% 0.04075 252.56)",
+          "oklch(95.00% 0.04075 252.56)"
+        ]
+      },
+      "ink-faint": {
+        "role": "neutral",
+        "displayName": "ink-faint",
+        "tonalRamp": [
+          "oklch(15.00% 0.04325 253.44)",
+          "oklch(26.43% 0.04325 253.44)",
+          "oklch(37.86% 0.04325 253.44)",
+          "oklch(49.29% 0.04325 253.44)",
+          "oklch(60.71% 0.04325 253.44)",
+          "oklch(72.14% 0.04325 253.44)",
+          "oklch(83.57% 0.04325 253.44)",
+          "oklch(95.00% 0.04325 253.44)"
+        ]
+      },
+      "bg": {
+        "role": "neutral",
+        "displayName": "bg",
+        "tonalRamp": [
+          "oklch(15.00% 0.00574 264.53)",
+          "oklch(26.43% 0.00574 264.53)",
+          "oklch(37.86% 0.00574 264.53)",
+          "oklch(49.29% 0.00574 264.53)",
+          "oklch(60.71% 0.00574 264.53)",
+          "oklch(72.14% 0.00574 264.53)",
+          "oklch(83.57% 0.00574 264.53)",
+          "oklch(95.00% 0.00574 264.53)"
+        ]
+      },
+      "surface": {
+        "role": "neutral",
+        "displayName": "surface",
+        "tonalRamp": [
+          "oklch(15.00% 0.00000 89.88)",
+          "oklch(26.43% 0.00000 89.88)",
+          "oklch(37.86% 0.00000 89.88)",
+          "oklch(49.29% 0.00000 89.88)",
+          "oklch(60.71% 0.00000 89.88)",
+          "oklch(72.14% 0.00000 89.88)",
+          "oklch(83.57% 0.00000 89.88)",
+          "oklch(95.00% 0.00000 89.88)"
+        ]
+      },
+      "surface-blue": {
+        "role": "neutral",
+        "displayName": "surface-blue",
+        "tonalRamp": [
+          "oklch(15.00% 0.01737 264.49)",
+          "oklch(26.43% 0.01737 264.49)",
+          "oklch(37.86% 0.01737 264.49)",
+          "oklch(49.29% 0.01737 264.49)",
+          "oklch(60.71% 0.01737 264.49)",
+          "oklch(72.14% 0.01737 264.49)",
+          "oklch(83.57% 0.01737 264.49)",
+          "oklch(95.00% 0.01737 264.49)"
+        ]
+      },
+      "line": {
+        "role": "neutral",
+        "displayName": "line",
+        "tonalRamp": [
+          "oklch(15.00% 0.01614 253.91)",
+          "oklch(26.43% 0.01614 253.91)",
+          "oklch(37.86% 0.01614 253.91)",
+          "oklch(49.29% 0.01614 253.91)",
+          "oklch(60.71% 0.01614 253.91)",
+          "oklch(72.14% 0.01614 253.91)",
+          "oklch(83.57% 0.01614 253.91)",
+          "oklch(95.00% 0.01614 253.91)"
+        ]
+      },
+      "blue": {
+        "role": "primary",
+        "displayName": "blue",
+        "tonalRamp": [
+          "oklch(15.00% 0.21642 262.71)",
+          "oklch(26.43% 0.21642 262.71)",
+          "oklch(37.86% 0.21642 262.71)",
+          "oklch(49.29% 0.21642 262.71)",
+          "oklch(60.71% 0.21642 262.71)",
+          "oklch(72.14% 0.21642 262.71)",
+          "oklch(83.57% 0.21642 262.71)",
+          "oklch(95.00% 0.21642 262.71)"
+        ]
+      },
+      "blue-deep": {
+        "role": "primary",
+        "displayName": "blue-deep",
+        "tonalRamp": [
+          "oklch(15.00% 0.18055 263.59)",
+          "oklch(26.43% 0.18055 263.59)",
+          "oklch(37.86% 0.18055 263.59)",
+          "oklch(49.29% 0.18055 263.59)",
+          "oklch(60.71% 0.18055 263.59)",
+          "oklch(72.14% 0.18055 263.59)",
+          "oklch(83.57% 0.18055 263.59)",
+          "oklch(95.00% 0.18055 263.59)"
+        ]
+      },
+      "navy": {
+        "role": "primary",
+        "displayName": "navy",
+        "tonalRamp": [
+          "oklch(15.00% 0.08395 257.03)",
+          "oklch(26.43% 0.08395 257.03)",
+          "oklch(37.86% 0.08395 257.03)",
+          "oklch(49.29% 0.08395 257.03)",
+          "oklch(60.71% 0.08395 257.03)",
+          "oklch(72.14% 0.08395 257.03)",
+          "oklch(83.57% 0.08395 257.03)",
+          "oklch(95.00% 0.08395 257.03)"
+        ]
+      },
+      "orange": {
+        "role": "secondary",
+        "displayName": "orange",
+        "tonalRamp": [
+          "oklch(15.00% 0.13347 61.20)",
+          "oklch(26.43% 0.13347 61.20)",
+          "oklch(37.86% 0.13347 61.20)",
+          "oklch(49.29% 0.13347 61.20)",
+          "oklch(60.71% 0.13347 61.20)",
+          "oklch(72.14% 0.13347 61.20)",
+          "oklch(83.57% 0.13347 61.20)",
+          "oklch(95.00% 0.13347 61.20)"
+        ]
+      }
+    },
+    "typographyMeta": {
+      "display": {
+        "displayName": "Home display",
+        "purpose": "Wide-screen home hero; responsive overrides are documented in DESIGN.md."
+      },
+      "body": {
+        "displayName": "Body",
+        "purpose": "Readable shared Space Grotesk text."
+      }
+    },
+    "shadows": [
+      {
+        "name": "screenshot",
+        "value": "0 14px 38px rgb(16 47 89 / 10%)",
+        "purpose": "Budget screenshot frames."
+      }
+    ],
+    "motion": [
+      {
+        "name": "button-transition",
+        "value": "background .2s, transform .2s",
+        "purpose": "Button hover response, removed under reduced-motion preferences."
+      },
+      {
+        "name": "exhibit-transition",
+        "value": "transform .3s",
+        "purpose": "Product exhibit hover response, removed under reduced-motion preferences."
+      }
+    ],
+    "breakpoints": [
+      {
+        "name": "home-video-stack",
+        "value": "1050px"
+      },
+      {
+        "name": "home-hero-stack",
+        "value": "850px"
+      },
+      {
+        "name": "mobile",
+        "value": "620px"
+      },
+      {
+        "name": "small-mobile",
+        "value": "360px"
+      }
+    ],
+    "notes": [
+      "Tonal ramps are generated preview metadata, not additional production palette tokens.",
+      "Component snippets reproduce visual states; the application supplies journey and translation behavior.",
+      "Direction seed a935e462 was implemented code-first without an approved image comp."
+    ]
+  },
+  "components": [
+    {
+      "name": "Primary action",
+      "kind": "button",
+      "refersTo": "button-primary",
+      "description": "Primary destination or support link.",
+      "html": "<a class=\"ds-primary\" href=\"#example\">Google Play</a>",
+      "css": ".ds-primary{font-family:\"Space Grotesk\",\"Segoe UI\",sans-serif;display:inline-flex;align-items:center;justify-content:center;min-height:48px;padding:13px 23px;border-radius:12px;background:var(--blue,#1857df);color:#fff;font-size:14px;font-weight:600;line-height:1.4;text-decoration:none;transition:background .2s,transform .2s}.ds-primary:hover{background:var(--blue-deep,#123eab);transform:translateY(-2px)}.ds-primary:focus-visible,.ds-text:focus-visible,.ds-nav a:focus-visible,.ds-journey button:focus-visible,.ds-faq summary:focus-visible{outline:3px solid var(--blue,#1857df);outline-offset:5px;}@media(prefers-reduced-motion:reduce){.ds-primary{transition:none}}"
+    },
+    {
+      "name": "Text action",
+      "kind": "button",
+      "refersTo": "button-text",
+      "description": "Underlined secondary destination.",
+      "html": "<a class=\"ds-text\" href=\"#example\">Uygulamayı keşfet</a>",
+      "css": ".ds-text{font-family:\"Space Grotesk\",\"Segoe UI\",sans-serif;display:inline-flex;align-items:center;min-height:48px;padding:13px 4px;color:var(--ink,#13283f);font-size:14px;font-weight:600;border-radius:2px;text-decoration:underline;text-decoration-color:#9cabbe;text-underline-offset:5px;transition:transform .2s}.ds-text:hover{color:var(--blue,#1857df);transform:translateY(-2px)}.ds-primary:focus-visible,.ds-text:focus-visible,.ds-nav a:focus-visible,.ds-journey button:focus-visible,.ds-faq summary:focus-visible{outline:3px solid var(--blue,#1857df);outline-offset:5px;}@media(prefers-reduced-motion:reduce){.ds-text{transition:none}}"
+    },
+    {
+      "name": "Navigation",
+      "kind": "nav",
+      "refersTo": "navigation-link",
+      "description": "Visible text navigation; mobile layout wraps on the page.",
+      "html": "<nav class=\"ds-nav\" aria-label=\"Örnek gezinme\"><a href=\"#ops\">OPS</a><a href=\"#butce\">Bütçe Takip</a></nav>",
+      "css": ".ds-nav{display:flex;gap:26px;align-items:center}.ds-nav a{font-family:\"Space Grotesk\",\"Segoe UI\",sans-serif;padding:12px 0;color:var(--ink-soft,#4b5d72);font-size:14px;text-decoration:none}.ds-nav a:hover{color:var(--blue,#1857df);text-decoration:underline;text-underline-offset:5px}.ds-primary:focus-visible,.ds-text:focus-visible,.ds-nav a:focus-visible,.ds-journey button:focus-visible,.ds-faq summary:focus-visible{outline:3px solid var(--blue,#1857df);outline-offset:5px;}"
+    },
+    {
+      "name": "Feature chip",
+      "kind": "chip",
+      "refersTo": "feature-chip",
+      "description": "Noninteractive feature summary.",
+      "html": "<span class=\"ds-chip\">Portföy takibi</span>",
+      "css": ".ds-chip{font-family:\"Space Grotesk\",\"Segoe UI\",sans-serif;display:inline-block;padding:7px 12px;border-radius:8px;background:var(--surface-blue,#eaf0fc);color:#254986;font-size:12px;line-height:1.65}"
+    },
+    {
+      "name": "Journey button group",
+      "kind": "custom",
+      "refersTo": "journey-selected",
+      "description": "Selected and unselected states; page JavaScript supplies selection and keyboard behavior.",
+      "html": "<div class=\"ds-journey\" role=\"group\" aria-label=\"Uygulama seçimi\"><button aria-pressed=\"true\">OPS</button><button aria-pressed=\"false\">Bütçe Takip</button></div>",
+      "css": ".ds-journey{display:inline-flex;gap:4px;border:1px solid #bfcfe9;padding:5px;border-radius:14px;background:var(--surface-blue,#eaf0fc)}.ds-journey button{font-family:\"Space Grotesk\",\"Segoe UI\",sans-serif;min-height:44px;padding:10px 28px;border:0;border-radius:10px;color:#2f4b73;background:transparent;font-weight:600;font-size:14px;cursor:pointer}.ds-journey button[aria-pressed=true]{background:var(--navy,#102f59);color:#fff}.ds-primary:focus-visible,.ds-text:focus-visible,.ds-nav a:focus-visible,.ds-journey button:focus-visible,.ds-faq summary:focus-visible{outline:3px solid var(--blue,#1857df);outline-offset:5px;}"
+    },
+    {
+      "name": "FAQ disclosure",
+      "kind": "custom",
+      "description": "Native details/summary with a visible open-state marker.",
+      "html": "<div class=\"ds-faq\"><details><summary>Hangi Android sürümü gerekiyor?</summary><p>Gerekli sürüm ürün sayfasında belirtilir.</p></details></div>",
+      "css": ".ds-faq{font-family:\"Space Grotesk\",\"Segoe UI\",sans-serif;color:var(--ink,#13283f);line-height:1.65}.ds-faq details{border-block:1px solid var(--line,#dbe3ed)}.ds-faq summary{display:flex;justify-content:space-between;gap:20px;padding:22px 0;cursor:pointer;font-size:17px;font-weight:500;list-style:none}.ds-faq summary::-webkit-details-marker{display:none}.ds-faq summary::after{content:\"+\";font-size:24px;color:var(--blue,#1857df)}.ds-faq details[open] summary::after{content:\"−\"}.ds-faq p{margin:0;padding-bottom:20px;color:var(--ink-soft,#4b5d72);font-size:14px}.ds-primary:focus-visible,.ds-text:focus-visible,.ds-nav a:focus-visible,.ds-journey button:focus-visible,.ds-faq summary:focus-visible{outline:3px solid var(--blue,#1857df);outline-offset:5px;}"
+    }
+  ],
+  "narrative": {
+    "overview": "Kutvoks uses its established navy, blue and orange identity to make two Android applications clear, equally important choices. Space Grotesk is deliberately retained with the existing logo, app icons and OPS mascot. This is an extraction of the built site, not a replacement identity or a new visual concept.\n\nThe home page leads with a task-oriented introduction and two equally sized product exhibits. Product pages share a readable catalogue structure, explicit usage tables and real supporting media. The OPS mascot is a brand character; Bütçe Takip imagery is actual application imagery. Their different treatments preserve each product's identity without changing their equal standing.",
+    "keyCharacteristics": [
+      "Equal product emphasis with distinct, authentic imagery.",
+      "Large, compact headings above readable, limited-width prose.",
+      "Light surfaces, navy media areas and blue actions.",
+      "Visible content by default, enhanced with small accessible controls."
+    ],
+    "rules": [
+      {
+        "name": "The Existing Identity Rule",
+        "body": "Preserve Kutvoks's supplied logo, icons, mascot and deliberate Space Grotesk typography when extending the site.",
+        "section": "colors"
+      },
+      {
+        "name": "The Visible Content Rule",
+        "body": "Keep essential copy, product routes and supporting evidence available before JavaScript runs.",
+        "section": "components"
+      }
+    ],
+    "dos": [
+      "Do give OPS and Bütçe Takip equal visual importance.",
+      "Do retain the existing brand assets, palette and Space Grotesk.",
+      "Do use real screenshots and label mascot art as brand imagery.",
+      "Do preserve visible keyboard focus and the static-content fallback.",
+      "Do retain readable limitations and usage notes alongside feature descriptions."
+    ],
+    "donts": [
+      "Don't present mascot art as an application screenshot.",
+      "Don't make content visibility depend on reveal scripts.",
+      "Don't invent product features or guarantee outcomes through design copy.",
+      "Don't apply the screenshot shadow to every surface."
+    ]
+  }
+}

@@ -28,32 +28,37 @@
     <article class="prose wrap">
         <a class="back-link" href="ops.html">OPS: Financial Support sayfası</a>
         <h1>OPS: Financial Support Gizlilik Politikası</h1>
-        <p class="meta">Son güncelleme: 4 Kasım 2026</p>
+        <p class="meta">Son güncelleme: 7 Kasım 2026</p>
 
         <div class="toc">
-            <b>Özet:</b> OPS: Financial Support, verilerinin büyük bölümünü <strong>cihazında</strong> saklayan bir finans uygulamasıdır. Sunucu hesabı yoktur; portföy verin cihazından dışarı çıkmaz.
+            <b>Özet:</b> OPS: Financial Support, portföy ve uygulama kayıtlarını <strong>cihazında</strong> saklar. Yapay zekâ, ses, piyasa verisi, reklam ve isteğe bağlı Google ile giriş özellikleri ilgili harici hizmetlerle bağlantı kurar. Yapay zekâyı kullandığında soruların ve yanıt için gerekli portföy bağlamın seçtiğin sağlayıcıya iletilebilir.
         </div>
 
         <h2>1. Hangi verileri işleriz?</h2>
         <ul>
             <li><strong>Hesap verisi (opsiyonel):</strong> Google ile giriş kullanırsan e-posta, ad ve profil fotoğrafın Firebase Authentication üzerinden işlenir. Bu bilgiler yalnızca uygulama içi hesabının tanınması için kullanılır.</li>
-            <li><strong>Cihaz içi veriler:</strong> Portföyün (varlıklar, adetler, maliyetler), favoriler, fiyat alarmları ve sohbet geçmişi. Bunlar yalnızca cihazındaki yerel SQLite veritabanında saklanır; sunucumuz yoktur.</li>
-            <li><strong>API anahtarları:</strong> Kendi yapay zekâ sağlayıcın (OpenAI, Gemini, Kimi, DeepSeek, Ollama Cloud) için girdiğin anahtarlar cihazda Android Keystore ile şifrelenmiş olarak saklanır. Anahtarın cihazdan çıkmaz.</li>
-            <li><strong>Reklam:</strong> AdMob banner reklamcılığı reklam kimliği (advertising ID) cihaz kimliğine erişebilir; ayrıntılar Google'ın gizlilik politikasındadır.</li>
+            <li><strong>Cihaz içi kayıtlar:</strong> Portföyün (varlıklar, adetler, maliyetler), favoriler ve sohbet geçmişi yerel SQLite/Room veritabanında saklanır. Bu sürümde portföyün için otomatik bulut senkronizasyonu sunulmaz.</li>
+            <li><strong>API anahtarları:</strong> Seçtiğin yapay zekâ veya veri sağlayıcısı için girdiğin anahtarlar cihaz tercihlerinde saklanır ve ilgili servise yapılan isteklerde kimlik doğrulama amacıyla o sağlayıcıya iletilir. Uygulama şifreli saklamayı dener; şifreli depolama başlatılamazsa standart cihaz tercihlerini kullanabilir.</li>
+            <li><strong>Reklam:</strong> AdMob banner ve ödüllü reklam özellikleri reklam kimliği, cihaz ve reklam etkileşimi bilgilerini işleyebilir; ayrıntılar ilgili Google gizlilik bildirimlerindedir.</li>
+            <li><strong>Ses:</strong> Sesli giriş için mikrofon izniyle Android konuşma tanıma hizmeti, sesli yanıt için metin seslendirme hizmeti kullanılır. Seçilen hizmete göre ses işleme ağ bağlantısı içerebilir.</li>
         </ul>
 
         <h2>2. Verileri hangi durumda paylaşırız?</h2>
-        <p>Portföy verin uygulamadan dışarı çıkmaz. Aşağıdaki istekler yalnızca piyasa verisi görüntülemek için üçüncü taraf servislerine gider:</p>
+        <p>Yerel saklama, harici hizmetlere hiç veri gönderilmediği anlamına gelmez. Kullandığın özelliğe göre şu bağlantılar kurulur:</p>
         <ul>
             <li>Yahoo Finance: hisse, endeks, döviz ve emtia fiyat geçmişleri</li>
             <li>Binance: kripto canlı fiyat akışı</li>
             <li>Finansal medya RSS kaynakları: Türkçe haber başlıkları</li>
-            <li>AdMob / Google: reklam gösterimi</li>
-            <li>Yapay zekâ sağlayıcın: kendi anahtarınla, yalnızca soru sorduğun anda, seçtiğin sağlayıcının (OpenAI, Google, Moonshot, DeepSeek, Ollama) sunucusuna. Anahtar tanımlı değilse hiçbir yapay zekâ isteği gönderilmez.</li>
+            <li>İsteğe bağlı Twelve Data / Alpha Vantage: yapılandırdığın veri kaynağına fiyat ve varlık istekleri</li>
+            <li>AdMob / Google: reklam gösterimi ve ödüllü reklam etkileşimleri</li>
+            <li>Firebase Authentication / Google: isteğe bağlı Google ile giriş</li>
+            <li>Yapay zekâ sağlayıcın: sohbet veya Haber Etkisi kullanıldığında seçtiğin sağlayıcıya soru, sohbet geçmişi ve gereken bağlam gönderilir. Bu bağlam portföy sembolleri, adetler, maliyetler, favoriler ve piyasa/haber verileri içerebilir. API anahtarı ilgili sağlayıcıya kimlik doğrulama için iletilir.</li>
+            <li>Android konuşma tanıma / seslendirme: ses özelliğini kullandığında seçili hizmetin koşullarına göre</li>
         </ul>
+        <p>Bu web sitesindeki tanıtım oynatıcıları YouTube tarafından sunulur. Bir videoyu yüklediğinde veya oynattığında YouTube da bağlantı ve oynatma bilgilerini kendi koşulları kapsamında işleyebilir.</p>
 
         <h2>3. Verilerini nasıl silersin?</h2>
-        <p>Uygulamayı kaldırabilir ya da uygulama içi Ayarlar'dan verileri sıfırlayabilirsin. Google hesabıyla oluşturulan kaydı Firebase hesap silme üzerinden kaldırabilirsin. Destek istersen: <a href="mailto:aykutkutlu08@gmail.com">aykutkutlu08@gmail.com</a></p>
+        <p>Yerel kayıtları Android uygulama ayarlarından depolama verilerini temizleyerek veya uygulamayı kaldırarak silebilirsin. Bu işlemler harici sağlayıcılara daha önce iletilen verileri otomatik silmez; onların silme ve saklama koşulları geçerlidir. İsteğe bağlı giriş hesabıyla ilgili silme talebi veya destek için: <a href="mailto:aykutkutlu08@gmail.com">aykutkutlu08@gmail.com</a></p>
 
         <h2>4. Çocuklar</h2>
         <p>OPS: Financial Support 18 yaş ve üzeri kullanıcılara yöneliktir. 13 yaş altı kullanım desteklenmez.</p>
