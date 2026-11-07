@@ -414,12 +414,51 @@
 </section>
 <section class="section contact-section">
 <div class="wrap">
-<div class="contact-box">
-<div>
+<div class="contact-panel">
+<div class="contact-intro">
 <h2>OPS hakkında konuşalım.</h2>
 <p>Hata bildirirken uygulama sürümünü, Android sürümünü ve sorunu tekrar etme adımlarını yazabilirsin. Özel finansal bilgilerini paylaşmana gerek yok.</p>
+<a class="contact-mail" href="mailto:aykutkutlu08@gmail.com">
+<span aria-hidden="true">✉</span>
+<span>aykutkutlu08@gmail.com</span>
+</a>
 </div>
-<a class="btn btn-primary" href="mailto:aykutkutlu08@gmail.com">Destek için yaz</a>
+<form class="contact-form" data-feedback action="https://formsubmit.co/ajax/aykutkutlu08@gmail.com" method="POST" novalidate>
+<input type="hidden" name="_subject" value="Kutvoks web — geri bildirim">
+<input type="hidden" name="_template" value="table">
+<input type="hidden" name="_origin" value="web">
+<input type="text" name="_honey" tabindex="-1" autocomplete="off" aria-hidden="true" class="honey">
+<div class="field-row">
+<div class="field">
+<label for="fbName" data-i18n="form.name">Ad (opsiyonel)</label>
+<input id="fbName" name="name" type="text" autocomplete="name" maxlength="80" data-i18n-ph="form.namePh" placeholder="Adın">
+</div>
+<div class="field">
+<label for="fbEmail" data-i18n="form.email">E-posta</label>
+<input id="fbEmail" name="email" type="email" autocomplete="email" required maxlength="160" placeholder="ornek@posta.com">
+</div>
+</div>
+<div class="field">
+<label for="fbTopic" data-i18n="form.topic">Konu</label>
+<select id="fbTopic" name="topic" required>
+<option value="" data-i18n="form.topicPick">— Konu seç —</option>
+<option value="t1" data-i18n="form.topic1">Geri bildirim</option>
+<option value="t2" data-i18n="form.topic2">Hata bildirimi</option>
+<option value="t3" data-i18n="form.topic3">İş birliği / Fikir</option>
+<option value="t4" data-i18n="form.topic4">Diğer</option>
+</select>
+</div>
+<div class="field">
+<label for="fbMsg" data-i18n="form.msg">Mesaj</label>
+<textarea id="fbMsg" name="message" rows="5" required maxlength="4000" data-i18n-ph="form.msgPh" placeholder="Bize anlatmak istediğin her şey…"></textarea>
+</div>
+<button class="btn btn-primary" type="submit">
+<span data-i18n="form.send">Gönder</span>
+</button>
+<p class="form-note" data-i18n="form.note">Mesajın iletişim e-postamıza ulaşsın diye bir form servisinin üzerinden iletir; sunucuda saklanmaz.</p>
+<p class="form-status" data-feedback-status role="status" aria-live="polite" hidden>
+</p>
+</form>
 </div>
 </div>
 </section>
@@ -445,6 +484,7 @@
 </div>
 <div class="footer-col">
 <h3>Gizlilik ve bilgiler</h3>
+<a href="index.html#iletisim">Geri bildirim formu</a>
 <a href="gizlilik.html">OPS · Gizlilik</a>
 <a href="butce-gizlilik.html">Bütçe Takip · Gizlilik</a>
 <a href="app-ads.txt">app-ads.txt</a>

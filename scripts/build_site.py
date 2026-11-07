@@ -60,15 +60,55 @@ def footer(home=False):
     ops_privacy = tr('footer.opsPrivacy', 'OPS · Gizlilik', 'OPS · Privacy') if home else 'OPS · Gizlilik'
     budget_privacy = tr('footer.budgetPrivacy', 'Bütçe Takip · Gizlilik', 'Bütçe Takip · Privacy') if home else 'Bütçe Takip · Gizlilik'
     disclaimer = tr('footer.disclaimer', 'OPS içerikleri bilgilendirme amaçlıdır; yatırım tavsiyesi değildir.', 'OPS content is for information, not investment advice.') if home else 'OPS içerikleri bilgilendirme amaçlıdır; yatırım tavsiyesi değildir.'
+    feedback = tr('footer.feedback', 'Geri bildirim formu', 'Feedback form') if home else 'Geri bildirim formu'
     return f'''<footer class="site-footer"><div class="wrap"><div class="footer-grid">
 <div class="footer-col footer-brand"><a class="brand" href="index.html"><img src="images/kutvoks/kutvoks-icon.png" alt="" width="44" height="44"><span><b>Kutvoks</b><span>app studio</span></span></a>{note}</div>
 <div class="footer-col"><h3>Kutvoks</h3><a href="ops.html">OPS: Financial Support</a><a href="butce-takip.html">Bütçe Takip</a><a href="mailto:{MAIL}">{MAIL}</a></div>
-<div class="footer-col"><h3>{privacy}</h3><a href="gizlilik.html">{ops_privacy}</a><a href="butce-gizlilik.html">{budget_privacy}</a><a href="app-ads.txt">app-ads.txt</a></div>
+<div class="footer-col"><h3>{privacy}</h3><a href="index.html#iletisim">{feedback}</a><a href="gizlilik.html">{ops_privacy}</a><a href="butce-gizlilik.html">{budget_privacy}</a><a href="app-ads.txt">app-ads.txt</a></div>
 </div><div class="footer-bottom"><span>© 2026 Kutvoks</span><span>{disclaimer}</span></div></div></footer>'''
 
 
 def play(app):
     return f'https://play.google.com/store/apps/details?id={app["package"]}'
+
+
+FORM_ACTION = 'https://formsubmit.co/ajax/' + MAIL
+
+
+def feedback_form():
+    """Contact panel form. Submissions are delivered to MAIL by formsubmit.co;
+    first submission sends a one-click activation mail (see README)."""
+    topics = ['Geri bildirim', 'Hata bildirimi', 'İş birliği / Fikir', 'Diğer']
+    topic_en = ['Feedback', 'Bug report', 'Collaboration / Idea', 'Other']
+    pick = tr('form.topicPick', '— Konu seç —', '— Choose a topic —')
+    options = '<option value="" data-i18n="form.topicPick">— Konu seç —</option>' + ''.join(
+        f'<option value="t{i + 1}" data-i18n="form.topic{i + 1}">{e(t)}</option>' for i, t in enumerate(topics))
+    for i, (t, en) in enumerate(zip(topics, topic_en)):
+        tr('form.topic' + str(i + 1), t, en)
+    return f'''<form class="contact-form" data-feedback action="{FORM_ACTION}" method="POST" novalidate>
+<input type="hidden" name="_subject" value="Kutvoks web — geri bildirim">
+<input type="hidden" name="_template" value="table">
+<input type="hidden" name="_origin" value="web">
+<input type="text" name="_honey" tabindex="-1" autocomplete="off" aria-hidden="true" class="honey">
+<div class="field-row">
+<div class="field"><label for="fbName" data-i18n="form.name">Ad (opsiyonel)</label><input id="fbName" name="name" type="text" autocomplete="name" maxlength="80" data-i18n-ph="form.namePh" placeholder="Adın"></div>
+<div class="field"><label for="fbEmail" data-i18n="form.email">E-posta</label><input id="fbEmail" name="email" type="email" autocomplete="email" required maxlength="160" placeholder="ornek@posta.com"></div>
+</div>
+<div class="field"><label for="fbTopic" data-i18n="form.topic">Konu</label><select id="fbTopic" name="topic" required>{options}</select></div>
+<div class="field"><label for="fbMsg" data-i18n="form.msg">Mesaj</label><textarea id="fbMsg" name="message" rows="5" required maxlength="4000" data-i18n-ph="form.msgPh" placeholder="Bize anlatmak istediğin her şey…"></textarea></div>
+<button class="btn btn-primary" type="submit">{tr('form.send', 'Gönder', 'Send')}</button>
+<p class="form-note" data-i18n="form.note">Mesajın iletişim e-postamıza ulaşsın diye bir form servisinin üzerinden iletir; sunucuda saklanmaz.</p>
+<p class="form-status" data-feedback-status role="status" aria-live="polite" hidden></p>
+</form>'''
+# Register remaining form strings for i18n dictionaries.
+tr('form.name', 'Ad (opsiyonel)', 'Name (optional)')
+tr('form.namePh', 'Adın', 'Your name')
+tr('form.email', 'E-posta', 'Email')
+tr('form.topic', 'Konu', 'Topic')
+tr('form.msg', 'Mesaj', 'Message')
+tr('form.msgPh', 'Bize anlatmak istediğin her şey…', 'Anything you want to tell us…')
+tr('form.send', 'Gönder', 'Send')
+tr('form.note', 'Mesajın iletişim e-postamıza ulaşsın diye bir form servisinin üzerinden iletir; sunucuda saklanmaz.', 'The form sends your message to our contact email through a form service; nothing is stored on our side.')
 
 
 def button(url, label, variant='primary', external=False):
@@ -140,10 +180,18 @@ FINISH: unreviewed and undocumented is unfinished; this build ends with the fini
         ('language', 'Türkçe ve İngilizce', 'Turkish and English', 'İki uygulamada da dilini seçebilirsin. Piyasa ve bütçe işlerini kendi alışkanlıklarınla takip et.', 'Choose your language in both apps and track markets or budgets in a way that suits you.'),
         ('terms', 'Özellikler kadar koşullar da net', 'Clear features and clear terms', 'Analiz hakları, ücretsiz kullanım sınırları ve Premium farklarını indirmeden önce inceleyebilirsin.', 'Check analysis credits, free usage limits and Premium differences before downloading.')]:
         text += '<div>' + tr('about.' + key + '.title', title_tr, title_en, 'h3') + tr('about.' + key + '.body', body_tr, body_en, 'p') + '</div>'
-    text += '</div></div></section><section class="section contact-section" id="iletisim"><div class="wrap"><div class="contact-box"><div>'
-    text += tr('contact.title', 'Birlikte daha iyiye.', 'Better, together.', 'h2') + tr('contact.desc', 'Bir özellik önerin veya hata bildirimin mi var? Kullandığın uygulamayı ve sürümü belirterek bize yaz.', 'Have a feature idea or a bug to report? Tell us which app and version you use.', 'p') + '</div>' + button('mailto:' + MAIL, tr('contact.cta', 'Kutvoks’a yaz', 'Contact Kutvoks')) + '</div></div></section></main>'
+    text += '</div></div></section><section class="section contact-section" id="iletisim"><div class="wrap"><div class="contact-panel"><div class="contact-intro">'
+    text += tr('contact.title', 'Birlikte daha iyiye.', 'Better, together.', 'h2')
+    text += tr('contact.desc', 'Bir özellik önerin veya hata bildirimin mi var? Kullandığın uygulamayı ve sürümü belirterek, aşağıdaki formu kullanarak yaz.', 'Have a feature idea or a bug to report? Tell us which app and version you use in the form below.', 'p')
+    text += f'<a class="contact-mail" href="mailto:{MAIL}"><span aria-hidden="true">✉</span><span>{MAIL}</span></a>'
+    text += '<ul class="contact-points">' + ''.join(tr('contact.point.' + str(i), a, b, 'li') for i, (a, b) in enumerate([
+        ('Uygulama deneyimine dair her geri bildirim', 'Any feedback about your app experience'),
+        ('Hata bildirimi / çökme raporu', 'Bug reports and crash reports'),
+        ('İş birliği ve özellik fikirleri', 'Collaboration and feature ideas')])) + '</ul></div>'
+    text += feedback_form() + '</div></div></section></main>'
     text += footer(True) + '<script src="home-copy.js" defer></script><script src="lang.js" defer></script></body></html>'
-    (ROOT / 'index.html').write_text(text.replace('><', '>\n<') + '\n', encoding='utf-8')
+    rendered = text.replace('><', '>\n<').replace('\n</textarea>', '</textarea>')
+    (ROOT / 'index.html').write_text(rendered + '\n', encoding='utf-8')
     (ROOT / 'home-copy.js').write_text('/* Generated by scripts/build_site.py */\nwindow.KUTVOKS_COPY = ' + json.dumps(COPY, ensure_ascii=False, indent=2) + ';\n', encoding='utf-8')
 
 
@@ -193,9 +241,9 @@ def detail(key):
         text += '</div></div></section>'
     text += f'<section class="section privacy-section"><div class="wrap privacy-grid"><h2>Yerel kayıtlar.<br>Açık veri akışı.</h2><div><p>{app["privacy"]}</p>' + button(app['privacyPage'], 'Gizlilik politikasını oku', 'text') + '</div></div></section>'
     text += '<section class="section" id="sss"><div class="wrap"><div class="section-heading"><h2>Aklındaki sorular.</h2></div><div class="faq">' + ''.join(f'<details><summary>{q}</summary><p>{a}</p></details>' for q,a in app['faq']) + '</div></div></section>'
-    text += f'<section class="section contact-section"><div class="wrap"><div class="contact-box"><div><h2>{app["short"]} hakkında konuşalım.</h2><p>Hata bildirirken uygulama sürümünü, Android sürümünü ve sorunu tekrar etme adımlarını yazabilirsin. Özel finansal bilgilerini paylaşmana gerek yok.</p></div>' + button('mailto:' + MAIL, 'Destek için yaz') + '</div></div></section></main>'
+    text += f'<section class="section contact-section"><div class="wrap"><div class="contact-panel"><div class="contact-intro"><h2>{app["short"]} hakkında konuşalım.</h2><p>Hata bildirirken uygulama sürümünü, Android sürümünü ve sorunu tekrar etme adımlarını yazabilirsin. Özel finansal bilgilerini paylaşmana gerek yok.</p><a class="contact-mail" href="mailto:{MAIL}"><span aria-hidden="true">✉</span><span>{MAIL}</span></a></div>' + feedback_form() + '</div></div></section></main>'
     text += footer() + '<script src="lang.js" defer></script></body></html>'
-    (ROOT / app['page']).write_text(text.replace('><', '>\n<') + '\n', encoding='utf-8')
+    (ROOT / app['page']).write_text(text.replace('><', '>\n<').replace('\n</textarea>', '</textarea>') + '\n', encoding='utf-8')
 
 
 if __name__ == '__main__':

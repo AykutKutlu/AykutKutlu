@@ -49,6 +49,14 @@ node --check home-copy.js
 
 Videolar `ops.html#tanitim` altında; iki yeni video ayrıca ana sayfada bulunur. Gömüler YouTube `youtube-nocookie.com` adresini, gecikmeli yüklemeyi ve tam ekran desteğini kullanır; otomatik oynatma yoktur. Her birinde bağımsız YouTube bağlantısı vardır. Yeni video eklerken `scripts/build_site.py` içindeki `VIDEOS` listesini güncelleyin.
 
+## Geri bildirim formu
+
+Tüm sayfalara yerleşik geri bildirim formunda ziyaretçi yazıları **formsubmit.co** üzerinden `aykutkutlu08@gmail.com`'a iletilir:
+
+- İlk form gönderiminde FormSubmit, iletişim adresine bir **"Activate Form"** e-postası yollar; linki bir kez tıklandıktan sonra iletiler akmaya başlar.
+- Bu tek seferlik etkinleştirme yapılana kadar site, ziyaretçiye "kanal etkinleştirme aşamasında" diye bilgilendirme gösterir ve doğrudan e-posta bağlantısı önerecek şekilde tasarlandı (`lang.js` içindeki `FORM_MESSAGES`).
+- `build_site.py` içindeki `FORM_ACTION` sabiti hedef adresi tutar. FormSubmit yerine Formspree ya da Google Forms'a geçmek istersen (kayıt/anahtar gerektirir) bu sabiti değiştirip `python scripts/build_site.py` çalıştırman yeterli.
+
 ## Yerel önizleme ve yayın
 
 ```powershell
