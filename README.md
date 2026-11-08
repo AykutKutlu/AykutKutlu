@@ -13,6 +13,12 @@ OPS: Financial Support ve Bütçe Takip için statik, GitHub Pages üzerinden ya
 | `butce-gizlilik.html` | Bütçe Takip gizlilik politikası — URL sabittir |
 | `app-ads.txt` | Mevcut Google ve Tappx satıcı bildirimleri — kökte korunur |
 
+## Yakında: Kairos
+
+BIST30 sinyal uygulaması **Kairos** (kaynak: `C:\Users\aykut\Desktop\Kairos`, v2.3.0) Play'de yayına hazırlanıyor. Ana sayfada `story-kairos` "Yakında" kartı (altın rozet) ve footer'da "Kairos · Yakında" etiketi olarak gösterilir; CTA iletişim formuna işaret eder. Görseller: `images/apps/kairos-icon.png`, `images/kairos/screen-hex.png`.
+
+Yayına girdiğinde `content/apps.json` içine `kairos` girişi ekleyip `scripts/build_site.py` içinde `detail('kairos')` çağrısına bağlayınca `kairos.html` otomatik üretilir; teaser kartını Play linkli ürüne çevirmeyi unutma.
+
 ## İçerik güncelleme
 
 Ürün özelliklerinin kaynağı `content/apps.json`. Başlıklar, açıklamalar, özellik grupları, koşullar, başlangıç adımları ve SSS bu dosyadadır. Koddan doğrulanan özelliklerin göreli kaynak kanıtları `docs/feature-audit-ops.json` ve `docs/feature-audit-butce.json` dosyalarında tutulur.

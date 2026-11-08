@@ -43,6 +43,14 @@ window.KUTVOKS_COPY = {
     "butce.all": "Tüm özellikleri incele",
     "butce.play": "Google Play'de aç",
     "butce.conditions": "Ücretsiz temel takip · İsteğe bağlı Premium",
+    "kairos.soon": "Yakında",
+    "kairos.headline": "BIST30'da disiplinli sinyaller.",
+    "kairos.intro": "Kairos, BIST30 endeksindeki 30 hisse için 25 teknik strateji kombinasyonunu 2020'den bugüne backtest eder ve her hisseye disiplinli bir giriş/çıkış kuralı çifti sabitler. Sinyal geldiğinde ya da fiyat eşiğe yaklaştığında cihazın bildirim merkezini devreye alır.",
+    "kairos.bullet.0": "Backtestli giriş/çıkış kuralları",
+    "kairos.bullet.1": "Canlı sinyal bildirimleri",
+    "kairos.bullet.2": "Bal peteği görünümü · BIST30 tek bakışta",
+    "kairos.cta": "Yayınlandığında haberdar ol",
+    "kairos.note": "Fiyat verileri Yahoo Finance'ten yaklaşık 15 dakika gecikmelidir. Skorlar geçmiş backtest sonuçlarıdır; getiri vaadi yoktur.",
     "journey.title": "Sen neyi takip etmek istiyorsun?",
     "journey.desc": "İki uygulama, birbirinden farklı ihtiyaçlar. Başlamak için sana uygun yolu seç.",
     "journey.ops": "Piyasalar ve yatırımlarım",
@@ -91,7 +99,8 @@ window.KUTVOKS_COPY = {
     "footer.opsPrivacy": "OPS · Gizlilik",
     "footer.budgetPrivacy": "Bütçe Takip · Gizlilik",
     "footer.disclaimer": "OPS içerikleri bilgilendirme amaçlıdır; yatırım tavsiyesi değildir.",
-    "footer.feedback": "Geri bildirim formu"
+    "footer.feedback": "Geri bildirim formu",
+    "footer.kairos": "Kairos · Yakında"
   },
   "en": {
     "form.name": "Name (optional)",
@@ -136,6 +145,14 @@ window.KUTVOKS_COPY = {
     "butce.all": "Explore all features",
     "butce.play": "Open in Google Play",
     "butce.conditions": "Free core tracking · Optional Premium",
+    "kairos.soon": "Coming soon",
+    "kairos.headline": "Disciplined signals on BIST30.",
+    "kairos.intro": "Kairos backtests 25 technical strategy combinations across 30 BIST30 stocks since 2020 and locks a disciplined entry/exit rule pair for each. When a signal hits or price approaches the threshold, your device notifies you.",
+    "kairos.bullet.0": "Backtested entry/exit rules",
+    "kairos.bullet.1": "Live signal notifications",
+    "kairos.bullet.2": "Honeycomb view · whole BIST30 at a glance",
+    "kairos.cta": "Be notified at launch",
+    "kairos.note": "Price data from Yahoo Finance is delayed approx. 15 minutes. Scores are based on historical backtests; no return guarantee.",
     "journey.title": "What would you like to track?",
     "journey.desc": "Two apps for different needs. Pick a starting point that works for you.",
     "journey.ops": "Markets and my investments",
@@ -184,6 +201,7 @@ window.KUTVOKS_COPY = {
     "footer.opsPrivacy": "OPS · Privacy",
     "footer.budgetPrivacy": "Bütçe Takip · Privacy",
     "footer.disclaimer": "OPS content is for information, not investment advice.",
-    "footer.feedback": "Feedback form"
+    "footer.feedback": "Feedback form",
+    "footer.kairos": "Kairos · Coming soon"
   }
 };

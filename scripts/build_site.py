@@ -62,9 +62,10 @@ def footer(home=False):
     budget_privacy = tr('footer.budgetPrivacy', 'Bütçe Takip · Gizlilik', 'Bütçe Takip · Privacy') if home else 'Bütçe Takip · Gizlilik'
     disclaimer = tr('footer.disclaimer', 'OPS içerikleri bilgilendirme amaçlıdır; yatırım tavsiyesi değildir.', 'OPS content is for information, not investment advice.') if home else 'OPS içerikleri bilgilendirme amaçlıdır; yatırım tavsiyesi değildir.'
     feedback = tr('footer.feedback', 'Geri bildirim formu', 'Feedback form') if home else 'Geri bildirim formu'
+    kairos_soon = tr('footer.kairos', 'Kairos · Yakında', 'Kairos · Coming soon') if home else 'Kairos · Yakında'
     return f'''<footer class="site-footer"><div class="wrap"><div class="footer-grid">
 <div class="footer-col footer-brand"><a class="brand" href="index.html"><img src="images/kutvoks/kutvoks-icon.png" alt="" width="44" height="44"><span><b>Kutvoks</b><span>app studio</span></span></a>{note}</div>
-<div class="footer-col"><h3>Kutvoks</h3><a href="ops.html">OPS: Financial Support</a><a href="butce-takip.html">Bütçe Takip</a><a href="mailto:{MAIL}">{MAIL}</a></div>
+<div class="footer-col"><h3>Kutvoks</h3><a href="ops.html">OPS: Financial Support</a><a href="butce-takip.html">Bütçe Takip</a><span class="soon-label">{kairos_soon}</span><a href="mailto:{MAIL}">{MAIL}</a></div>
 <div class="footer-col"><h3>{privacy}</h3><a href="index.html#iletisim">{feedback}</a><a href="gizlilik.html">{ops_privacy}</a><a href="butce-gizlilik.html">{budget_privacy}</a><a href="app-ads.txt">app-ads.txt</a></div>
 </div><div class="footer-bottom"><span>© 2026 Kutvoks</span><span>{disclaimer}</span></div></div></footer>'''
 
@@ -164,6 +165,15 @@ FINISH: unreviewed and undocumented is unfinished; this build ends with the fini
         text += '<ul class="story-features">' + ''.join(tr(key + '.bullet.' + str(i), a, b, 'li') for i, (a, b) in enumerate(bullets)) + '</ul>'
         text += '<div class="story-actions">' + button(app['page'], tr(key + '.all', 'Tüm özellikleri incele', 'Explore all features')) + button(play(app), tr(key + '.play', "Google Play'de aç", 'Open in Google Play'), 'text', True) + '</div>'
         text += tr(key + '.conditions', 'Reklamlar ve analiz hakları · Harici sağlayıcı koşulları geçerli' if key == 'ops' else 'Ücretsiz temel takip · İsteğe bağlı Premium', 'Ads & analysis credits · External provider terms apply' if key == 'ops' else 'Free core tracking · Optional Premium', 'p', 'small-note') + '</div></article>'
+    text += f'''<article class="product-story story-kairos"><div class="story-identity"><img src="images/apps/kairos-icon.png" alt="" width="68" height="68">''' + f'<h3>Kairos</h3><span>Android 8.0+ · <b class="soon-badge">{tr("kairos.soon", "Yakında", "Coming soon")}</b></span></div><div class="story-body">'
+    text += tr('kairos.headline', "BIST30'da disiplinli sinyaller.", 'Disciplined signals on BIST30.', 'h4')
+    text += tr('kairos.intro', "Kairos, BIST30 endeksindeki 30 hisse için 25 teknik strateji kombinasyonunu 2020'den bugüne backtest eder ve her hisseye disiplinli bir giriş/çıkış kuralı çifti sabitler. Sinyal geldiğinde ya da fiyat eşiğe yaklaştığında cihazın bildirim merkezini devreye alır.", "Kairos backtests 25 technical strategy combinations across 30 BIST30 stocks since 2020 and locks a disciplined entry/exit rule pair for each. When a signal hits or price approaches the threshold, your device notifies you.", 'p')
+    text += '<ul class="story-features">' + ''.join(tr('kairos.bullet.' + str(i), a, b, 'li') for i, (a, b) in enumerate([
+        ('Backtestli giriş/çıkış kuralları', 'Backtested entry/exit rules'),
+        ('Canlı sinyal bildirimleri', 'Live signal notifications'),
+        ('Bal peteği görünümü · BIST30 tek bakışta', 'Honeycomb view · whole BIST30 at a glance')])) + '</ul>'
+    text += '<div class="story-actions">' + button('#iletisim', tr('kairos.cta', 'Yayınlandığında haberdar ol', 'Be notified at launch')) + '</div>'
+    text += tr('kairos.note', "Fiyat verileri Yahoo Finance'ten yaklaşık 15 dakika gecikmelidir. Skorlar geçmiş backtest sonuçlarıdır; getiri vaadi yoktur.", "Price data from Yahoo Finance is delayed approx. 15 minutes. Scores are based on historical backtests; no return guarantee.", 'p', 'small-note') + '</div></article>'
     text += '</div></section><section class="section journey-section" id="nasil-calisir"><div class="wrap"><div class="section-heading">'
     text += tr('journey.title', 'Sen neyi takip etmek istiyorsun?', 'What would you like to track?', 'h2')
     text += tr('journey.desc', 'İki uygulama, birbirinden farklı ihtiyaçlar. Başlamak için sana uygun yolu seç.', 'Two apps for different needs. Pick a starting point that works for you.', 'p') + '</div>'
