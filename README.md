@@ -55,7 +55,7 @@ Tüm sayfalara yerleşik geri bildirim formunda ziyaretçi yazıları **formsubm
 
 - İlk form gönderiminde FormSubmit, iletişim adresine bir **"Activate Form"** e-postası yollar; linki bir kez tıklandıktan sonra iletiler akmaya başlar.
 - Bu tek seferlik etkinleştirme yapılana kadar site, ziyaretçiye "kanal etkinleştirme aşamasında" diye bilgilendirme gösterir ve doğrudan e-posta bağlantısı önerecek şekilde tasarlandı (`lang.js` içindeki `FORM_MESSAGES`).
-- `build_site.py` içindeki `FORM_ACTION` sabiti hedef adresi tutar. FormSubmit yerine Formspree ya da Google Forms'a geçmek istersen (kayıt/anahtar gerektirir) bu sabiti değiştirip `python scripts/build_site.py` çalıştırman yeterli.
+- `build_site.py` içindeki `FORM_ALIAS` sabiti iletişim adresini gizleyen FormSubmit anahtarını tutar; gönderiler yine `MAIL` adresine düşer. FormSubmit yeni bir anahtar üretirse (tek seferlik aktivasyon maili, 08.11.2026) eski değeri oradaki string ile güncelle; adres değişikliğinde ise `MAIL` ve aliases'i birlikte güncelle, ardından `python scripts/build_site.py` çalıştır.
 
 ## Yerel önizleme ve yayın
 

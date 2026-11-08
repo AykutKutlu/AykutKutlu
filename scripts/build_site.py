@@ -72,7 +72,10 @@ def play(app):
     return f'https://play.google.com/store/apps/details?id={app["package"]}'
 
 
-FORM_ACTION = 'https://formsubmit.co/ajax/' + MAIL
+# Feedback endpoint: the random-like string is a FormSubmit alias that maps to MAIL
+# (from the one-time activation mail, 08 Nov 2026). It hides the raw email from scrapers.
+FORM_ALIAS = '5dbe9cf6a213ac34c2375538c0dbeff2'
+FORM_ACTION = 'https://formsubmit.co/ajax/' + FORM_ALIAS
 
 
 def feedback_form():
