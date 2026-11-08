@@ -1,0 +1,119 @@
+<!DOCTYPE html>
+<html lang="tr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Kairos — Gizlilik Politikası | Kutvoks</title>
+    <meta name="description" content="Kairos gizlilik politikası: veriler nasıl cihazda tutulur, Yahoo Finance ve Google Play entegrasyonları, izinler, abonelik koşulları ve verilerin nasıl silinir.">
+    <link rel="canonical" href="https://aykutkutlu.github.io/AykutKutlu/kairos-gizlilik.html">
+    <link rel="icon" type="image/png" href="images/kutvoks/kutvoks-icon.png">
+    <link rel="stylesheet" href="styles.css">
+    <link href="https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@400;500;600;700&display=swap" rel="stylesheet">
+</head>
+<body>
+
+<header class="site-header">
+    <div class="wrap">
+        <a class="brand" href="index.html">
+            <img src="images/kutvoks/kutvoks-icon.png" alt="Kutvoks logosu">
+            <span><b>Kutvoks</b><span>app studio</span></span>
+        </a>
+        <nav class="nav-links">
+            <a href="ops.html">OPS: Financial Support</a>
+            <a href="butce-takip.html">Bütçe Takip</a>
+            <a href="index.html#iletisim">Destek</a>
+        </nav>
+    </div>
+</header>
+
+<main>
+    <article class="prose wrap">
+        <a class="back-link" href="index.html">Kutvoks ana sayfa</a>
+        <h1>Kairos Gizlilik Politikası</h1>
+        <p class="meta">Son güncelleme: 8 Kasım 2026</p>
+
+        <div class="toc">
+            <b>Özet:</b> Kairos <strong>sunucusuz</strong> çalışır. Stratejiler, ayarlar ve hesap bilgisi yalnızca senin cihazında tutulur; hiçbir kişisel veya finansal veri geliştiriciye veya üçüncü tarafa gönderilmez. Fiyat verisi Yahoo Finance'ten anonim olarak istenir; abonelik ödemeleri Google Play altyapısında işlenir.
+        </div>
+
+        <h2>1. Uygulamanın tanımı</h2>
+        <p>Kairos; Borsa İstanbul (BIST30) endeksinde yer alan hisse senetlerinde teorik stratejilerin (teknik gösterge giriş/çıkış kuralları) geçmiş veriye dayalı backtest sonuçlarını gösteren ve kullanıcı seçimine göre sinyal bildirimleri gönderen bir mobil uygulamadır. Uygulama Borsa İstanbul, SPK veya herhangi bir resmî kurumla bağlantılı değildir.</p>
+
+        <h2>2. Toplanan veriler</h2>
+        <p>Kairos kendi sunucusuna veya herhangi bir üçüncü tarafa <strong>kimlik, finansal, konum veya cihaz verisi göndermez</strong>. Uygulama sunucusuz çalışır. Cihazda yerel olarak saklanan bilgiler:</p>
+        <ul>
+            <li><strong>Strateji kayıtları:</strong> seçilen giriş/çıkış kuralları, backtest skorları, bildirim durumları.</li>
+            <li><strong>Google hesap bilgisi (yalnızca kullanıcı giriş yaptıysa):</strong> görüntülenen ad ve e-posta adresi. Bu bilgi yalnızca cihazda tutulur, hiçbir sunucuya iletilmez ve uygulama geliştiricisi bunlara erişemez.</li>
+            <li><strong>Ayarlar:</strong> bildirim açık/kapalı durumu, sorumluluk reddi onayı, ücretsiz sürümde bildirim almaya seçilmiş hisseler, Kairos Pro abonelik sahipliği durumu (doğrulama Google Play'den cihazda yapılır).</li>
+            <li><strong>Fiyat verisi:</strong> geçmiş fiyat verileri cihazın dahili depolamasında (özel dizinde) tutulur ve cihaz yedeklerinden hariç tutulur (yeniden indirilebilir olduğu için).</li>
+        </ul>
+
+        <h2>3. Üçüncü taraflar</h2>
+        <ul>
+            <li><strong>Yahoo Finance:</strong> Fiyat, endeks ve kur verileri anonim HTTP istekleriyle Yahoo Finance'ten alınır. Bu istekler sırasında kullanıcının IP adresi Yahoo'ya iletilir; Yahoo'nun kendi gizlilik politikası uygulanır (<a href="https://policies.yahoo.com/" target="_blank" rel="noopener noreferrer">policies.yahoo.com</a>).</li>
+            <li><strong>Google Play Hizmetleri / Google Sign-In (Credential Manager):</strong> Kullanıcı "Google ile giriş yap"a dokunursa, Google'ın SDK'sı devreye girer; doğrulama Google sunucularında yapılır. Kairos yalnızca token'dan okuyabildiği temel profil bilgilerini (ad, e-posta) cihazda tutar. Google'ın gizlilik politikası için: <a href="https://policies.google.com/privacy" target="_blank" rel="noopener noreferrer">policies.google.com/privacy</a>.</li>
+            <li><strong>Google Play Billing (Kairos Pro aboneliği):</strong> Abonelik satın alma, yenileme ve iptal süreçlerinin tamamı Google Play altyapısında işlenir. Kairos ödeme bilgilerini görmez, saklamaz ve geliştirici kimliğine erişemez; yalnızca Play'in döndürdüğü sahiplik durumu (abonelik etkin mi) cihazda tutulur.</li>
+            <li><strong>Android WorkManager:</strong> Bildirim zamanlaması cihazda çalışır; veri dışarı çıkmaz.</li>
+        </ul>
+
+        <h2>4. İzinler</h2>
+        <ul>
+            <li><strong>İnternet:</strong> fiyat verisi güncellemeleri için.</li>
+            <li><strong>Bildirimler (POST_NOTIFICATIONS):</strong> kullanıcı tarafından onaylanırsa sinyal bildirimleri gösterilir; Ayarlar'dan kapatılabilir.</li>
+        </ul>
+
+        <h2>5. Çocuklar</h2>
+        <p>Uygulama 13 yaş ve üzeri kullanıcılara yöneliktir; 13 yaş altından bilinçli olarak hiçbir veri toplanmaz.</p>
+
+        <h2>6. Abonelik (Kairos Pro)</h2>
+        <p>Kairos Pro, Google Play üzerinden aylık abonelikle sunulur. Aboneliğin ödemeleri, yenilemeleri ve iadeleri Google Play tarafından yönetilir; aboneliğini dilediğin zaman Play &gt; Ödemeler ve abonelikler &gt; Abonelikler bölümünden tek tıkla iptal edebilirsin. Ücretsiz sürümde 3 hisse için sinyal bildirimi verilir; abonelikte tüm BIST30 hisselerinden bildirim alınır. Ödeme politikası ve iadeler için <a href="kairos-kosullar.html">Kullanım Koşulları</a> ve Google Play Hükümleri geçerlidir.</p>
+
+        <h2>7. Verilerin silinmesi</h2>
+        <p>Uygulamayı cihazdan kaldırmak tüm yerel verileri siler. Ayrıca <strong>Ayarlar → Çıkış yap</strong> seçeneği Google hesabını uygulama kayıtlarından temizler. Veri silme talepleri için: <a href="mailto:aykutkutlu08@gmail.com">aykutkutlu08@gmail.com</a></p>
+
+        <h2>8. Sorumluluk reddi</h2>
+        <p>Kairos <strong>yatırım tavsiyesi değildir</strong>. Fiyat verileri yaklaşık 15 dakika gecikmelidir. Backtest sonuçları geçmiş performansı gösterir; gelecek getirilerin garantisi değildir. Alım-satım kararlarının tamamı ve sonuçları kullanıcıya aittir. Piyasa riskinden doğabilecek kayıplardan uygulama geliştiricisi sorumlu tutulamaz.</p>
+
+        <h2>9. Değişiklikler</h2>
+        <p>Bu politika uygulama güncellemeleriyle güncellenebilir; önemli değişiklikler uygulama içi bildirim veya Play sürüm notlarıyla duyurulur. Güncel sürüme her zaman bu sayfadan ulaşabilirsin.</p>
+
+        <h2>10. İletişim</h2>
+        <p><a href="mailto:aykutkutlu08@gmail.com">aykutkutlu08@gmail.com</a> · <a href="index.html#iletisim">Geri bildirim formu</a></p>
+    </article>
+</main>
+
+<footer class="site-footer">
+    <div class="wrap">
+        <div class="footer-grid">
+            <div class="footer-col footer-brand">
+                <a class="brand" href="index.html">
+                    <img src="images/kutvoks/kutvoks-icon.png" alt="Kutvoks logosu">
+                    <span><b>Kutvoks</b><span>app studio</span></span>
+                </a>
+                <p>Günlük finans için bağımsız Android uygulamaları.</p>
+            </div>
+            <div class="footer-col">
+                <h3>Kutvoks</h3>
+                <a href="ops.html">OPS: Financial Support</a>
+                <a href="butce-takip.html">Bütçe Takip</a>
+                <span class="soon-label">Kairos · Yakında</span>
+                <a href="mailto:aykutkutlu08@gmail.com">aykutkutlu08@gmail.com</a>
+            </div>
+            <div class="footer-col">
+                <h3>Gizlilik ve bilgiler</h3>
+                <a href="index.html#iletisim">Geri bildirim formu</a>
+                <a href="gizlilik.html">OPS · Gizlilik</a>
+                <a href="butce-gizlilik.html">Bütçe Takip · Gizlilik</a>
+                <a href="kairos-gizlilik.html">Kairos · Gizlilik</a>
+                <a href="app-ads.txt">app-ads.txt</a>
+            </div>
+        </div>
+        <div class="footer-bottom">
+            <span>© 2026 Kutvoks</span>
+            <span>OPS içerikleri bilgilendirme amaçlıdır; yatırım tavsiyesi değildir.</span>
+        </div>
+    </div>
+</footer>
+
+</body>
+</html>

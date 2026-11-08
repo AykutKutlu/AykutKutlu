@@ -49,6 +49,8 @@ window.KUTVOKS_COPY = {
     "kairos.bullet.0": "Backtestli giriş/çıkış kuralları",
     "kairos.bullet.1": "Canlı sinyal bildirimleri",
     "kairos.bullet.2": "Bal peteği görünümü · BIST30 tek bakışta",
+    "kairos.link.privacy": "Gizlilik politikası",
+    "kairos.link.terms": "Kullanım koşulları",
     "kairos.cta": "Yayınlandığında haberdar ol",
     "kairos.note": "Fiyat verileri Yahoo Finance'ten yaklaşık 15 dakika gecikmelidir. Skorlar geçmiş backtest sonuçlarıdır; getiri vaadi yoktur.",
     "journey.title": "Sen neyi takip etmek istiyorsun?",
@@ -100,7 +102,9 @@ window.KUTVOKS_COPY = {
     "footer.budgetPrivacy": "Bütçe Takip · Gizlilik",
     "footer.disclaimer": "OPS içerikleri bilgilendirme amaçlıdır; yatırım tavsiyesi değildir.",
     "footer.feedback": "Geri bildirim formu",
-    "footer.kairos": "Kairos · Yakında"
+    "footer.kairos": "Kairos · Yakında",
+    "footer.kairosPrivacy": "Kairos · Gizlilik",
+    "footer.kairosTerms": "Kairos · Koşullar"
   },
   "en": {
     "form.name": "Name (optional)",
@@ -151,6 +155,8 @@ window.KUTVOKS_COPY = {
     "kairos.bullet.0": "Backtested entry/exit rules",
     "kairos.bullet.1": "Live signal notifications",
     "kairos.bullet.2": "Honeycomb view · whole BIST30 at a glance",
+    "kairos.link.privacy": "Privacy policy",
+    "kairos.link.terms": "Terms of use",
     "kairos.cta": "Be notified at launch",
     "kairos.note": "Price data from Yahoo Finance is delayed approx. 15 minutes. Scores are based on historical backtests; no return guarantee.",
     "journey.title": "What would you like to track?",
@@ -202,6 +208,8 @@ window.KUTVOKS_COPY = {
     "footer.budgetPrivacy": "Bütçe Takip · Privacy",
     "footer.disclaimer": "OPS content is for information, not investment advice.",
     "footer.feedback": "Feedback form",
-    "footer.kairos": "Kairos · Coming soon"
+    "footer.kairos": "Kairos · Coming soon",
+    "footer.kairosPrivacy": "Kairos · Privacy",
+    "footer.kairosTerms": "Kairos · Terms"
   }
 };

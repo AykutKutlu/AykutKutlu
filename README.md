@@ -17,6 +17,16 @@ OPS: Financial Support ve Bütçe Takip için statik, GitHub Pages üzerinden ya
 
 BIST30 sinyal uygulaması **Kairos** (kaynak: `C:\Users\aykut\Desktop\Kairos`, v2.3.0) Play'de yayına hazırlanıyor. Ana sayfada `story-kairos` "Yakında" kartı (altın rozet) ve footer'da "Kairos · Yakında" etiketi olarak gösterilir; CTA iletişim formuna işaret eder. Görseller: `images/apps/kairos-icon.png`, `images/kairos/screen-hex.png`.
 
+Play Console için hazır linkler (kaynak: `PLAY_LISTING.md` + `PLAY_PRIVACY_POLICY.md`):
+
+| Alan | Değer |
+|---|---|
+| Web sitesi | `https://aykutkutlu.github.io/AykutKutlu/` |
+| Gizlilik politikası (URL) | `https://aykutkutlu.github.io/AykutKutlu/kairos-gizlilik.html` |
+| Kullanım koşulları (URL) | `https://aykutkutlu.github.io/AykutKutlu/kairos-kosullar.html` |
+| Destek e-posta | `aykutkutlu08@gmail.com` |
+| Destek sayfası (form) | `https://aykutkutlu.github.io/AykutKutlu/index.html#iletisim` |
+
 Yayına girdiğinde `content/apps.json` içine `kairos` girişi ekleyip `scripts/build_site.py` içinde `detail('kairos')` çağrısına bağlayınca `kairos.html` otomatik üretilir; teaser kartını Play linkli ürüne çevirmeyi unutma.
 
 ## İçerik güncelleme
