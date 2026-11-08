@@ -47,10 +47,11 @@ def header(home=False):
     support = tr('nav.support', 'Destek', 'Support') if home else 'Destek'
     toggle = '''<div class="lang-toggle" role="group" aria-label="Dil / Language"><button class="lang-opt" type="button" data-lang="tr" aria-label="Türkçe">TR</button><button class="lang-opt" type="button" data-lang="en" aria-label="English">EN</button></div>''' if home else ''
     skip = tr('nav.skip', 'İçeriğe geç', 'Skip to content') if home else 'İçeriğe geç'
+    prefix = '' if home else 'index.html'
     return f'''<a class="skip-link" href="#icerik">{skip}</a>
 <header class="site-header" id="siteHeader"><div class="wrap header-inner">
 <a class="brand" href="index.html" aria-label="Kutvoks"><img src="images/kutvoks/kutvoks-icon.png" alt="" width="44" height="44"><span><b>Kutvoks</b><span>app studio</span></span></a>
-<nav class="nav-links" aria-label="Ana menü"><a href="{'#' if home else 'index.html#'}uygulamalar">{apps}</a><a href="{'#' if home else 'index.html#'}hakkinda">{about}</a><a href="mailto:{MAIL}">{support}</a></nav>{toggle}
+<nav class="nav-links" aria-label="Ana menü"><a href="{prefix}#uygulamalar">{apps}</a><a href="{prefix}#hakkinda">{about}</a><a href="{prefix}#iletisim">{support}</a></nav>{toggle}
 </div></header>'''
 
 
